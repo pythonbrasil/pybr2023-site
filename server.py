@@ -5,8 +5,8 @@ server = Server()
 
 
 def run_server():
-    server.watch('src/*')
-    server.serve(root='src')
+    server.watch('./')
+    server.serve(root='./')
 
 
 if __name__ == '__main__':
