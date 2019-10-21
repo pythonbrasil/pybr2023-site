@@ -1,0 +1,134 @@
+/* fonts */
+@font-face {
+    font-family: Cervanttis;
+    src: url(fonts/Cervanttis.ttf)
+}
+/* /fonts */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+div.content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* width: 1920px;
+    height: 6500px; */
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background_content.png');
+    /* background-image: transparent url('assets/images/background_content.png') 0% 0% no-repeat padding-box; */
+    opacity: 1;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+div.content-middle {
+    position: absolute;
+    height: 64%;
+    width: 40%;
+    left: 30%;
+    top: 20%;
+    background-image: url('images/background_grape vine.png');
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+}
+div.content-middle p.dates {
+    font-family: 'Signika', sans-serif;
+    font-size: 1em;
+    letter-spacing: 10.84px;
+    color: #F6F6F6;
+    text-shadow: 0px 20px 50px #00000080;
+    text-transform: uppercase;
+    opacity: 1;
+}
+div.content-middle p.city {
+    font-family: Cervanttis;
+    font-size: 6em;
+    letter-spacing: 0;
+    color: #F6F6F6;
+    text-shadow: 0px 20px 50px #00000080;
+    opacity: 1;
+    margin: 0;
+}
+div.content-middle p.region {
+    font-family: 'Signika', sans-serif;
+    letter-spacing: 1em;
+    color: #F6F6F6;
+    text-shadow: 0px 20px 50px #00000080;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+div.logo {
+    position: absolute;
+    top: 130px;
+    left: 157px;
+    width: 110px;
+    height: 166px;
+    opacity: 1;
+}
+div.logo-python {
+    top: 130px;
+    left: 157px;
+    width: 110px;
+    height: 166px;
+    background: transparent url('images/logo_python_brasil.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+div.vertical-description {
+    position: absolute;
+    top: 370px;
+    left: 135px;
+    /* width: 15px; */
+    width: 28%;
+    /* height: 452px; */
+    height: 46%;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+}
+div.vertical-description p {
+    text-align: left;
+    /* font-family: Regular 12px/15px Signika; */
+    font-family: 'Signika', sans-serif;
+    letter-spacing: 6.5px;
+    color: #F6F6F6;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+div.top-menu {
+    /* position: absolute;
+    top: 333px;
+    left: 1631px;
+    width: 70px; */
+    /* height: 15px; */
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+div.top-menu ul {
+    list-style: none;
+    width: 150px;
+    align-items: center;
+    margin: 0;
+}
+div.top-menu ul li {
+    display: block;
+    padding: 30px;
+}
+div.top-menu a {
+    text-align: left;
+    /* font: Semibold 12px/25px Signika; */
+    font-family: 'Signika', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #F6F6F6;
+    opacity: 1;
+    margin-bottom: 85px;
+    text-decoration: None;
+}
