@@ -5,97 +5,64 @@
 }
 /* /fonts */
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 
 div.content {
+    position: absolute;
     top: 0px;
     left: 0px;
-    width: 1920px;
-    height: 6500px;
-    background: transparent url('assets/images/background_content.png') 0% 0% no-repeat padding-box;
+    /* width: 1920px;
+    height: 6500px; */
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/background_content.png');
+    /* background-image: transparent url('assets/images/background_content.png') 0% 0% no-repeat padding-box; */
     opacity: 1;
+    background-size: 100% 100%;
+    text-align: center;
 }
 
-div.content-top {
+div.content-middle {
     position: absolute;
-    top: 202px;
-    left: 603px;
-    width: 714px;
-    height: 632px;
-    background: transparent url('assets/images/background_grape vine.png') 0% 0% no-repeat padding-box;
-    opacity: 0.34;
-    background-size: 100%;
+    height: 64%;
+    width: 40%;
+    left: 30%;
+    top: 20%;
+    background-image: url('assets/images/background_grape vine.png');
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
 }
-
-div.content-top-city {
-    position: absolute;
-    /* top: 447px;
-    left: 572px; */
-    top: 420px;
-    left: 572px;
-    width: 698px;
-    height: 243px;
-}
-
-div.content-top-city div.dates {
-    top: 637px;
-    left: 695px;
-    width: 390px;
-    /* height: 25px; */
-    margin-left: 125px;
-}
-div.content-top-city div.dates p {
-    text-align: left;
-    /* font: Regular 20px/25px Signika; */
+div.content-middle p.dates {
     font-family: 'Signika', sans-serif;
-    font-size: 15px;
+    font-size: 1em;
     letter-spacing: 10.84px;
     color: #F6F6F6;
     text-shadow: 0px 20px 50px #00000080;
     text-transform: uppercase;
     opacity: 1;
 }
-div.content-top-city div.city p {
-    text-align: left;
-    /* font: Regular 101px/243px Cervanttis; */
+div.content-middle p.city {
     font-family: Cervanttis;
-    font-size: 100px;
+    font-size: 6em;
     letter-spacing: 0;
     color: #F6F6F6;
     text-shadow: 0px 20px 50px #00000080;
     opacity: 1;
     margin: 0;
 }
-
-div.content-top-city div.region {
-    top: 637px;
-    left: 695px;
-    width: 351px;
-    /* height: 25px; */
-    margin-left: 125px;
-}
-div.content-top-city div.region p {
-    text-align: left;
-    /* font: Regular 20px/25px Signika; */
+div.content-middle p.region {
     font-family: 'Signika', sans-serif;
-    letter-spacing: 10.84px;
+    letter-spacing: 1em;
     color: #F6F6F6;
     text-shadow: 0px 20px 50px #00000080;
     text-transform: uppercase;
     opacity: 1;
 }
-
-div.content-top-statues {
-    position: absolute;
-    top: 226px;
-    left: 827px;
-    width: 191px;
-    height: 185px;
-    background: transparent url('assets/images/statues.png') 0% 0% no-repeat padding-box;
-    box-shadow: 0px 20px 50px #000000;
-    opacity: 0.12;
-    background-size: 100%;
-}
-
 
 div.logo {
     position: absolute;
@@ -120,7 +87,9 @@ div.vertical-description {
     top: 370px;
     left: 135px;
     /* width: 15px; */
-    height: 452px;
+    width: 28%;
+    /* height: 452px; */
+    height: 46%;
     transform: matrix(0, -1, 1, 0, 0, 0);
 }
 div.vertical-description p {
@@ -134,11 +103,24 @@ div.vertical-description p {
 }
 
 div.top-menu {
-    position: absolute;
+    /* position: absolute;
     top: 333px;
     left: 1631px;
-    width: 70px;
+    width: 70px; */
     /* height: 15px; */
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+div.top-menu ul {
+    list-style: none;
+    width: 150px;
+    align-items: center;
+    margin: 0;
+}
+div.top-menu ul li {
+    display: block;
+    padding: 30px;
 }
 div.top-menu a {
     text-align: left;
@@ -150,25 +132,5 @@ div.top-menu a {
     opacity: 1;
     margin-bottom: 85px;
     text-decoration: None;
-}
-div.top-menu ul {
-    list-style: none;
-    width: 150px;
-    align-items: center;
-    margin: 0;
-}
 
-div.top-menu ul li {
-    display: block;
-    padding: 30px;
-}
-
-div.saiba-mais {
-    position: absolute;
-    top: 1381px;
-    left: 458px;
-    width: 85px;
-    height: 1px;
-    background: #AA076B 0% 0% no-repeat padding-box;
-    opacity: 1;
 }
