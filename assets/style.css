@@ -1,134 +1,115 @@
-/* fonts */
 @font-face {
-    font-family: Cervanttis;
-    src: url(fonts/Cervanttis.ttf)
+    font-family: 'cervanttisregular';
+    src: url('./fonts/cervanttis-webfont.woff2') format('woff2'),
+    url('./fonts/cervanttis-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-/* /fonts */
 
 html {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
+    background: url('images/background_content.png') no-repeat center;
+    background-size: cover;
 }
 
+body {
+    min-height: 100%;
+    margin: 0;
+    color: #F6F6F6;
+    font-family: 'Signika', sans-serif;
+    letter-spacing: 6.5px;
+    text-transform: uppercase;
+    background: url('images/background_grape vine.png') no-repeat center;
+    background-size: contain;
+}
 
-div.content {
+.title {
+    background: url('images/logo_python_brasil.svg') no-repeat bottom right;
+    margin: 0 auto;
+    padding: 65px 0 0;
+    width: 110px;
+    height: 166px;
+    text-indent: -999rem;
+}
+
+.subtitle {
+    transform: rotate(270deg);
+    transform-origin: left;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    /* width: 1920px;
-    height: 6500px; */
-    width: 100%;
-    height: 100%;
-    background-image: url('images/background_content.png');
-    /* background-image: transparent url('assets/images/background_content.png') 0% 0% no-repeat padding-box; */
-    opacity: 1;
-    background-size: 100% 100%;
+    bottom: 64px;
+    left: 32px;
+    font-size: 1rem;
+}
+
+main {
+    min-height: calc(100vh - 231px);
+    margin: 0 auto;
+    padding: 0 72px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .city {
+    font-family: 'cervanttisregular', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0;
+    margin: 0;
+    text-shadow: 0 20px 50px #00000080;
+    text-transform: initial;
     text-align: center;
 }
 
-div.content-middle {
-    position: absolute;
-    height: 64%;
-    width: 40%;
-    left: 30%;
-    top: 20%;
-    background-image: url('images/background_grape vine.png');
-    background-size: 100% 100%;
-    display: flex;
-    align-items: center;
-}
-div.content-middle p.dates {
-    font-family: 'Signika', sans-serif;
-    font-size: 1em;
-    letter-spacing: 10.84px;
-    color: #F6F6F6;
-    text-shadow: 0px 20px 50px #00000080;
-    text-transform: uppercase;
-    opacity: 1;
-}
-div.content-middle p.city {
-    font-family: Cervanttis;
-    font-size: 6em;
-    letter-spacing: 0;
-    color: #F6F6F6;
-    text-shadow: 0px 20px 50px #00000080;
-    opacity: 1;
-    margin: 0;
-}
-div.content-middle p.region {
-    font-family: 'Signika', sans-serif;
-    letter-spacing: 1em;
-    color: #F6F6F6;
-    text-shadow: 0px 20px 50px #00000080;
-    text-transform: uppercase;
-    opacity: 1;
+main .dates, main .region {
+    padding: 0 1rem;
+    max-width: 160px;
+    text-align: center;
 }
 
-div.logo {
+/* todo nav */
+nav {
     position: absolute;
-    top: 130px;
-    left: 157px;
-    width: 110px;
-    height: 166px;
-    opacity: 1;
-}
-div.logo-python {
-    top: 130px;
-    left: 157px;
-    width: 110px;
-    height: 166px;
-    background: transparent url('images/logo_python_brasil.svg') 0% 0% no-repeat padding-box;
-    opacity: 1;
+    top: 0;
+    right: 1.5rem;
+    transform: rotate(-90deg);
+    transform-origin: right;
+    font-size: .75rem;
 }
 
-div.vertical-description {
-    position: absolute;
-    top: 370px;
-    left: 135px;
-    /* width: 15px; */
-    width: 28%;
-    /* height: 452px; */
-    height: 46%;
-    transform: matrix(0, -1, 1, 0, 0, 0);
-}
-div.vertical-description p {
-    text-align: left;
-    /* font-family: Regular 12px/15px Signika; */
-    font-family: 'Signika', sans-serif;
-    letter-spacing: 6.5px;
-    color: #F6F6F6;
-    text-transform: uppercase;
-    opacity: 1;
-}
-
-div.top-menu {
-    /* position: absolute;
-    top: 333px;
-    left: 1631px;
-    width: 70px; */
-    /* height: 15px; */
-    position: absolute;
-    top: 30%;
-    right: 0;
-}
-div.top-menu ul {
-    list-style: none;
-    width: 150px;
-    align-items: center;
-    margin: 0;
-}
-div.top-menu ul li {
-    display: block;
-    padding: 30px;
-}
-div.top-menu a {
-    text-align: left;
-    /* font: Semibold 12px/25px Signika; */
-    font-family: 'Signika', sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: #F6F6F6;
-    opacity: 1;
-    margin-bottom: 85px;
-    text-decoration: None;
+@media (min-width: 769px) {
+    body {
+        background-size: auto 92%;
+    }
+    nav {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    header {
+        position: relative;
+    }
+    .title {
+        /*margin: 130px 0 0 157px;*/
+        margin: 0;
+        padding: 130px 0 0 157px;
+    }
+    .subtitle {
+        margin: 32px -202px 0 0;
+        transform-origin: right;
+        white-space: nowrap;
+        bottom: initial;
+        left: initial;
+        top: 100%;
+        right: 100%;
+    }
+    main {
+        max-width: calc(100vw - 598px);
+        min-height: 100vh;
+        margin: -296px auto 0;
+        flex-direction: row;
+    }
+    main .city {
+        font-size: 5rem;
+    }
 }
