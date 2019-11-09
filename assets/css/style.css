@@ -1,14 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: 'cervanttisregular';
-    src: url('./fonts/cervanttis-webfont.woff2') format('woff2'),
-    url('./fonts/cervanttis-webfont.woff') format('woff');
+    src: url('../fonts/cervanttis-webfont.woff2') format('woff2'),
+    url('../fonts/cervanttis-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,7 +9,7 @@
 html {
     min-height: 100vh;
     width: 100%;
-    background: url('images/background_content.png') no-repeat center;
+    background: url('../images/background_content.png') no-repeat center;
     background-size: cover;
 }
 
@@ -27,12 +20,12 @@ body {
     font-family: 'Signika', sans-serif;
     letter-spacing: 6.5px;
     text-transform: uppercase;
-    background: url('images/background_grape vine.png') no-repeat center;
+    background: url('../images/background_grape vine.png') no-repeat center;
     background-size: contain;
 }
 
 .title {
-    background: url('images/logo_python_brasil.svg') no-repeat bottom right;
+    background: url('../images/logo_python_brasil.svg') no-repeat bottom right;
     margin: 0 auto;
     padding: 65px 0 0;
     width: 110px;
