@@ -1,0 +1,83 @@
+// GENERAL
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #091E2A;
+  background: -moz-linear-gradient(to right, #122443, #091E2A);
+  background: linear-gradient(to right, #122443, #091E2A);
+  background: -webkit-linear-gradient(to right, #122443, #091E2A);;
+  color: $dark-blue;
+  font-family: $font-signika;
+  font-size: 1.6rem;
+  font-weight: $font-weight-300;
+}
+
+.break {
+  display: block;
+}
+
+@media screen and(max-width: $tablet) {
+  .break-mobile {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $large-desktop) {
+  .break-desktop {
+    display: block;
+  }
+}
+
+// FONT
+@font-face {
+  font-family: 'Cervanttis';
+  src: url('../fonts/cervanttis.eot');
+  src: url('../fonts/cervanttis.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/cervanttis.woff2') format('woff2'),
+       url('../fonts/cervanttis.woff') format('woff'),
+       url('../fonts/cervanttis.svg') format("svg"),
+       url('../fonts/cervanttis.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fw-300 {
+  font-weight: $font-weight-300;
+}
+
+.fw-400 {
+  font-weight: $font-weight-400;
+}
+
+.fw-600 {
+  font-weight: $font-weight-600;
+}
+
+// COLOR
+.text-light-purple {
+  color: $light-purple;
+}
+
+.text-dark-purple {
+  color: $dark-purple;
+}
+
+.text-light-blue {
+  color: $light-blue;
+}
+
+.dark-blue {
+  color: $dark-blue;
+}
+
+// ANIMATIONS
+.main-transition {
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
