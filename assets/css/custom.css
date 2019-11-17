@@ -133,10 +133,43 @@ body {
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   @media screen and (min-width: 1024px) {
     .header {
       padding: 150px 0 0; } }
+  @media screen and (min-width: 1600px) {
+    .header {
+      padding: 100px 0; } }
+  .header__brand {
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      .header__brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        height: 100%;
+        width: 110px;
+        left: 5%;
+        top: 10%; } }
+    @media screen and (min-width: 1600px) {
+      .header__brand {
+        left: 8%;
+        top: 20%; } }
+    .header__brand__logo {
+      padding-bottom: 40px; }
+    .header__brand__title {
+      font-size: 12px;
+      letter-spacing: 5px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-trasnfor: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg); }
   .header__group {
     display: flex;
     flex-direction: column;
@@ -152,7 +185,8 @@ body {
           width: 800px; } }
       @media screen and (min-width: 1600px) {
         .header__group__background {
-          width: 890px; } }
+          width: 890px;
+          margin-top: 80px; } }
     .header__group__content {
       display: flex;
       flex-direction: column;
@@ -163,6 +197,9 @@ body {
       @media screen and (min-width: 1200px) {
         .header__group__content {
           padding-top: 150px; } }
+      @media screen and (min-width: 1600px) {
+        .header__group__content {
+          padding-top: 220px; } }
       .header__group__content__title {
         font-size: 40px;
         padding-bottom: 20px; }
@@ -221,6 +258,21 @@ body {
           -o-transform: scale(1.1); }
         .header__group__content__btn__icon {
           margin-right: 10px; }
+  .header__detail-top {
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      .header__detail-top {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 30%;
+        width: 80px; } }
+    @media screen and (min-width: 1200px) {
+      .header__detail-top {
+        left: 22%; } }
+    @media screen and (min-width: 1600px) {
+      .header__detail-top {
+        left: 27%; } }
 
 .header-disclaimer {
   padding: 50px 0; }

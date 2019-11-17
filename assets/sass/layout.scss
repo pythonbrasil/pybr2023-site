@@ -181,9 +181,51 @@ body {
   justify-content: center;
   padding: 100px 0;
   height: 100%;
+  position: relative;
 
   @media screen and (min-width: $ipad-pro) {
     padding: 150px 0 0;
+  }
+
+  @media screen and (min-width: $extra-large-desktop) {
+    padding: 100px 0;
+  }
+
+  &__brand {
+    display: none;
+
+    @media screen and (min-width: $ipad-pro) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: absolute;
+      height: 100%;
+      width: 110px;
+      left: 5%;
+      top: 10%;
+    }
+
+    @media screen and (min-width: $extra-large-desktop) {
+      left: 8%;
+      top: 20%;
+    }
+
+    &__logo {
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 12px;
+      letter-spacing: 5px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-trasnfor: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+    }
   }
 
   &__group {
@@ -204,6 +246,7 @@ body {
 
       @media screen and (min-width: $extra-large-desktop) {
         width: 890px;
+        margin-top: 80px;
       }
     }
 
@@ -217,6 +260,10 @@ body {
 
       @media screen and (min-width: $large-desktop) {
         padding-top: 150px;
+      }
+
+      @media screen and (min-width: $extra-large-desktop) {
+        padding-top: 220px;
       }
 
       &__title {
@@ -295,6 +342,26 @@ body {
           margin-right: 10px;
         }
       }
+    }
+  }
+
+  &__detail-top {
+    display: none;
+
+    @media screen and (min-width: $ipad-pro) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 30%;
+      width: 80px;
+    }
+
+    @media screen and (min-width: $large-desktop) {
+      left: 22%;
+    }
+
+    @media screen and (min-width: $extra-large-desktop) {
+      left: 27%;
     }
   }
 }
