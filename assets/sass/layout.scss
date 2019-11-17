@@ -449,3 +449,12 @@ body {
     }
   }
 }
+
+.speakers {
+  padding: 50px 0;
+  position: relative;
+
+  &__soon {
+    padding: 100px 0;
+  }
+}

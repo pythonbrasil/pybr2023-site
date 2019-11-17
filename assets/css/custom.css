@@ -69,7 +69,7 @@ body {
   color: #3C1053; }
 
 .text-light-blue {
-  color: #041B2D; }
+  color: #082233; }
 
 .text-dark-blue {
   color: #08293C; }
@@ -327,5 +327,11 @@ body {
       .about__image {
         width: 860px;
         bottom: 0; } }
+
+.speakers {
+  padding: 50px 0;
+  position: relative; }
+  .speakers__soon {
+    padding: 100px 0; }
 
 /*# sourceMappingURL=custom.css.map */
