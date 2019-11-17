@@ -100,7 +100,7 @@ body {
   color: $light-blue;
 }
 
-.dark-blue {
+.text-dark-blue {
   color: $dark-blue;
 }
 
@@ -110,6 +110,67 @@ body {
   -o-transition: all .5s ease;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+}
+
+// TITLE
+.title__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 40px;
+
+  @media screen and (min-width: $ipad-pro) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: $large-desktop) {
+    min-width: 600px;
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: $extra-large-desktop) {
+    margin-left: 50px;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: $light-purple;
+    height: 1px;
+    width: 50px;
+    top: 0;
+    left: 18%;
+
+    @media screen and (min-width: $large-desktop) {
+      width: 85px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    font-size: 60px;
+
+    @media screen and (min-width: $large-desktop) {
+      font-size: 100px;
+    }
+  }
+
+  &__subtitle {
+    z-index: 2;
+    font-size: 30px;
+    padding-top: 10px;
+    letter-spacing: 7px;
+
+    @media screen and (min-width: $large-desktop) {
+      font-size: 40px;
+      padding-top: 25px;
+      letter-spacing: 15px;
+    }
+  }
 }
 
 // HEADER
@@ -336,6 +397,55 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+// ABOUT
+.about {
+  padding: 50px 0;
+  position: relative;
+
+  @media screen and (min-width: $large-desktop) {
+    padding: 50px 0 150px;
+  }
+
+  &__group {
+    &__title {
+      padding-bottom: 30px;
+
+      @media screen and (min-width: $extra-large-desktop) {
+        padding-bottom: 60px;
+      }
+    }
+
+    &__description {
+      font-size: 15px;
+      padding: 10px 0;
+      letter-spacing: 5px;
+      line-height: 1.8;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      right: 0;
+      bottom: 75px;
+      width: 350px;
+      z-index: 3;
+    }
+
+    @media screen and (min-width: $large-desktop) {
+      width: 650px;
+      bottom: 100px;
+    }
+
+    @media screen and (min-width: $extra-large-desktop) {
+      width: 860px;
+      bottom: 0;
     }
   }
 }

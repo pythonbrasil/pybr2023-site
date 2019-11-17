@@ -71,7 +71,7 @@ body {
 .text-light-blue {
   color: #041B2D; }
 
-.dark-blue {
+.text-dark-blue {
   color: #08293C; }
 
 .main-transition {
@@ -79,6 +79,53 @@ body {
   -o-transition: all .5s ease;
   -webkit-transition: all .5s ease;
   transition: all .5s ease; }
+
+.title__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 40px; }
+  @media screen and (min-width: 1024px) {
+    .title__group {
+      width: 400px; } }
+  @media screen and (min-width: 1200px) {
+    .title__group {
+      min-width: 600px;
+      margin-left: 20px; } }
+  @media screen and (min-width: 1600px) {
+    .title__group {
+      margin-left: 50px; } }
+  .title__group::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #AA076B;
+    height: 1px;
+    width: 50px;
+    top: 0;
+    left: 18%; }
+    @media screen and (min-width: 1200px) {
+      .title__group::before {
+        width: 85px; } }
+  .title__group__title {
+    position: absolute;
+    z-index: 1;
+    font-size: 60px; }
+    @media screen and (min-width: 1200px) {
+      .title__group__title {
+        font-size: 100px; } }
+  .title__group__subtitle {
+    z-index: 2;
+    font-size: 30px;
+    padding-top: 10px;
+    letter-spacing: 7px; }
+    @media screen and (min-width: 1200px) {
+      .title__group__subtitle {
+        font-size: 40px;
+        padding-top: 25px;
+        letter-spacing: 15px; } }
 
 .header {
   display: flex;
@@ -246,5 +293,39 @@ body {
             text-decoration: none;
             background-color: #3C1053;
             color: #FFF; }
+
+.about {
+  padding: 50px 0;
+  position: relative; }
+  @media screen and (min-width: 1200px) {
+    .about {
+      padding: 50px 0 150px; } }
+  .about__group__title {
+    padding-bottom: 30px; }
+    @media screen and (min-width: 1600px) {
+      .about__group__title {
+        padding-bottom: 60px; } }
+  .about__group__description {
+    font-size: 15px;
+    padding: 10px 0;
+    letter-spacing: 5px;
+    line-height: 1.8; }
+  .about__image {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .about__image {
+        position: absolute;
+        right: 0;
+        bottom: 75px;
+        width: 350px;
+        z-index: 3; } }
+    @media screen and (min-width: 1200px) {
+      .about__image {
+        width: 650px;
+        bottom: 100px; } }
+    @media screen and (min-width: 1600px) {
+      .about__image {
+        width: 860px;
+        bottom: 0; } }
 
 /*# sourceMappingURL=custom.css.map */
