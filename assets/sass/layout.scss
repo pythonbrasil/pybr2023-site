@@ -7,13 +7,27 @@
 
 body {
   background: #091E2A;
-  background: -moz-linear-gradient(to right, #122443, #091E2A);
   background: linear-gradient(to right, #122443, #091E2A);
-  background: -webkit-linear-gradient(to right, #122443, #091E2A);;
+  background: -moz-linear-gradient(to right, #122443, #091E2A);
+  background: -webkit-linear-gradient(to right, #122443, #091E2A);
+  background: -o-linear-gradient(to right, #122443, #091E2A);
   color: $dark-blue;
   font-family: $font-signika;
   font-size: 1.6rem;
   font-weight: $font-weight-300;
+  position: relative;
+}
+
+.full-white-block {
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: $white;
+  top: 0;
+  right: 0;
+  width: 8vw;
+  height: 100vh;
+  z-index: 0;
 }
 
 .break {
@@ -57,6 +71,18 @@ body {
   font-weight: $font-weight-600;
 }
 
+.font-alice {
+  font-family: $font-alice;
+}
+
+.font-cervanttis {
+  font-family: $font-cervanttis;
+}
+
+.font-default {
+  font-family: $font-signika;
+}
+
 // COLOR
 .text-light-purple {
   color: $light-purple;
@@ -80,4 +106,128 @@ body {
   -o-transition: all .5s ease;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+}
+
+// HEADER
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  height: 100%;
+
+  @media screen and (min-width: $ipad-pro) {
+    padding: 150px 0 0;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 500px;
+
+    &__background {
+      position: absolute;
+      width: 100%;
+
+      @media screen and (min-width: $large-desktop) {
+        width: 800px;
+      }
+
+      @media screen and (min-width: $extra-large-desktop) {
+        width: 890px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+
+      @media screen and (min-width: $large-desktop) {
+        padding-top: 150px;
+      }
+
+      &__title {
+        font-size: 40px;
+        padding-bottom: 20px;
+
+        @media screen and (min-width: $ipad-pro) {
+          font-size: 70px;
+          padding-bottom: 60px;
+        }
+
+        @media screen and (min-width: $large-desktop) {
+          font-size: 100px;
+        }
+
+        &--small {
+          padding-top: 20px;
+          font-size: 22px;
+
+          @media screen and (min-width: $ipad-pro) {
+            padding-top: 40px;
+            font-size: 20px;
+            letter-spacing: 10px;
+          }
+        }
+      }
+
+      &__subtitle {
+        order: -1;
+        font-size: 18px;
+        padding-bottom: 20px;
+
+        @media screen and (min-width: $ipad-pro) {
+          font-size: 16px;
+          letter-spacing: 10px;
+        }
+
+        @media screen and (min-width: $large-desktop) {
+          font-size: 20px;
+        }
+      }
+
+      &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 47px;
+        background-color: $dark-blue;
+        color: $white;
+        border-radius: 50px;
+        font-size: 16px;
+
+        @media screen and (min-width: $ipad-pro) {
+          width: 275px;
+          margin-left: 100px;
+        }
+
+        @media screen and (min-width: $large-desktop) {
+          font-size: 18px;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $white;
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+        }
+
+        &__icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }

@@ -5,13 +5,26 @@
 
 body {
   background: #091E2A;
-  background: -moz-linear-gradient(to right, #122443, #091E2A);
   background: linear-gradient(to right, #122443, #091E2A);
+  background: -moz-linear-gradient(to right, #122443, #091E2A);
   background: -webkit-linear-gradient(to right, #122443, #091E2A);
+  background: -o-linear-gradient(to right, #122443, #091E2A);
   color: #08293C;
   font-family: "Signika", sans-serif;
   font-size: 1.6rem;
-  font-weight: 300; }
+  font-weight: 300;
+  position: relative; }
+
+.full-white-block {
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: #FFF;
+  top: 0;
+  right: 0;
+  width: 8vw;
+  height: 100vh;
+  z-index: 0; }
 
 .break {
   display: block; }
@@ -37,6 +50,15 @@ body {
 .fw-600 {
   font-weight: 600; }
 
+.font-alice {
+  font-family: "Alice", serif; }
+
+.font-cervanttis {
+  font-family: "Cervanttis", sans-serif; }
+
+.font-default {
+  font-family: "Signika", sans-serif; }
+
 .text-light-purple {
   color: #AA076B; }
 
@@ -54,5 +76,98 @@ body {
   -o-transition: all .5s ease;
   -webkit-transition: all .5s ease;
   transition: all .5s ease; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  height: 100%; }
+  @media screen and (min-width: 1024px) {
+    .header {
+      padding: 150px 0 0; } }
+  .header__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 500px; }
+    .header__group__background {
+      position: absolute;
+      width: 100%; }
+      @media screen and (min-width: 1200px) {
+        .header__group__background {
+          width: 800px; } }
+      @media screen and (min-width: 1600px) {
+        .header__group__background {
+          width: 890px; } }
+    .header__group__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative; }
+      @media screen and (min-width: 1200px) {
+        .header__group__content {
+          padding-top: 150px; } }
+      .header__group__content__title {
+        font-size: 40px;
+        padding-bottom: 20px; }
+        @media screen and (min-width: 1024px) {
+          .header__group__content__title {
+            font-size: 70px;
+            padding-bottom: 60px; } }
+        @media screen and (min-width: 1200px) {
+          .header__group__content__title {
+            font-size: 100px; } }
+        .header__group__content__title--small {
+          padding-top: 20px;
+          font-size: 22px; }
+          @media screen and (min-width: 1024px) {
+            .header__group__content__title--small {
+              padding-top: 40px;
+              font-size: 20px;
+              letter-spacing: 10px; } }
+      .header__group__content__subtitle {
+        order: -1;
+        font-size: 18px;
+        padding-bottom: 20px; }
+        @media screen and (min-width: 1024px) {
+          .header__group__content__subtitle {
+            font-size: 16px;
+            letter-spacing: 10px; } }
+        @media screen and (min-width: 1200px) {
+          .header__group__content__subtitle {
+            font-size: 20px; } }
+      .header__group__content__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 47px;
+        background-color: #08293C;
+        color: #FFF;
+        border-radius: 50px;
+        font-size: 16px; }
+        @media screen and (min-width: 1024px) {
+          .header__group__content__btn {
+            width: 275px;
+            margin-left: 100px; } }
+        @media screen and (min-width: 1200px) {
+          .header__group__content__btn {
+            font-size: 18px; } }
+        .header__group__content__btn:hover {
+          text-decoration: none;
+          color: #FFF;
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1); }
+        .header__group__content__btn__icon {
+          margin-right: 10px; }
 
 /*# sourceMappingURL=custom.css.map */
