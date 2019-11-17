@@ -12,7 +12,19 @@
 
 ## Rodando o projeto
 
-Para facilitar o desenvolvimento, você pode ativar o servidor local que irá atualizando o navegador a cada atualização dos estáticos da página.
+Instale as dependências do projeto rodando:
+
+```sh
+npm install
+```
+
+Ou - é recomendado essa opção:
+
+```sh
+yarn
+```
+
+Para facilitar o desenvolvimento, você pode ativar o servidor local que irá atualizar o navegador a cada alteração dos estáticos da página.
 
 ### Configurando o servidor pela primeira vez
 
@@ -59,3 +71,26 @@ source venv/bin/activate
 ```sh
 make local/run-server
 ```
+
+## Alterando os estilos da página
+
+Este projeto utiliza SASS (SCSS). Os arquivos a serem alterados estão no seguinte diretório:
+
+.
+├── assets
+│   ├── sass
+│   |    └── layout.scss
+│   |    └── main.scss
+
+Antes de alterar os arquivos, rode o seguinte comando:
+
+```sh
+sass --watch assets/sass/main.scss:assets/css/custom.css
+```
+
+Em quaisquer alterações o seguinte arquivo será alterado, arquivo esse que é o que a página consome:
+
+.
+├── assets
+│   ├── css
+│   |    └── custom.scss
