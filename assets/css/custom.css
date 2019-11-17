@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #091E2A;
+  background: -moz-linear-gradient(to right, #122443, #091E2A);
+  background: linear-gradient(to right, #122443, #091E2A);
+  background: -webkit-linear-gradient(to right, #122443, #091E2A);
+  color: #08293C;
+  font-family: "Signika", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300; }
+
+.break {
+  display: block; }
+
+@media screen and (max-width: 768px) {
+  .break-mobile {
+    display: block; } }
+@media screen and (min-width: 1200px) {
+  .break-desktop {
+    display: block; } }
+@font-face {
+  font-family: 'Cervanttis';
+  src: url("../fonts/cervanttis.eot");
+  src: url("../fonts/cervanttis.eot?#iefix") format("embedded-opentype"), url("../fonts/cervanttis.woff2") format("woff2"), url("../fonts/cervanttis.woff") format("woff"), url("../fonts/cervanttis.svg") format("svg"), url("../fonts/cervanttis.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+.fw-300 {
+  font-weight: 300; }
+
+.fw-400 {
+  font-weight: 400; }
+
+.fw-600 {
+  font-weight: 600; }
+
+.text-light-purple {
+  color: #AA076B; }
+
+.text-dark-purple {
+  color: #3C1053; }
+
+.text-light-blue {
+  color: #041B2D; }
+
+.dark-blue {
+  color: #08293C; }
+
+.main-transition {
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+/*# sourceMappingURL=custom.css.map */
