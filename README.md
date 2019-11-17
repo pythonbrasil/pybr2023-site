@@ -76,11 +76,13 @@ make local/run-server
 
 Este projeto utiliza SASS (SCSS). Os arquivos a serem alterados estão no seguinte diretório:
 
+```
 .
 ├── assets
 │   ├── sass
 │   |    └── layout.scss
 │   |    └── main.scss
+```
 
 Antes de alterar os arquivos, rode o seguinte comando:
 
@@ -90,7 +92,9 @@ sass --watch assets/sass/main.scss:assets/css/custom.css
 
 Em quaisquer alterações o seguinte arquivo será alterado, arquivo esse que é o que a página consome:
 
+```
 .
 ├── assets
 │   ├── css
 │   |    └── custom.scss
+```
