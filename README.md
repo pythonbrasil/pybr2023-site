@@ -6,15 +6,15 @@
 
 ## Sobre o projeto
 
-* **Tecnologias:** HTML, CSS, JS, jQuery, Bootstrap 4
+* **Tecnologias:** HTML, CSS (SCSS), JS, jQuery e Bootstrap 4
 * **Metodologias:** BEM - CSS
-* **Server:** Python
+* **Servidor:** Python
 
 ## Rodando o projeto
 
 Para facilitar o desenvolvimento, você pode ativar o servidor local que irá atualizando o navegador a cada atualização dos estáticos da página.
 
-### Configurando o servidor
+### Configurando o servidor pela primeira vez
 
 **Caso já tenha Virtualenv instalado, por favor, pule essa etapa:**
 
@@ -36,7 +36,25 @@ source venv/bin/activate
 make local/install
 ```
 
-### Ativando o servidor
+#### Ativando o servidor
+
+```sh
+make local/run-server
+```
+
+### Encerrando o servidor
+
+```sh
+deactivate
+```
+
+### Ativando o servidor (após ter encerrado, fechado e aberto novamente)
+
+No diretório do projeto:
+
+```sh
+source venv/bin/activate
+```
 
 ```sh
 make local/run-server
