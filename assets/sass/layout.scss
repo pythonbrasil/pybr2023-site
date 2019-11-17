@@ -19,15 +19,19 @@ body {
 }
 
 .full-white-block {
-  display: block;
-  content: "";
-  position: absolute;
-  background-color: $white;
-  top: 0;
-  right: 0;
-  width: 8vw;
-  height: 100vh;
-  z-index: 0;
+  display: none;
+
+  @media screen and (min-width: $large-desktop) {
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: $white;
+    top: 0;
+    right: 0;
+    width: 8vw;
+    height: 100%;
+    z-index: 0;
+  }
 }
 
 .break {
@@ -114,7 +118,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  padding: 100px 0;
   height: 100%;
 
   @media screen and (min-width: $ipad-pro) {
@@ -127,7 +131,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 500px;
+    z-index: 2;
 
     &__background {
       position: absolute;
@@ -169,7 +173,8 @@ body {
 
         &--small {
           padding-top: 20px;
-          font-size: 22px;
+          font-size: 18px;
+          letter-spacing: 5px;
 
           @media screen and (min-width: $ipad-pro) {
             padding-top: 40px;
@@ -181,8 +186,9 @@ body {
 
       &__subtitle {
         order: -1;
-        font-size: 18px;
+        font-size: 16px;
         padding-bottom: 20px;
+        letter-spacing: 2px;
 
         @media screen and (min-width: $ipad-pro) {
           font-size: 16px;
@@ -226,6 +232,108 @@ body {
 
         &__icon {
           margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+// HEADER DISCLAIMER
+.header-disclaimer {
+  padding: 50px 0;
+
+  @media screen and (min-width: $ipad-pro) {
+    padding: 150px 0 100px;
+  }
+
+  @media screen and (min-width: $large-desktop) {
+    padding: 100px 0;
+  }
+
+  @media screen and (min-width: $extra-large-desktop) {
+    padding: 150px 0 100px;
+  }
+
+  &__group {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+
+    @media screen and (min-width: $ipad-pro) {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 75px 100px 75px 150px;
+    }
+
+    @media screen and (min-width: $large-desktop) {
+      padding: 75px 100px 75px 200px;
+    }
+
+    &__item {
+      padding: 30px 0;
+
+      &--1 {
+        @media screen and (min-width: $ipad-pro) {
+          margin-right: 10%;
+        }
+      }
+
+      @media screen and (min-width: $ipad-pro) {
+        padding: 0;
+        width: 40%;
+      }
+
+      @media screen and (min-width: $extra-large-desktop) {
+        width: 35%;
+      }
+
+      &__title {
+        font-size: 16px;
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      &__description {
+        font-size: 16px;
+        padding-bottom: 20px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+      }
+
+      &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 25px;
+        font-size: 12px;
+        border-radius: 50px;
+
+        &--light-purple {
+          background-color: transparent;
+          border: 2px solid $light-purple;
+          color: $light-purple;
+
+          &:hover {
+            text-decoration: none;
+            background-color: $light-purple;
+            color: $white;
+          }
+        }
+
+        &--dark-purple {
+          background-color: transparent;
+          border: 2px solid $dark-purple;
+          color: $dark-purple;
+
+          &:hover {
+            text-decoration: none;
+            background-color: $dark-purple;
+            color: $white;
+          }
         }
       }
     }
