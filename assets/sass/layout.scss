@@ -517,11 +517,154 @@ body {
   }
 }
 
+// SPEAKERS
 .speakers {
   padding: 50px 0;
   position: relative;
 
   &__soon {
     padding: 100px 0;
+  }
+}
+
+// FOOTER
+.footer {
+  position: relative;
+  z-index: 7;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $large-desktop) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    &__disclaimer {
+      width: 100%;
+      padding: 0 50px 50px;
+
+      @media screen and (min-width: $ipad-pro) {
+        padding: 0 100px 50px;
+      }
+
+      @media screen and (min-width: $large-desktop) {
+        width: 30%;
+        min-height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 50px;
+      }
+
+      @media screen and (min-width: $extra-large-desktop) {
+        width: 25%;
+        padding: 0 75px;
+      }
+
+      &__text {
+        font-size: 14px;
+        letter-spacing: 5px;
+        line-height: 2;
+
+        @media screen and (min-width: $large-desktop) {
+          font-size: 9px;
+          line-height: 2.5;
+        }
+      }
+    }
+
+    &__links {
+      width: 100%;
+      background-color: $white;
+      padding: 20px 50px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: $ipad-pro) {
+        padding: 20px 100px;
+      }
+
+      @media screen and (min-width: $large-desktop) {
+        width: 70%;
+        min-height: 240px;
+      }
+
+      @media screen and (min-width: $extra-large-desktop) {
+        width: 75%;
+      }
+
+      &__item {
+        padding: 30px 0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $tablet) {
+          width: 25%;
+        }
+
+        &__title {
+          font-size: 14px;
+          padding-bottom: 20px;
+          letter-spacing: 2px;
+        }
+
+        &__link {
+          font-size: 16px;
+          color: $dark-blue;
+          letter-spacing: 2px;
+
+          &:hover {
+            color: $light-purple;
+            text-decoration: none;
+          }
+
+          &--btn {
+            @media screen and (min-width: $large-desktop) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 250px;
+              height: 47px;
+              background-color: $dark-blue;
+              color: $white;
+              border-radius: 50px;
+              font-size: 14px;
+              margin-top: -10px;
+              box-shadow: 0 0 7px rgba(8, 41, 60, 1);
+
+              &:hover {
+                text-decoration: none;
+                color: $white;
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                box-shadow: 0 0 10px rgba(8, 41, 60, .5);
+              }
+            }
+
+            @media screen and (min-width: $extra-large-desktop) {
+              width: 275px;
+              font-size: 16px;
+            }
+
+            &__icon {
+              display: none;
+
+              @media screen and (min-width: $large-desktop) {
+                display: block;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
