@@ -563,6 +563,18 @@ body {
     }
   }
 
+  &__partners-group {
+    padding-top: 100px;
+
+    &__title {
+      align-items: flex-start;
+
+      &::before {
+        left: 10%;
+      }
+    }
+  }
+
   &__group-logos {
     padding-top: 50px;
     display: flex;
@@ -573,11 +585,21 @@ body {
       justify-content: space-between;
     }
 
+    &--partners {
+      flex-direction: column;
+    }
+
     &__item {
       width: 100%;
 
       @media screen and (min-width: $large-desktop) {
         width: 30%;
+      }
+
+      &--help {
+        width: 100%;
+        position: relative;
+        z-index: 3;
       }
 
       &__title {
@@ -610,7 +632,6 @@ body {
       }
 
       &__logos {
-
         &__brand {
           display: block;
           background-color: $white;
@@ -638,6 +659,24 @@ body {
               height: 60px;
             }
           }
+
+          &--host {
+            width: 255px;
+            background-color: initial;
+          }
+
+          &--help {
+            width: 30%;
+            height: 60px;
+            background-color: #c9c9c9;
+          }
+        }
+
+        &--help {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
         }
       }
     }
