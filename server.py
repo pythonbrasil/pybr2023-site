@@ -6,7 +6,7 @@ server = Server()
 
 def run_server():
     server.watch('./')
-    server.serve(root='./')
+    server.serve(root='./', host='0.0.0.0.')
 
 
 if __name__ == '__main__':

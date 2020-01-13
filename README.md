@@ -98,3 +98,12 @@ Em quaisquer alterações o seguinte arquivo será alterado, arquivo esse que é
 │   ├── css
 │   |    └── custom.scss
 ```
+
+# Alternativa de execução
+
+Use docker para fazer a build e execução do projeto
+
+```
+docker build -f Dockerfile -t pybr16:dev .
+docker run -v "${PWD}:/src" -p 5500:5500 --rm  pybr16:dev
+```
