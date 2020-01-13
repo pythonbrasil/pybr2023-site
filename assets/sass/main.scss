@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+// FONT
+$font-alice: 'Alice', serif !default;
+$font-signika: 'Signika', sans-serif !default;
+$font-cervanttis: 'Cervanttis', sans-serif !default;
+$font-weight-300: 300 !default;
+$font-weight-400: 400 !default;
+$font-weight-600: 600 !default;
+
+// COLOR
+$default-color: #2E4A6D !default;
+$light-purple:  #AA076B !default;
+$dark-purple:   #3C1053 !default;
+$white:         #FFF !default;
+$new-white:     #F6F6F6 !default;
+$light-blue:    #082233 !default;
+$dark-blue:     #08293C !default;
+
+// MEDIA QUERIES
+$tablet:              768px !default;
+$desktop:             992px !default;
+$ipad-pro:            1024px !default;
+$large-desktop:       1200px !default;
+$extra-large-desktop: 1600px !default;
+
+// IMPORT PARCIALS
+@import
+  'layout'
+;
