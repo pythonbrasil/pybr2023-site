@@ -548,6 +548,20 @@ body {
   padding: 50px 0;
   position: relative;
 
+  &__group {
+    &__title {
+      @media screen and (max-width: $tablet) {
+        align-items: flex-start;
+      }
+
+      &::before {
+        @media screen and (max-width: $tablet) {
+          left: 0;
+        }
+      }
+    }
+  }
+
   &__soon {
     padding: 100px 0;
   }
