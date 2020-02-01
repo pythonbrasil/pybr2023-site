@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #091E2A;
   background: linear-gradient(to right, #122443, #091E2A);
