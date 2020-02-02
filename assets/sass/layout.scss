@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #091E2A;
   background: linear-gradient(to right, #122443, #091E2A);
@@ -544,196 +548,22 @@ body {
   padding: 50px 0;
   position: relative;
 
+  &__group {
+    &__title {
+      @media screen and (max-width: $tablet) {
+        align-items: flex-start;
+      }
+
+      &::before {
+        @media screen and (max-width: $tablet) {
+          left: 0;
+        }
+      }
+    }
+  }
+
   &__soon {
     padding: 100px 0;
-  }
-}
-
-// SCHEDULE
-.schedule {
-  padding: 0 0 100px;
-  position: relative;
-
-  @media screen and (min-width: $ipad-pro) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: $large-desktop) {
-    padding: 0 0 300px;
-    margin: 100px 0;
-  }
-
-  @media screen and (min-width: $extra-large-desktop) {
-    width: 800px;
-    margin: 100px 0 200px;
-  }
-
-  &__group {
-    background-color: $new-white;
-    padding: 40px;
-
-    @media screen and (min-width: $large-desktop) {
-      padding: 60px;
-    }
-
-    @media screen and (min-width: $extra-large-desktop) {
-      padding: 60px 60px 100px;
-    }
-
-    &__detail-left {
-      display: none;
-
-      @media screen and (min-width: $large-desktop) {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 100px;
-        width: 120px;
-        z-index: 4;
-      }
-    }
-
-    &__detail-top {
-      display: none;
-
-      @media screen and (min-width: $ipad-pro) {
-        display: block;
-        position: absolute;
-        top: -220px;
-        left: 0;
-        width: 200px;
-        z-index: 2;
-      }
-    }
-
-    &__main {
-      position: relative;
-      z-index: 3;
-
-      @media screen and (min-width: $large-desktop) {
-        margin: 0 auto;
-        width: 100%;
-      }
-
-      &__small-image {
-        display: none;
-
-        @media screen and (min-width: $large-desktop) {
-          display: block;
-          width: 300px;
-          margin: -150px auto 50px;
-        }
-      }
-
-      &__title {
-        &__text {
-          color: #EBEBEB;
-        }
-
-        &__subtitle {
-          color: $dark-blue;
-        }
-      }
-
-      &__description {
-        font-size: 15px;
-        letter-spacing: 2px;
-        line-height: 1.6;
-        padding: 40px 0;
-        margin: 0;
-
-        @media screen and (min-width: $large-desktop) {
-          padding: 60px 0 40px;
-          text-align: center;
-        }
-      }
-
-      &__days {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        @media screen and (min-width: $large-desktop) {
-          width: 50%;
-          margin: 0 auto;
-        }
-
-        @media screen and (min-width: $extra-large-desktop) {
-          width: 300px;
-        }
-
-        &__item {
-          width: 85px;
-          height: 85px;
-          background-color: transparent;
-          border: 2px solid #3C1053;
-          border-radius: 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 20px 0;
-
-          @media screen and (min-width: $ipad-pro) {
-            width: 28%;
-            height: 110px;
-          }
-
-          @media screen and (min-width: $large-desktop) {
-            width: 85px;
-            height: 85px;
-          }
-
-          &:hover {
-            text-decoration: none;
-            background-color: $dark-blue;
-            color: $new-white;
-          }
-
-          &__link {
-            width: 85px;
-            height: 85px;
-            color: $dark-blue;
-            font-size: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @media screen and (min-width: $ipad-pro) {
-              width: 28%;
-              height: 110px;
-            }
-
-            @media screen and (min-width: $large-desktop) {
-              width: 85px;
-              height: 85px;
-            }
-
-            &:hover {
-              text-decoration: none;
-              color: $new-white;
-            }
-          }
-        }
-      }
-    }
-
-    &__big-image {
-      display: none;
-
-      @media screen and (min-width: $large-desktop) {
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-        width: 600px;
-      }
-
-      @media screen and (min-width: $extra-large-desktop) {
-        width: 700px;
-        bottom: -50px;
-      }
-    }
   }
 }
 
