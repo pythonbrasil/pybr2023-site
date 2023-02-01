@@ -6,6 +6,6 @@
   "repository": "https://github.com/pythonbrasil/pythonbrasil16-site.git",
   "license": "GPL-3.0",
   "devDependencies": {
-    "sass": "^1.23.6"
+    "sass": "^1.58.0"
   }
 }
