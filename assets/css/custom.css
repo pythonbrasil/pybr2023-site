@@ -206,7 +206,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding-top: 60px;
   height: 100%;
   position: relative;
 }
@@ -913,3 +914,45 @@ body {
 }
 
 /*# sourceMappingURL=custom.css.map */
+
+/* CSS Python 2023 */
+
+.button {
+  min-width: 25%;
+  background-color: #B90867;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  /* font-family: sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+@keyframes glowing {
+  0% {
+    background-color: #B90867;
+    box-shadow: 0 0 5px #fff;
+  }
+  50% {
+    background-color: #7a0544;
+    box-shadow: 0 0 20px #7a0544;
+  }
+  100% {
+    background-color: #B90867;
+    box-shadow: 0 0 5px #B90867;
+  }
+}
+.button {
+  animation: glowing 1300ms infinite;
+}
+
+.overAll {
+  position: relative;
+  z-index: 7;
+}
