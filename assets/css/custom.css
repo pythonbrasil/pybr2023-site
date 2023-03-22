@@ -934,6 +934,7 @@ body {
   text-decoration: none;
   letter-spacing: 4px;
 }
+
 @keyframes glowing {
   0% {
     background-color: #B90867;
@@ -954,7 +955,9 @@ body {
 }
 
 .aButton {
-  animation: glowing 2000ms infinite;
+  color: #eeeeee;
+  background-color: #7a0544;
+  animation: glowing 2000ms infinite !important;
 }
 
 .overAll {
