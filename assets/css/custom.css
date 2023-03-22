@@ -948,11 +948,20 @@ body {
     box-shadow: 0 0 5px #B90867;
   }
 }
+
 .button {
   animation: glowing 1300ms infinite;
+}
+
+.aButton {
+  animation: glowing 2000ms infinite;
 }
 
 .overAll {
   position: relative;
   z-index: 7;
+}
+
+.fontColor {
+  color: #FFF;
 }
