@@ -950,14 +950,20 @@ body {
   }
 }
 
-.button {
+.blinkMe {
   animation: glowing 1300ms infinite;
 }
 
 .aButton {
   color: #eeeeee;
   background-color: #7a0544;
-  animation: glowing 2000ms infinite !important;
+  /* animation: glowing 1900ms infinite !important; */
+}
+
+.bButton {
+  color: #eeeeee;
+  background-color: #7a0544;
+  /* animation: glowing 1900ms infinite !important; */
 }
 
 .overAll {
