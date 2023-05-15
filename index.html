@@ -36,18 +36,26 @@
                 <img class="logo-vertical2023" src="assets/img/logo-vertical2023.png" alt="Logo Python Brasil 2023">
                 <p class="header__brand__title text-white text-uppercase">O maior evento Python da América Latina</p>
             </div>
-
+            <div class="header__right">
+                <div class="p-4 pt-5">
+                    <ul class="list-unstyled components mb-5">
+                        <li>
+                            <a href="#about" class="about__group__description spaceBetween float-right text-white">O Evento</a>
+                        </li>
+                        <li>
+                            <a href="#speakers" class="about__group__description spaceBetween float-right text-white">Keynotes</a>
+                        </li>
+                        <li>
+                            <a href="#agenda" class="about__group__description spaceBetween float-right text-white">Programação</a>
+                        </li>
+                        <li>
+                            <a href="#tickets" class="about__group__description spaceBetween float-right text-white">Ingressos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
             <div class="container-fluid">
-                <!-- <div class="row justify-content-center">
-                  <div class="col-6">
-                    <div class="alert alert-light footer__group__links__item__link main-transition" role="alert">
-                      <h4 class="alert-heading">Python Brasil 2023 adiada</h4>
-                      <p>Por conta da <strong>COVID-19</strong>, a Python Brasil 2023 foi <strong>adiada</strong> para 2021. Ainda sem data confirmada, o local do evento continua o mesmo, <strong>Caxias do Sul - RS</strong>.</p>
-                      <hr>
-                      <p class="mb-0">Atualizações serão adicionadas nesse site e enviadas em nossas redes sociais.</p>
-                    </div>
-                  </div>
-                </div> -->
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8">
                         <div class="header__group text-center">
@@ -108,9 +116,7 @@
                 <br>
             </div>
             <br>
-        </main>
 
-        <!-- <main role="main">
             <section class="about" id="about" style="padding: 100px 0;">
                 <div class="container-fluid">
                     <div class="row">
@@ -121,7 +127,7 @@
                                     <h2 class="about__group__title__text title__group__subtitle text-light-purple fw-300">saiba mais</h2>
                                 </div>
 
-                                <p class="about__group__description">A PythonBrasil é o maior evento sobre linguagem de programação Python do Brasil. Feito pela comunidade para a comunidade, tem o objetivo de difundir a linguagem, promover a troca de experiências e manter a comunidade crescendo igualmente em público e impacto social.</p>
+                                <p class="about__group__description">Python Brasil é o maior evento sobre linguagem de programação Python do Brasil. Feito pela comunidade para a comunidade, tem o objetivo de difundir a linguagem, promover a troca de experiências e manter a comunidade crescendo igualmente em público e impacto social.</p>
                                 <p class="about__group__description">São 6 dias de imersão onde os participantes poderão contribuir para projetos de software livre, participar de treinamentos e adquirir novos conhecimentos com desenvolvedores renomados da comunidade.</p>
                                 <p class="about__group__description">Este ano, está sendo organizada pela comunidade Python de Caxias do Sul/RS com o apoio da APyB (Associação Python Brasil).</p>
                             </div>
@@ -131,7 +137,7 @@
                 <img class="about__image" src="assets/img/image-about.png" alt="Imagem de uma plateia com gradiente rosa por cima. Abaixo está escrito em branco '2023'">
             </section>
 
-            <section class="speakers">
+            <section class="speakers" id="speakers">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 offset-0 col-md-5 offset-md-6">
@@ -139,6 +145,26 @@
                                 <div class="speakers__group__title title__group">
                                     <h1 class="speakers__group__title__text title__group__title font-alice text-white" style="opacity: .1;">Keynotes</h1>
                                     <h2 class="speakers__group__title__text title__group__subtitle text-light-purple fw-300">o time</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 offset-0 col-md-4 offset-md-8">
+                            <div class="speakers__soon text-white">
+                                <p class="speakers__soon__text text-uppercase">Em breve</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="speakers" id="agenda">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 offset-0 col-md-5 offset-md-6">
+                            <div class="speakers__group">
+                                <div class="speakers__group__title title__group">
+                                    <h1 class="speakers__group__title__text title__group__title font-alice text-white" style="opacity: .1;">Programação</h1>
+                                    <h2 class="speakers__group__title__text title__group__subtitle text-light-purple fw-300">do evento</h2>
                                 </div>
                             </div>
                         </div>
@@ -175,15 +201,16 @@
                         <div class="col-12 offset-0 col-md-5 offset-md-3 offset-lg-6">
                             <div class="sponsors__group__cta">
                                 <h4 class="sponsors__group__cta__title fw-700 text-white">Quer ser um(a) parceiro(a)?</h4>
-                                <a class="sponsors__group__cta__btn main-transition" href="https://drive.google.com/open?id=1CTaBIXGERsF9hI9i9o_SXKwzDgVkIuEF" target="_blank">Saiba mais</a>
+                                <a class="sponsors__group__cta__btn main-transition" onclick="window.open('patrocinio_python_brasil_2023.pdf','_blank'); this.blur(); return false;"
+                                target="_blank">Saiba mais</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </main> -->
+        </main>
 
-        <!-- <footer class="footer">
+        <footer class="footer" id="tickets">
             <div class="footer__group">
                 <div class="footer__group__disclaimer">
                     <h1 class="footer__group__disclaimer__text text-white">PythonBrasil is a non-profit volunteer-driv conference for promoting the open source Python programming language. It is supported by the Brazilian Python Association (APyB) and by the Python Software Foundation (PSF).</h1>
@@ -197,27 +224,77 @@
 
                     <div class="footer__group__links__item">
                         <h2 class="footer__group__links__item__title text-uppercase text-light-purple">Ajuda</h2>
-                        <a class="footer__group__links__item__link main-transition" href="https://github.com/pythonbrasil/codigo-de-conduta" target="_blank">Código de Conduta</a>
+                        <a class="footer__group__links__item__link main-transition" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Código de Conduta</a>
                     </div>
 
                     <div class="footer__group__links__item">
                         <h2 class="footer__group__links__item__title text-uppercase text-light-purple">Patrocínios</h2>
-                        <a class="footer__group__links__item__link main-transition" href="https://drive.google.com/open?id=1CTaBIXGERsF9hI9i9o_SXKwzDgVkIuEF" target="_blank">Quero Patrocinar</a>
+                        <a class="footer__group__links__item__link main-transition" onclick="window.open('patrocinio_python_brasil_2023.pdf','_blank'); this.blur(); return false;"
+                        target="_blank">Quero Patrocinar</a>
                     </div>
 
                     <div class="footer__group__links__item">
                         <h2 class="footer__group__links__item__title text-uppercase text-light-purple">Ingressos</h2>
-                        <a class="footer__group__links__item__link footer__group__links__item__link--btn main-transition" href="#" style="cursor: not-allowed;">
+                        <a class="footer__group__links__item__link footer__group__links__item__link--btn main-transition blinkMe"
+                        onclick="window.open('https://www.eventbrite.com.br/e/python-brasil-2023-registration-576537738897','_blank'); this.blur(); return false;"
+                        target="_blank" href="#" style="cursor: not-allowed;">
                             <img class="footer__group__links__item__link--btn__icon" src="assets/svg/icon-coupon.svg" alt="Ícone de 2 ingressos com fundo transparente e bordas brancas" width="26">
-                            Ingressos em breve
+                            Ingressos
                         </a>
                     </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
 
-        <!-- <img class="full-image-bottom" src="assets/img/detail-sponsors.png" alt="Homem palestrando, segurando microfone, de costas e olhando para o público"> -->
+        <img class="full-image-bottom" src="assets/img/detail-sponsors.png" alt="Homem palestrando, segurando microfone, de costas e olhando para o público">
 
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-xl modal-lg modal-sm modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Código de Conduta</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div w3-include-html="assets/data/codigo_conduta.html"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function includeHTML() {
+                var z, i, elmnt, file, xhttp;
+                /*loop through a collection of all HTML elements:*/
+                z = document.getElementsByTagName("*");
+                for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    /*search for elements with a certain attribute:*/
+                    file = elmnt.getAttribute("w3-include-html");
+                    if (file) {
+                        /*make an HTTP request using the attribute value as the file name:*/
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4) {
+                                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                                if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                                /*remove the attribute, and call this function once more:*/
+                                elmnt.removeAttribute("w3-include-html");
+                                includeHTML();
+                            }
+                        }
+                        xhttp.open("GET", file, true);
+                        xhttp.send();
+                        /*exit the function:*/
+                        return;
+                    }
+                }
+            };
+            includeHTML();
+        </script>
         <script src="assets/js/jquery-3.4.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
     </body>

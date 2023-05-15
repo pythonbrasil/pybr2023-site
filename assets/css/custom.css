@@ -236,10 +236,25 @@ body {
     left: 5%;
     top: 10%;
   }
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    right: 5%;
+    top: 10%;
+  }
 }
 @media screen and (min-width: 1600px) {
   .header__brand {
     left: 8%;
+    top: 20%;
+  }
+  .header__right {
+    right: 8%;
     top: 20%;
   }
 }
@@ -973,4 +988,33 @@ body {
 
 .fontColor {
   color: #FFF;
+}
+
+/* //////////////////////////// */
+.about__group__description.spaceBetween {
+  line-height: 3 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:link {
+  text-decoration: none !important;
+}
+
+a:visited {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:active {
+  text-decoration: none !important;
+}
+
+.modal-body {
+  padding-left: 2.5rem;
 }
