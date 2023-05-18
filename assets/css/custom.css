@@ -31,6 +31,19 @@ body {
   z-index: 100;
 }
 
+.call_for_action {
+  width: 80%;
+  height: auto;
+  z-index: 100;
+  padding: 20px;
+  display: block;
+  background-color: #FFF;
+}
+
+.max_height_30 {
+  height: 30px !important;
+}
+
 @media screen and (min-width: 1200px) {
   .full-white-block {
     display: block;
@@ -236,10 +249,25 @@ body {
     left: 5%;
     top: 10%;
   }
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    right: 5%;
+    top: 10%;
+  }
 }
 @media screen and (min-width: 1600px) {
   .header__brand {
     left: 8%;
+    top: 20%;
+  }
+  .header__right {
+    right: 8%;
     top: 20%;
   }
 }
@@ -954,6 +982,10 @@ body {
   animation: glowing 1300ms infinite;
 }
 
+.blinkMe2 {
+  animation: glowing 1800ms infinite;
+}
+
 .aButton {
   color: #eeeeee;
   background-color: #7a0544;
@@ -972,5 +1004,38 @@ body {
 }
 
 .fontColor {
-  color: #FFF;
+  color: #7a0544;
+}
+
+.navColor {
+  color: #08293C;
+}
+
+/* //////////////////////////// */
+.about__group__description.spaceBetween {
+  line-height: 3 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:link {
+  text-decoration: none !important;
+}
+
+a:visited {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:active {
+  text-decoration: none !important;
+}
+
+.modal-body {
+  padding-left: 2.5rem;
 }
