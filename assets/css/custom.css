@@ -31,6 +31,19 @@ body {
   z-index: 100;
 }
 
+.call_for_action {
+  width: 80%;
+  height: auto;
+  z-index: 100;
+  padding: 20px;
+  display: block;
+  background-color: #FFF;
+}
+
+.max_height_30 {
+  height: 30px !important;
+}
+
 @media screen and (min-width: 1200px) {
   .full-white-block {
     display: block;
@@ -969,6 +982,10 @@ body {
   animation: glowing 1300ms infinite;
 }
 
+.blinkMe2 {
+  animation: glowing 1800ms infinite;
+}
+
 .aButton {
   color: #eeeeee;
   background-color: #7a0544;
@@ -987,7 +1004,7 @@ body {
 }
 
 .fontColor {
-  color: #FFF;
+  color: #7a0544;
 }
 
 /* //////////////////////////// */
