@@ -1007,6 +1007,10 @@ body {
   color: #7a0544;
 }
 
+.navColor {
+  color: #08293C;
+}
+
 /* //////////////////////////// */
 .about__group__description.spaceBetween {
   line-height: 3 !important;
