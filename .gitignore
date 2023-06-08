@@ -1,6 +1,14 @@
-.DS_Store
+output/
 env/
+.env
+.DS_Store
 venv/
+.venv/
 node_modules/
 .sass-cache/
 .vscode/
+__pycache__/
+*~
+*.swp
+*.sublime-project
+*.sublime-workspace

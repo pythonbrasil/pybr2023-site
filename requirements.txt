@@ -1,1 +1,4 @@
-livereload==2.6.1
+pelican[markdown]
+livereload
+invoke
+ghp-import

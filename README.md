@@ -1,109 +1,38 @@
-![Logo Python Brasil 2020 - Caxias do Sul/RS](docs/images/logo-python-brasil-2023.jpg)
+PyCaxias
+============
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Logo PyCaxias](./util/logo2023-2.png)
 
-> Página oficial da Python Brasil 2023 - Caxias do Sul/RS.
+[PyCaxias.org](https://pycaxias.com.br/)
 
-## Sobre o projeto
+Repositorio do site PyCaxias 
 
-* **Tecnologias:** HTML, CSS (SCSS), JS, jQuery e Bootstrap 4
-* **Metodologias:** BEM - CSS
-* **Servidor:** Python
+Evento da comunidade Python de Caxias do Sul, com intuito de popularizar e disseminar o conhecimento da linguagem python.
 
-## Rodando o projeto
+Projeto [Pelican](https://docs.getpelican.com/en/latest/)!
 
-Instale as dependências do projeto rodando:
-
-```sh
-npm install
+# Ambiente
+```shell
+git clone git@github.com:RedeNeural/PyCaxias.git;
+cd PyCaxias
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Ou se preferir use essa opção:
-
-```sh
-yarn install
+# Rodar
+```shell
+source .venv/bin/activate
+invoke reserve
 ```
 
-Para facilitar o desenvolvimento, você pode ativar o servidor local que irá atualizar o navegador a cada alteração dos estáticos da página.
+# Configuração
 
-### Configurando o servidor pela primeira vez
+> 
+> python decouple para configurar a url.
+>
 
-**Caso já tenha Virtualenv instalado, por favor, pule essa etapa:**
-
-```sh
-pip install virtualenv
-```
-
-Depois:
-
-```sh
-make local/create-env
-```
-
-```sh
-source venv/bin/activate
-```
-
-```sh
-make local/install
-```
-
-#### Ativando o servidor
-
-```sh
-make local/run-server
-```
-
-### Encerrando o servidor
-
-```sh
-deactivate
-```
-
-### Ativando o servidor (após ter encerrado, fechado e aberto novamente)
-
-No diretório do projeto:
-
-```sh
-source venv/bin/activate
-```
-
-```sh
-make local/run-server
-```
-
-## Alterando os estilos da página
-
-Este projeto utiliza SASS (SCSS). Os arquivos a serem alterados estão no seguinte diretório:
-
-```
-.
-├── assets
-│   ├── sass
-│   |    └── layout.scss
-│   |    └── main.scss
-```
-
-Antes de alterar os arquivos, rode o seguinte comando:
-
-```sh
-sass --watch assets/sass/main.scss:assets/css/custom.css
-```
-
-Em quaisquer alterações o seguinte arquivo será alterado, arquivo esse que é o que a página consome:
-
-```
-.
-├── assets
-│   ├── css
-│   |    └── custom.scss
-```
-
-# Alternativa de execução
-
-Use docker para fazer a build e execução do projeto
-
-```
-docker build -f Dockerfile -t pybr16:dev .
-docker run -v "${PWD}:/src" -p 5500:5500 --rm  pybr16:dev
+# Deploy
+```shell
+[dentro da env]$ invoke gh-pages
 ```
