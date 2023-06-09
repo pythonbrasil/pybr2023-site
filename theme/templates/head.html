@@ -1,0 +1,49 @@
+<head>
+    <meta charset="utf-8">
+    <title>Python Brasil 2023</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="{{SITE_META_KEYWORDS}}" name="keywords">
+    <meta content="{{SITE_META_DESCRIPTION}}" name="description">
+  
+    <!-- Favicons -->
+    <link href="/theme/img/favicon.png" rel="icon">
+    <link href="/theme/img/favicon.png" rel="apple-touch-icon">
+
+    <meta property="og:title" content="Python Brasil">
+    <meta property="og:type" content="Python Brasil">
+    <meta property="og:description" content="{{SITE_META_DESCRIPTION}}">
+    {% if article %}
+    <meta property="og:image" content="{{ SITEURL }}/theme/img/palestrante/{{article.image}}">
+    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+    {% else %}
+    <meta property="og:image" content="{{ SITEURL }}/theme/img/share.png?v={{SITEYEAR}}">
+    <meta property="og:url" content="{{ SITEURL }}">
+    {% endif %}
+    <meta property="og:image:alt" content="Python Brasil {{SITEYEAR}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200px">
+    <meta property="og:image:height" content="630px">
+    
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  
+    <!-- Main Stylesheet File -->
+    <link href="/theme/css/style.css" rel="stylesheet">
+  
+    <!-- =======================================================
+      Theme Name: TheEvent
+      Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128014134-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-128014134-1');
+    </script> -->
+  </head>

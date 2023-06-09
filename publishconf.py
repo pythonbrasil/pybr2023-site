@@ -11,7 +11,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = 'https://pycaxias.com.br'
+SITEURL = 'https://pythonbrasil.org.br'
 THEME = 'theme'
 RELATIVE_URLS = False
 
