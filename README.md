@@ -1,5 +1,3 @@
-![Logo Python Brasil 2020 - Caxias do Sul/RS](docs/images/logo-python-brasil-2023.jpg)
-
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 > Página oficial da Python Brasil 2023 - Caxias do Sul/RS.
