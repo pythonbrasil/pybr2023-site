@@ -15,16 +15,15 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     {% for tag, text, active in MENU %}
-                        {% if active %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{tag}}">{{text}}</a>
-                            </li>
-                        {% endif %}
+                    {% if active %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{tag}}">{{text}}</a>
+                    </li>
+                    {% endif %}
                     {% endfor %}
                     {% if EVENTO.inscricao %}
                     <li class="nav-item">
-                        <a class="nav-link eventbright" target="_blank"
-                            href="{{EVENTO.inscricao}}">Comprar
+                        <a class="nav-link eventbright" target="_blank" href="{{EVENTO.inscricao}}">Comprar
                             Ingresso!</a>
                     </li>
                     {% endif %}
@@ -44,8 +43,7 @@
                     <p>As inscrições para a Python Brasil {{SITEYEAR}} podem ser feitas pelo botão abaixo.</p>
 
                     <p>
-                        <a href="{{EVENTO.inscricao}}"
-                            target="_blank" class="btn btn-outline-light">
+                        <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
                             <i class="fa-solid fa-ticket"></i>
                             Inscreva-se para o evento aqui (Presencial e online)
                         </a>
@@ -59,15 +57,25 @@
                 <h2 class="title">O Evento</h2>
                 <hr class="divider" />
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa quasi vitae dolor nostrum
-                    dignissimos doloribus, minus eum consequatur, error iusto unde voluptatum, cum exercitationem
-                    voluptate dolorum vel fuga provident?
+                    A Python Brasil é a maior conferência da linguagem de programação Python da América Latina.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa quasi vitae dolor nostrum
-                    dignissimos doloribus, minus eum consequatur, error iusto unde voluptatum, cum exercitationem
-                    voluptate dolorum vel fuga provident?
+
+                    É um evento itinerante, que a cada ano é sediado em uma cidade diferente do país, organizado por
+                    pessoas
+                    voluntárias da comunidade local.
                 </p>
+                <p>
+                    Temos como principais objetivos: difundir a linguagem Python; promover a troca de experiências e
+                    conhecimentos; e incentivar o crescimento da comunidade, impactando econômica e socialmente a
+                    região.
+
+                </p>
+                <p>
+                    Este ano evento acontece:<br />
+                    Entre os dias 30 de outubro e 05 de novembro em Caxias do Sul (RS).
+                </p>
+
             </div>
         </section>
         <section class="section keynotes" id="keynotes">
@@ -77,46 +85,12 @@
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid rounded-start" alt="...">
+                            <img src="{{SITEURL}}/theme/img/keynotes.png" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Keynote-1</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Keynote-2</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Keynote-3</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                <h5 class="card-title">Keynote</h5>
+                                <p class="card-text">Logo teremos novidades anciosos para saber os keynotes desse ano ?</p>
                                 </p>
                             </div>
                         </div>
@@ -129,30 +103,48 @@
                 <h2 class="title"> Os Programação do Evento </h2>
                 <hr class="divider" />
                 <div class="row">
-                    <div class="cols">
+                    <div class="col">
                         <h3>Tutoriais</h3>
                         <p>
                             30, 31 de Outubro e 01 de Novembro </br>
-                            Espaço gratuido da python brasil onde é construido um espaço para aprendizagem e troca de informações
+                            Espaço gratuido da python brasil onde é construido um espaço para aprendizagem e troca de
+                            informações
                         </p>
                     </div>
-                    <div class="cols">
+                    <div class="col">
                         <h3>Palestras</h3>
                         <p>
                             02, 03, 04 de Novembro </br>
-                            Dias principais do evento, espaço para job fair, network, palestras de diversos temas acontencendo simultaneamente
+                            Dias principais do evento, espaço para job fair, network, palestras de diversos temas
+                            acontencendo simultaneamente
                         </p>
                     </div>
-                    <div class="cols">
+                    <div class="col">
                         <h3>Sprint</h3>
                         <p>
                             05 de Novembro </br>
-                            Espaço gratuido da python brasil onde é construido um espaço para contribuição em projetos open source 
+                            Espaço gratuido da python brasil onde é construido um espaço para contribuição em projetos
+                            open source
                         </p>
                     </div>
                 </div>
                 <div>
-                    Grade ainda em construção!
+                    <p>
+                        Grade ainda em construção!<br>
+                        enquanto isso ja garantiu seu ingresso ?
+                    </p>
+                    <p>
+                        <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
+                            <i class="fa-solid fa-ticket"></i>
+                            Inscreva-se para o evento aqui (Presencial e online)
+                        </a>
+                    </p>
+                    <p>
+                        Que tal ir conhecendo a cidade do evento ?<br>
+                        <a href="https://www.google.com/maps/place/Caxias+do+Sul,+RS/" target="_blank" class="btn btn-outline-light">
+                            Caxias do sul RS
+                        </a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -164,18 +156,33 @@
                     <div class="col">
                         <h3>Palestrantes/Tutoriais</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa quasi vitae dolor
-                            nostrum dignissimos doloribus, minus eum consequatur, error iusto unde voluptatum, cum
-                            exercitationem voluptate dolorum vel fuga provident?
+                            Vem fazer um evento incrivel, com sua palestra ou tutorial
                         </p>
+                        <a href="{{EVENTO.submissao}}" target="_blank" class="btn btn-outline-light">
+                            <i class="fa-solid fa-person-chalkboard"></i>
+                            Inscrever sua palestra!
+                        </a>
                     </div>
                     <div class="col">
                         <h3>Patrocinar/Apoiar</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa quasi vitae dolor
-                            nostrum dignissimos doloribus, minus eum consequatur, error iusto unde voluptatum, cum
-                            exercitationem voluptate dolorum vel fuga provident?
+                            Que tal apresentar a python brasil na sua empresa? ou ser uma presensa confirmada na maior
+                            Conferência de Python da América Latina
                         </p>
+                        <div class="row">
+                            <div class="col">
+                                <a href="{{PLANOS.pt_br}}" target="_blank" class="btn btn-outline-light">
+                                    <i class="fa-solid fa-suitcase"></i>
+                                    Media kit (pt-br)
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="{{PLANOS.en}}" target="_blank" class="btn btn-outline-light">
+                                    <i class="fa-solid fa-suitcase"></i>
+                                    Media kit (en)
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,128 +193,100 @@
                 <hr class="divider" />
                 <h3 class="patrocinio-title">Diamante</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_grande.png" alt="padrocinador">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Platina</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Ouro</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Prata</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Bronze</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Apoios</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Embaixadores</h3>
+                <p>
+                    Venha ser um embaixador da python brasil aquele influencer que nos ajuda a alcançar muitas pessoas!
+                    exigimos que seja uma pessoa publica e passará por avaliação da org para entrar no site!
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <a href="{{EVENTO.kit_divulgacao}}" target="_blank" class="btn btn-outline-light">
+                            SVG's para selembrar que vai na pybr
+                        </a>
+                    </div>
+                </div>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
-                    </div>
-                    <div class="col-2">
-                        <img src="{{SITEURL}}/theme/img/patrocinio.png" class="img-fluid" alt="padrocinador">
+                    <div class="col">
+                        <img src="{{SITEURL}}/theme/img/embaixadores.png" alt="padrocinador">
                     </div>
                 </div>
             </div>

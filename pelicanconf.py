@@ -58,6 +58,13 @@ SITE_META_DESCRIPTION = "Python Brasil é o maior evento sobre linguagem de prog
 
 EVENTO = {
     'inscricao':'https://www.eventbrite.com.br/e/python-brasil-2023-registration-576537738897',
+    'submissao':'https://pretalx.com/python-brasil-2023/cfp',
     'data_evento': 'DE 30 OUTUBRO À 05 NOVEMBRO',
-    'cidade': 'Caxias do Sul, RS'
+    'cidade': 'Caxias do Sul, RS',
+    'kit_divulgacao': '/theme/media_kits/frame.zip'
+}
+
+PLANOS = {
+    'pt_br':'/theme/media_kits/python_brasil_2023_pt_br.pdf',
+    'en':'/theme/media_kits/python_brasil_2023_en.pdf',
 }

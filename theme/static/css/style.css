@@ -1,5 +1,4 @@
 :root {
-  --white: #ffffff;
   --main-color: #b21b69;
   --secondar-color: #08293C;
   --complement-color: #622562;
@@ -34,7 +33,7 @@
 
 .title {
   font-weight: bold;
-  color: var(--secondar-color);
+  color: white;
   font-size: 4em;
 }
 
@@ -42,7 +41,7 @@ body {
   min-height: 100vh;
   background: var(--secondar-color);
   font-family: 'Signika';
-  color: var(--white);
+  color: white;
   overflow-x: hidden;
 }
 
@@ -53,26 +52,26 @@ main {
 .nav-item .nav-link {
   font-family: 'Signika';
   font-weight: bold;
-  color: var(--white);
+  color: white;
 }
 
 .nav-item .nav-link.eventbright {
   font-family: 'Signika';
   color: var(--secondar-color);
   padding: 3px 15px;
-  background-color: var(--white);
+  background-color: white;
   border-radius: 50px;
 }
 
 .hashtag {
   font-family: 'Signika';
-  color: var(--white);
+  color: white;
   font-size: 2em;
   text-align: left;
 }
 
 .local {
-  color: var(--white);
+  color: white;
   font-size: 6em;
   text-align: left;
   display: flex;
@@ -146,21 +145,21 @@ main {
 }
 
 .keynote:nth-child(even) .keynotes-description{
-  background-color: var(--white);
+  background-color: white;
   text-align: right;
   display: inline-block;
   width: 50%;
 }
 
 .divider {
-  border: 2px solid var(--white);
+  border: 2px solid white;
   margin: auto;
   margin-bottom: 10px;
   width: 50%;
 }
 
 .keynote:nth-child(even) .keynotes-description{
-  background-color: var(--white);
+  background-color: white;
   text-align: left;
   display: inline-block;
   width: 50%;
@@ -168,4 +167,8 @@ main {
 
 .keynote img {
   display: inline-block;
+}
+
+.list-group-item a {
+  text-decoration: none;
 }
