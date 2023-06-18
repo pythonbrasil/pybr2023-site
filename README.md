@@ -1,7 +1,7 @@
-Python Brasil 2023
-============
-
 ![Logo Python Brasil](./util/capa.png)
+
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 [Site Python Brasil](https://2023.pythonbrasil.org.br)
 
