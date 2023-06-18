@@ -1,13 +1,7 @@
-PyCaxias
+Python Brasil 2023
 ============
 
-![Logo PyCaxias](./util/logo2023-2.png)
-
-[PyCaxias.org](https://pycaxias.com.br/)
-
-Repositorio do site PyCaxias 
-
-Evento da comunidade Python de Caxias do Sul, com intuito de popularizar e disseminar o conhecimento da linguagem python.
+Repositorio do site Python Brasil 2023
 
 Projeto [Pelican](https://docs.getpelican.com/en/latest/)!
 
