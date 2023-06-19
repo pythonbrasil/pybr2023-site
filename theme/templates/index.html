@@ -10,7 +10,7 @@
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
@@ -33,28 +33,31 @@
     </nav>
     <main class="container-fluid text-center mt-4 g-0">
         <section class="section inicio" id="inicio">
-            <div class="row align-items-center">
-                <div class="col-5">
-                    <img src="/theme/img/capa.png" alt="logo" class="img-fluid">
-                </div>
-                <div class="col-7">
-                    <h2 class="local">{{EVENTO.data_evento}} {{SITEYEAR}}</h2>
-                    <p class="hashtag">#PYTHONBRASIL{{SITEYEAR}}</p>
-                    <p>As inscrições para a Python Brasil {{SITEYEAR}} podem ser feitas pelo botão abaixo.</p>
-
-                    <p>
-                        <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
-                            <i class="fa-solid fa-ticket"></i>
-                            Inscreva-se para o evento aqui (Presencial e online)
-                        </a>
-                        <p class="">{{EVENTO.cidade}}</p>
-                    </p>
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg">
+                        <img src="/theme/img/capa.png" alt="logo" class="img-fluid">
+                    </div>
+                    <div class="col-lg">
+                        <div class="container">
+                            <h2 class="fs-1">{{EVENTO.data_evento}} {{SITEYEAR}}</h2>
+                            <p class="fs-2">#PYTHONBRASIL{{SITEYEAR}}</p>
+                            <p>As inscrições para a Python Brasil {{SITEYEAR}} podem ser feitas pelo botão abaixo.</p>
+                            <p>
+                                <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
+                                    <i class="fa-solid fa-ticket"></i>
+                                    Inscreva-se para o evento aqui (Presencial e online)
+                                </a>
+                                <p class="">{{EVENTO.cidade}}</p>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="section evento" id="evento">
             <div class="container">
-                <h2 class="title">O Evento</h2>
+                <h2 class="title fs-1">O Evento</h2>
                 <hr class="divider" />
                 <p>
                     A Python Brasil é a maior conferência da linguagem de programação Python da América Latina.
@@ -80,17 +83,18 @@
         </section>
         <section class="section keynotes" id="keynotes">
             <div class="container">
-                <h2 class="title"> Os Keynotes </h2>
+                <h2 class="title fs-1"> Os Keynotes </h2>
                 <hr class="divider" />
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <div class="col-md-4">
+                        <div class="col-md">
                             <img src="{{SITEURL}}/theme/img/keynotes.png" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Keynote</h5>
-                                <p class="card-text">Logo teremos novidades anciosos para saber os keynotes desse ano ?</p>
+                                <p class="card-text">Logo teremos novidades anciosos para saber os keynotes desse ano ?
+                                </p>
                                 </p>
                             </div>
                         </div>
@@ -100,10 +104,10 @@
         </section>
         <section class="section programacao" id="programacao">
             <div class="container">
-                <h2 class="title"> Os Programação do Evento </h2>
+                <h2 class="title fs-1"> Os Programação do Evento </h2>
                 <hr class="divider" />
                 <div class="row">
-                    <div class="col">
+                    <div class="col-lg">
                         <h3>Tutoriais</h3>
                         <p>
                             30, 31 de Outubro e 01 de Novembro </br>
@@ -111,7 +115,7 @@
                             informações
                         </p>
                     </div>
-                    <div class="col">
+                    <div class="col-lg">
                         <h3>Palestras</h3>
                         <p>
                             02, 03, 04 de Novembro </br>
@@ -119,7 +123,7 @@
                             acontencendo simultaneamente
                         </p>
                     </div>
-                    <div class="col">
+                    <div class="col-lg">
                         <h3>Sprint</h3>
                         <p>
                             05 de Novembro </br>
@@ -141,7 +145,8 @@
                     </p>
                     <p>
                         Que tal ir conhecendo a cidade do evento ?<br>
-                        <a href="https://www.google.com/maps/place/Caxias+do+Sul,+RS/" target="_blank" class="btn btn-outline-light">
+                        <a href="https://www.google.com/maps/place/Caxias+do+Sul,+RS/" target="_blank"
+                            class="btn btn-outline-light">
                             Caxias do sul RS
                         </a>
                     </p>
@@ -150,10 +155,10 @@
         </section>
         <section class="section trabalhos" id="trabalhos">
             <div class="container">
-                <h2 class="title"> Chamada para trabalhos </h2>
+                <h2 class="title fs-1"> Chamada para trabalhos </h2>
                 <hr class="divider" />
                 <div class="row">
-                    <div class="col">
+                    <div class="col-lg">
                         <h3>Palestrantes/Tutoriais</h3>
                         <p>
                             Vem fazer um evento incrivel, com sua palestra ou tutorial
@@ -163,20 +168,20 @@
                             Inscrever sua palestra!
                         </a>
                     </div>
-                    <div class="col">
+                    <div class="col-lg">
                         <h3>Patrocinar/Apoiar</h3>
                         <p>
                             Que tal apresentar a python brasil na sua empresa? ou ser uma presensa confirmada na maior
                             Conferência de Python da América Latina
                         </p>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-lg">
                                 <a href="{{PLANOS.pt_br}}" target="_blank" class="btn btn-outline-light">
                                     <i class="fa-solid fa-suitcase"></i>
                                     Media kit (pt-br)
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-lg">
                                 <a href="{{PLANOS.en}}" target="_blank" class="btn btn-outline-light">
                                     <i class="fa-solid fa-suitcase"></i>
                                     Media kit (en)
@@ -189,87 +194,87 @@
         </section>
         <section class="section patrocinadores" id="patrocinadores">
             <div class="container">
-                <h2 class="title">Os Patrocinadores</h2>
+                <h2 class="title fs-1">Os Patrocinadores</h2>
                 <hr class="divider" />
                 <h3 class="patrocinio-title">Diamante</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_grande.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_grande.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Platina</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Ouro</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Prata</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Bronze</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Apoios</h3>
                 <div class="row patrocinio justify-content-center">
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador">
+                    <div class="col-lg">
+                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
                     </div>
                 </div>
                 <h3 class="patrocinio-title">Embaixadores</h3>
@@ -286,7 +291,7 @@
                 </div>
                 <div class="row patrocinio justify-content-center">
                     <div class="col">
-                        <img src="{{SITEURL}}/theme/img/embaixadores.png" alt="padrocinador">
+                        <img src="{{SITEURL}}/theme/img/embaixadores.png" alt="padrocinador" class="img-fluid">
                     </div>
                 </div>
             </div>
