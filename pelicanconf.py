@@ -6,11 +6,8 @@ AUTHOR = 'Python Brasil'
 
 SITENAME = 'Python Brasil 2023'
 SITEYEAR = 2023
-
-SITEURL = '/'
-
+SITEURL = ''
 PATH = 'content'
-
 SITEMAP = {
     'format': 'xml',
     'exclude': ['tags.html', 'categories.html', 'authors.html', 'archives.html']
@@ -24,7 +21,7 @@ DEFAULT_LANG = 'pt-br'
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
-
+USE_FOLDER_AS_CATEGORY = True
 # OLD_EVENTS
 OLD_EVENTS = []
 # OLD_EVENTS

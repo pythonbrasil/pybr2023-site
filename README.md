@@ -51,4 +51,3 @@ vai rodar em http://127.0.0.1:8000/
 ```shell
 [dentro da env]$ invoke gh-pages
 ```
-

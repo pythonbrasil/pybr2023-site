@@ -42,13 +42,16 @@
                         <div class="container">
                             <h2 class="fs-1">{{EVENTO.data_evento}} {{SITEYEAR}}</h2>
                             <p class="fs-2">#PYTHONBRASIL{{SITEYEAR}}</p>
-                            <p>As inscrições para a Python Brasil {{SITEYEAR}} podem ser feitas pelo botão abaixo.</p>
-                            <p>
+                            <p class="fs-3">As inscrições para a Python Brasil {{SITEYEAR}} podem ser feitas pelo botão
+                                abaixo.</p>
+                            <p class="fs-3">
                                 <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
                                     <i class="fa-solid fa-ticket"></i>
                                     Inscreva-se para o evento aqui (Presencial e online)
                                 </a>
-                                <p class="">{{EVENTO.cidade}}</p>
+                                <p>
+                                    <strong class="fs-3">{{EVENTO.cidade}}</strong>
+                                </p>
                             </p>
                         </div>
                     </div>
@@ -59,49 +62,54 @@
             <div class="container">
                 <h2 class="title fs-1">O Evento</h2>
                 <hr class="divider" />
-                <p>
+                <p class="fs-3">
                     A Python Brasil é a maior conferência da linguagem de programação Python da América Latina.
                 </p>
-                <p>
-
+                <p class="fs-3">
                     É um evento itinerante, que a cada ano é sediado em uma cidade diferente do país, organizado por
                     pessoas
                     voluntárias da comunidade local.
                 </p>
-                <p>
+                <p class="fs-3">
                     Temos como principais objetivos: difundir a linguagem Python; promover a troca de experiências e
                     conhecimentos; e incentivar o crescimento da comunidade, impactando econômica e socialmente a
                     região.
 
                 </p>
-                <p>
+                <p class="fs-3">
                     Este ano evento acontece:<br />
-                    Entre os dias 30 de outubro e 05 de novembro em Caxias do Sul (RS).
+                    <strong>Entre os dias 30 de outubro e 05 de novembro em Caxias do Sul (RS).</strong>
                 </p>
 
             </div>
         </section>
-        <section class="section keynotes" id="keynotes">
+        <!-- <section class="section keynotes" id="keynotes">
             <div class="container">
                 <h2 class="title fs-1"> Os Keynotes </h2>
                 <hr class="divider" />
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md">
-                            <img src="{{SITEURL}}/theme/img/keynotes.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Keynote</h5>
-                                <p class="card-text">Logo teremos novidades anciosos para saber os keynotes desse ano ?
-                                </p>
-                                </p>
+                <div class="row">
+                    {% for cat, posts in categories if cat == 'keynotes' %}
+                        {% for post in posts %}
+                        <div class="card mb-3">
+                            <div class="row">
+                                <div class="col-md">
+                                    <img src="{{SITEURL}}{{post.image}}" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-1 text-start">{{post.name}}</h5>
+                                        <p class="card-text fs-2 text-start">
+                                            {{post.summary}}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="section programacao" id="programacao">
             <div class="container">
                 <h2 class="title fs-1"> Os Programação do Evento </h2>
@@ -109,7 +117,7 @@
                 <div class="row">
                     <div class="col-lg">
                         <h3>Tutoriais</h3>
-                        <p>
+                        <p class="fs-4">
                             30, 31 de Outubro e 01 de Novembro </br>
                             Espaço gratuido da python brasil onde é construido um espaço para aprendizagem e troca de
                             informações
@@ -117,7 +125,7 @@
                     </div>
                     <div class="col-lg">
                         <h3>Palestras</h3>
-                        <p>
+                        <p class="fs-4">
                             02, 03, 04 de Novembro </br>
                             Dias principais do evento, espaço para job fair, network, palestras de diversos temas
                             acontencendo simultaneamente
@@ -125,25 +133,26 @@
                     </div>
                     <div class="col-lg">
                         <h3>Sprint</h3>
-                        <p>
+                        <p class="fs-4">
                             05 de Novembro </br>
                             Espaço gratuido da python brasil onde é construido um espaço para contribuição em projetos
                             open source
                         </p>
                     </div>
                 </div>
+                <hr class="divider" />
                 <div>
-                    <p>
+                    <p class="fs-4">
                         Grade ainda em construção!<br>
                         enquanto isso ja garantiu seu ingresso ?
                     </p>
-                    <p>
+                    <p class="fs-4">
                         <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
                             <i class="fa-solid fa-ticket"></i>
                             Inscreva-se para o evento aqui (Presencial e online)
                         </a>
                     </p>
-                    <p>
+                    <p class="fs-4">
                         Que tal ir conhecendo a cidade do evento ?<br>
                         <a href="https://www.google.com/maps/place/Caxias+do+Sul,+RS/" target="_blank"
                             class="btn btn-outline-light">
@@ -160,17 +169,18 @@
                 <div class="row">
                     <div class="col-lg">
                         <h3>Palestrantes/Tutoriais</h3>
-                        <p>
+                        <p class="fs-4">
                             Vem fazer um evento incrivel, com sua palestra ou tutorial
                         </p>
                         <a href="{{EVENTO.submissao}}" target="_blank" class="btn btn-outline-light">
                             <i class="fa-solid fa-person-chalkboard"></i>
                             Inscrever sua palestra!
                         </a>
+
                     </div>
                     <div class="col-lg">
                         <h3>Patrocinar/Apoiar</h3>
-                        <p>
+                        <p class="fs-4">
                             Que tal apresentar a python brasil na sua empresa? ou ser uma presensa confirmada na maior
                             Conferência de Python da América Latina
                         </p>
@@ -187,115 +197,95 @@
                                     Media kit (en)
                                 </a>
                             </div>
+                            <div class="col-lg">
+                                <a href="{{EVENTO.kit_divulgacao}}" target="_blank" class="btn btn-outline-light">
+                                    <i class="fa-solid fa-suitcase"></i>
+                                    Para Participantes!
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section patrocinadores" id="patrocinadores">
+        
+        <!-- <section class="section patrocinadores" id="patrocinadores">
             <div class="container">
                 <h2 class="title fs-1">Os Patrocinadores</h2>
                 <hr class="divider" />
-                <h3 class="patrocinio-title">Diamante</h3>
-                <div class="row patrocinio justify-content-center">
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_grande.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                </div>
-                <h3 class="patrocinio-title">Platina</h3>
-                <div class="row patrocinio justify-content-center">
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                </div>
-                <h3 class="patrocinio-title">Ouro</h3>
-                <div class="row patrocinio justify-content-center">
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_medio.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                </div>
-                <h3 class="patrocinio-title">Prata</h3>
-                <div class="row patrocinio justify-content-center">
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                </div>
-                <h3 class="patrocinio-title">Bronze</h3>
-                <div class="row patrocinio justify-content-center">
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                </div>
-                <h3 class="patrocinio-title">Apoios</h3>
-                <div class="row patrocinio justify-content-center">
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                    <div class="col-lg">
-                        <img src="{{SITEURL}}/theme/img/patrocinio_pqno.png" alt="padrocinador" class="img-fluid m-2">
-                    </div>
-                </div>
-                <h3 class="patrocinio-title">Embaixadores</h3>
-                <p>
-                    Venha ser um embaixador da python brasil aquele influencer que nos ajuda a alcançar muitas pessoas!
-                    exigimos que seja uma pessoa publica e passará por avaliação da org para entrar no site!
-                </p>
                 <div class="row">
-                    <div class="col">
-                        <a href="{{EVENTO.kit_divulgacao}}" target="_blank" class="btn btn-outline-light">
-                            SVG's para selembrar que vai na pybr
-                        </a>
-                    </div>
+                    {% for cat, posts in categories if cat == 'diamante' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
                 </div>
-                <div class="row patrocinio justify-content-center">
-                    <div class="col">
-                        <img src="{{SITEURL}}/theme/img/embaixadores.png" alt="padrocinador" class="img-fluid">
-                    </div>
+                <div class="row">
+                    {% for cat, posts in categories if cat == 'platina' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for cat, posts in categories if cat == 'ouro' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for cat, posts in categories if cat == 'prata' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+
+                <div class="row">
+                    {% for cat, posts in categories if cat == 'bronze' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for cat, posts in categories if cat == 'apoios' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for cat, posts in categories if cat == 'embaixadores' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     {% include 'footer.html' %}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -305,5 +295,4 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
