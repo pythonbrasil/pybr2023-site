@@ -34,7 +34,6 @@
 .title {
   font-weight: bold;
   color: white;
-  font-size: 4em;
 }
 
 body {
@@ -66,13 +65,11 @@ main {
 .hashtag {
   font-family: 'Signika';
   color: white;
-  font-size: 2em;
   text-align: left;
 }
 
 .local {
   color: white;
-  font-size: 6em;
   text-align: left;
   display: flex;
   vertical-align: middle;
@@ -137,7 +134,6 @@ main {
 }
 
 .container p {
-  font-size: 1.5em;
 }
 
 .keynotes {
@@ -171,4 +167,9 @@ main {
 
 .list-group-item a {
   text-decoration: none;
+}
+
+.navbar-toggler{
+  border: 0;
+  color: #fff;
 }
