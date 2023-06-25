@@ -133,9 +133,6 @@ main {
   margin-top: 15px;
 }
 
-.container p {
-}
-
 .keynotes {
   list-style: none;
 }
@@ -172,4 +169,46 @@ main {
 .navbar-toggler{
   border: 0;
   color: #fff;
+}
+
+.btn-block{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.list-object {
+  list-style-image: url("/theme/img/list_icon.png");
+}
+
+.list-item-li{
+  margin-bottom: 15px;
+}
+
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .section {
+    justify-content: initial;
+    margin-top: 20px;
+  }
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+
 }
