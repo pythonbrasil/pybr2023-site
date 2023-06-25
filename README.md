@@ -1,107 +1,53 @@
+![Logo Python Brasil](./util/capa.png)
+
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-> Página oficial da Python Brasil 2023 - Caxias do Sul/RS.
+[Site Python Brasil](https://2023.pythonbrasil.org.br)
 
-## Sobre o projeto
+Repositorio do site Python Brasil 2023
 
-* **Tecnologias:** HTML, CSS (SCSS), JS, jQuery e Bootstrap 4
-* **Metodologias:** BEM - CSS
-* **Servidor:** Python
+O Projeto utiliza [Pelican](https://docs.getpelican.com/en/latest/) como framework!
 
-## Rodando o projeto
+A maioria dos dados sensiveis que podem ser alterados com facilidade editando o arquivo `pelicanconf` ou `publishconf`
 
-Instale as dependências do projeto rodando:
+Dentro da pasta theme tem o tema que esta sendo usado na compilação, por ser estatico muita coisa esta informada dentro dele mesmo mas é possivel ir externalizando utilizando alguns recursos do pelican vide doc.
 
-```sh
-npm install
+Por favor use os arquivos html dentro do theme para editar o conteudo e a estrutura do site, leia com atenção pq o thema tem variaveis especificas e tambem pode usar alguns recursos do jinja para o mesmo.
+
+O arquivo `CNAME` é automaticamente copiado para dentro do output, levando os dados necessarios junto com o tema e os estilos.
+
+Para estilizar use o arquivo `styles.css` em `\theme\static\css\`
+
+Toda a pasta static ira para o output na compilação sempre que precisar limpar css/js/html apague a pasta output e rode novamente o comando de inicializar
+
+ou utilize o comando 
+```
+invoke clean
 ```
 
-Ou se preferir use essa opção:
+lembrando que todos os comandos invoke estão no arquivo `tasks.py`
 
-```sh
-yarn install
+
+# Ambiente
+```shell
+gh repo clone pythonbrasil/pybr2023-site;
+cd pybr2023-site
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Para facilitar o desenvolvimento, você pode ativar o servidor local que irá atualizar o navegador a cada alteração dos estáticos da página.
+# Rodar
 
-### Configurando o servidor pela primeira vez
-
-**Caso já tenha Virtualenv instalado, por favor, pule essa etapa:**
-
-```sh
-pip install virtualenv
+```shell
+source .venv/bin/activate
+invoke livereload
 ```
 
-Depois:
+vai rodar em http://127.0.0.1:8000/
 
-```sh
-make local/create-env
-```
-
-```sh
-source venv/bin/activate
-```
-
-```sh
-make local/install
-```
-
-#### Ativando o servidor
-
-```sh
-make local/run-server
-```
-
-### Encerrando o servidor
-
-```sh
-deactivate
-```
-
-### Ativando o servidor (após ter encerrado, fechado e aberto novamente)
-
-No diretório do projeto:
-
-```sh
-source venv/bin/activate
-```
-
-```sh
-make local/run-server
-```
-
-## Alterando os estilos da página
-
-Este projeto utiliza SASS (SCSS). Os arquivos a serem alterados estão no seguinte diretório:
-
-```
-.
-├── assets
-│   ├── sass
-│   |    └── layout.scss
-│   |    └── main.scss
-```
-
-Antes de alterar os arquivos, rode o seguinte comando:
-
-```sh
-sass --watch assets/sass/main.scss:assets/css/custom.css
-```
-
-Em quaisquer alterações o seguinte arquivo será alterado, arquivo esse que é o que a página consome:
-
-```
-.
-├── assets
-│   ├── css
-│   |    └── custom.scss
-```
-
-# Alternativa de execução
-
-Use docker para fazer a build e execução do projeto
-
-```
-docker build -f Dockerfile -t pybr16:dev .
-docker run -v "${PWD}:/src" -p 5500:5500 --rm  pybr16:dev
+# Deploy
+```shell
+[dentro da env]$ invoke gh-pages
 ```
