@@ -31,27 +31,30 @@
             </div>
         </div>
     </nav>
-    <main class="container-fluid text-center mt-4 g-0">
+    <main class="container-fluid text-center mt-2 g-0">
         <section class="section inicio" id="inicio">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg">
                         <img src="/theme/img/capa.png" alt="logo" class="img-fluid">
                     </div>
-                    <div class="col-lg">
+                    <div class="col-lg mt-4">
                         <div class="container">
-                            <h2 class="fs-1">{{EVENTO.data_evento}} {{SITEYEAR}}</h2>
-                            <p class="fs-2">#PYTHONBRASIL{{SITEYEAR}}</p>
-                            <p class="fs-3">As inscrições para a Python Brasil {{SITEYEAR}} podem ser feitas pelo botão
-                                abaixo.</p>
+                            <h2 class="fs-1 text-start">
+                                <strong>
+                                    {{EVENTO.data_evento}} {{SITEYEAR}}
+                                </strong>
+                            </h2>
+                            <p class="fs-6 text-start">#PYTHONBRASIL{{SITEYEAR}}</p>
                             <p class="fs-3">
-                                <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
+                                As inscrições para a Python Brasil {{SITEYEAR}} podem ser feitas pelo botão abaixo.
+                            </p>
+                            <p class="fs-3 mx-auto col-lg-4">
+                                <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-block btn-outline-light">
                                     <i class="fa-solid fa-ticket"></i>
-                                    Inscreva-se para o evento aqui (Presencial e online)
+                                    Inscreva-se para o evento aqui <br>(Presencial e online)
                                 </a>
-                                <p>
-                                    <strong class="fs-3">{{EVENTO.cidade}}</strong>
-                                </p>
+                                {{EVENTO.cidade}}
                             </p>
                         </div>
                     </div>
@@ -62,25 +65,27 @@
             <div class="container">
                 <h2 class="title fs-1">O Evento</h2>
                 <hr class="divider" />
-                <p class="fs-3">
+                <p class="fs-4 text-start">
                     A Python Brasil é a maior conferência da linguagem de programação Python da América Latina.
                 </p>
-                <p class="fs-3">
+                <p class="fs-4 text-start">
                     É um evento itinerante, que a cada ano é sediado em uma cidade diferente do país, organizado por
                     pessoas
                     voluntárias da comunidade local.
                 </p>
-                <p class="fs-3">
-                    Temos como principais objetivos: difundir a linguagem Python; promover a troca de experiências e
-                    conhecimentos; e incentivar o crescimento da comunidade, impactando econômica e socialmente a
-                    região.
-
+                <p class="fs-4 text-start">
+                    Temos como principais objetivos:<br>
+                    <ul class="text-start list-object">
+                        <li class="fs-5 list-item-li text-start">Difundir a linguagem Python</li>
+                        <li class="fs-5 list-item-li text-start">Promover a troca de experiências e conhecimentos</li>
+                        <li class="fs-5 list-item-li text-start">Incentivar o crescimento da comunidade</li>
+                        <li class="fs-5 list-item-li text-start">impactar econômica e socialmente a região.</li>
+                    </ul>
                 </p>
-                <p class="fs-3">
+                <p class="fs-4">
                     Este ano o evento acontece:<br />
                     <strong>Entre os dias 30 de outubro e 05 de novembro em Caxias do Sul (RS).</strong>
                 </p>
-
             </div>
         </section>
         <!-- <section class="section keynotes" id="keynotes">
@@ -116,48 +121,63 @@
                 <hr class="divider" />
                 <div class="row">
                     <div class="col-lg">
-                        <h3>Tutoriais</h3>
-                        <p class="fs-4">
-                            30, 31 de Outubro e 01 de Novembro </br>
+                        <h3>
+                            <strong>
+                                Tutoriais
+                            </strong>
+                        </h3>
+                        <p class="fs-4 text-start">
+                            <strong>30</strong>, <strong>31</strong> de Outubro e <strong>01</strong> de Novembro </br></br>
                             Espaço gratuito da Python Brasil para aprendizagem e troca de informações
                         </p>
                     </div>
                     <div class="col-lg">
-                        <h3>Palestras</h3>
-                        <p class="fs-4">
-                            02, 03, 04 de Novembro </br>
+                        <h3>
+                            <strong>
+                                Palestras
+                            </strong>
+                        </h3>
+                        <p class="fs-4 text-start">
+                            <strong>02</strong>, <strong>03</strong>, <strong>04</strong> de Novembro </br></br>
                             Dias principais do evento, espaço para job fair, network, palestras de diversos temas
                             acontencendo simultaneamente
                         </p>
                     </div>
                     <div class="col-lg">
-                        <h3>Sprint</h3>
-                        <p class="fs-4">
-                            05 de Novembro </br>
+                        <h3>
+                            <strong>
+                                Sprint
+                            </strong>
+                        </h3>
+                        <p class="fs-4 text-start">
+                            <strong>05</strong> de Novembro </br></br>
                             Espaço gratuito da python brasil onde é construido um espaço para contribuição em projetos
                             open source
                         </p>
                     </div>
                 </div>
-                <hr class="divider" />
+                <hr class="divider mb-4 mt-4" />
                 <div>
                     <p class="fs-4">
                         Grade ainda em construção!<br>
-                        Enquanto isso já garantiu seu ingresso ?
-                    </p>
-                    <p class="fs-4">
-                        <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-outline-light">
-                            <i class="fa-solid fa-ticket"></i>
-                            Inscreva-se para o evento aqui (Presencial e online)
-                        </a>
-                    </p>
-                    <p class="fs-4">
+                        Enquanto isso já garantiu seu ingresso ?<br>
                         Que tal ir conhecendo a cidade do evento ?<br>
-                        <a href="https://www.google.com/maps/place/Caxias+do+Sul,+RS/" target="_blank"
-                            class="btn btn-outline-light">
-                            Caxias do Sul RS
-                        </a>
                     </p>
+                    <div class="row">
+                        <p class="fs-4 mx-auto col-lg-4">
+                            <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-block btn-outline-light">
+                                <i class="fa-solid fa-ticket"></i>
+                                Inscreva-se para o evento
+                            </a>
+                        </p>
+                        <p class="fs-4 mx-auto col-lg-4">
+                            
+                            <a href="https://www.google.com/maps/place/Caxias+do+Sul,+RS/" target="_blank"
+                                class="btn btn-block btn-outline-light">
+                                Caxias do Sul RS
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -166,38 +186,50 @@
                 <h2 class="title fs-1"> Chamada para trabalhos </h2>
                 <hr class="divider" />
                 <div class="row">
-                    <div class="col-lg">
-                        <h3>Palestrantes/Tutoriais</h3>
+                    <div class="col-lg px-4">
+                        <h3>
+                            <strong>
+                                Palestrantes/Tutoriais
+                            </strong>
+                        </h3>
                         <p class="fs-4">
-                            Vem fazer um evento incrível, com sua palestra ou tutorial
+                            Vem fazer um evento incrível, com sua palestra ou tutorial, as submissões de atividades vão
+                            até dia 21/06/2023, Logo após fique ligado no seu email ou na plataforma de submissões para
+                            avaliar as atividades!
                         </p>
-                        <a href="{{EVENTO.submissao}}" target="_blank" class="btn btn-outline-light">
+                        <a href="{{EVENTO.submissao}}" target="_blank" class="btn btn-block btn-outline-light">
                             <i class="fa-solid fa-person-chalkboard"></i>
                             Inscrever sua palestra!
                         </a>
 
                     </div>
-                    <div class="col-lg">
-                        <h3>Patrocinar/Apoiar</h3>
+                    <div class="col-lg px-4">
+                        <h3>
+                            <strong>
+                                Patrocinar/Apoiar
+                            </strong>
+                        </h3>
                         <p class="fs-4">
-                            Que tal apresentar a Python Brasil na sua empresa? Ou marcar presensa na maior
-                            Conferência de Python da América Latina
+                            Que tal apresentar a Python Brasil na sua empresa? Para colaborar de com a organização de
+                            2023, envie um email para
+                            <strong>eventos@python.org.br</strong>, nos ajude a contruir um evento bacana!
                         </p>
                         <div class="row">
                             <div class="col-lg">
-                                <a href="{{PLANOS.pt_br}}" target="_blank" class="btn btn-outline-light">
+                                <a href="{{PLANOS.pt_br}}" target="_blank" class="btn btn-block btn-outline-light">
                                     <i class="fa-solid fa-suitcase"></i>
                                     Media kit (pt-br)
                                 </a>
                             </div>
                             <div class="col-lg">
-                                <a href="{{PLANOS.en}}" target="_blank" class="btn btn-outline-light">
+                                <a href="{{PLANOS.en}}" target="_blank" class="btn btn-block btn-outline-light">
                                     <i class="fa-solid fa-suitcase"></i>
                                     Media kit (en)
                                 </a>
                             </div>
                             <div class="col-lg">
-                                <a href="{{EVENTO.kit_divulgacao}}" target="_blank" class="btn btn-outline-light">
+                                <a href="{{EVENTO.kit_divulgacao}}" target="_blank"
+                                    class="btn btn-block btn-outline-light">
                                     <i class="fa-solid fa-suitcase"></i>
                                     Para Participantes!
                                 </a>
@@ -207,7 +239,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- <section class="section patrocinadores" id="patrocinadores">
             <div class="container">
                 <h2 class="title fs-1">Os Patrocinadores</h2>
@@ -294,4 +326,5 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
     </script>
 </body>
+
 </html>
