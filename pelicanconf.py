@@ -62,6 +62,6 @@ EVENTO = {
 }
 
 PLANOS = {
-    'pt_br':'/theme/media_kits/python_brasil_2023_pt_br.pdf',
-    'en':'/theme/media_kits/python_brasil_2023_en.pdf',
+    'pt_br':'/theme/media_kits/Python_Brasi_2023_PT_Br.pdf',
+    'en':'/theme/media_kits/Python_Brasil_2023_En.pdf',
 }
