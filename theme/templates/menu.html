@@ -3,19 +3,21 @@
         <a class="navbar-brand" href="/">
             <img src="/theme/img/logo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
         </a>
+        {% if not hide_menu %}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars"></i>
         </button>
+        {% endif %}
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             {% if not hide_menu %}
             <ul class="navbar-nav">
                 {% for tag, text, active in MENU %}
-                    {% if active %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{tag}}">{{text}}</a>
-                    </li>
-                    {% endif %}
+                {% if active %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{tag}}">{{text}}</a>
+                </li>
+                {% endif %}
                 {% endfor %}
                 {% if EVENTO.inscricao %}
                 <li class="nav-item">
