@@ -1,0 +1,33 @@
+{% include 'head.html' %}
+{% with hide_menu=true %}
+{% include 'menu.html' %}
+{% endwith %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="/{{category.url}}">
+                <span class="badge text-bg-light    ">
+                    {{category.name}}
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-12 mt-4">
+        <img src="/theme/img/logo_1.png" height="200px">
+        <br>
+        <h1 class="mt-4">
+            {{article.title|title}}
+        </h1>
+    </div>
+    <div class="col-12">
+        <img src="{{article.image}}" alt="{{article.title}}"><br>
+    </div>
+    <div class="col-12">
+        <p>
+            {{article.content}}
+        </p>
+    </div>
+</div>
