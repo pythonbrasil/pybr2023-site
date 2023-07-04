@@ -58,7 +58,7 @@ EVENTO = {
     'submissao':'https://pretalx.com/python-brasil-2023/cfp',
     'data_evento': 'DE 30 OUTUBRO À 05 NOVEMBRO',
     'cidade': 'Caxias do Sul, RS',
-    'kit_divulgacao': '/theme/media_kits/frame.zip'
+    'kit_divulgacao': 'https://github.com/pythonbrasil/pybr2023-site/raw/master/theme/static/media_kits/frames.zip'
 }
 
 PLANOS = {
