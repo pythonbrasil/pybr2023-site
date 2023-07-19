@@ -30,7 +30,6 @@ MENU = [
     ('#evento', 'Sobre o evento', True),
     ('#keynotes', 'Keynotes', True),
     ('#programacao', 'Programação', True),
-    ('#trabalhos', 'Chamada de Trabalhos', True),
     ('#patrocinadores', 'Patrocinadores', True),
 ]
 
