@@ -31,7 +31,7 @@ MENU = [
     ('#keynotes', 'Keynotes', True),
     ('#programacao', 'Programação', True),
     ('#patrocinadores', 'Patrocinadores', True),
-    ('#faq', 'Faq', True),
+    ('#faq', 'FAQ', True),
 ]
 
 # Social widget
