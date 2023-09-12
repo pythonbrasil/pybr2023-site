@@ -230,50 +230,53 @@
                         </a>
                     </div>
                 </div>
-                <!-- <hr class="divider" />
-                <div class="row">
-                    {% for cat, posts in categories if cat == 'diamante' %}
-                        <h3 class="patrocinio-title">{{cat}}</h3>
-                        {% for post in posts %}
-                        <div class="col-lg">
-                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
-                        </div>
-                        {% endfor %}
-                    {% endfor %}
-                </div>
-                <div class="row">
+                <hr class="divider" />
+                <!-- <div class="row">
                     {% for cat, posts in categories if cat == 'platina' %}
                         <h3 class="patrocinio-title">{{cat}}</h3>
                         {% for post in posts %}
                         <div class="col-lg">
-                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="250px"  class="img-fluid m-2">
                         </div>
                         {% endfor %}
                     {% endfor %}
-                </div>
-                <div class="row">
+                </div> -->
+                <!-- <div class="row">
                     {% for cat, posts in categories if cat == 'ouro' %}
                         <h3 class="patrocinio-title">{{cat}}</h3>
                         {% for post in posts %}
                         <div class="col-lg">
-                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="250px" class="img-fluid m-2">
                         </div>
                         {% endfor %}
                     {% endfor %}
-                </div>
+                </div> -->
                 <div class="row">
                     {% for cat, posts in categories if cat == 'prata' %}
                         <h3 class="patrocinio-title">{{cat}}</h3>
                         {% for post in posts %}
                         <div class="col-lg">
-                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                            <a target="_blank" href="{{post.link}}">
+                                <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="250px"  class="img-fluid m-2">
+                            </a>
                         </div>
                         {% endfor %}
                     {% endfor %}
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     {% for cat, posts in categories if cat == 'bronze' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="250px" class="img-fluid m-2">
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div> -->
+
+                <!-- <div class="row">
+                    {% for cat, posts in categories if cat == 'cobre' %}
                         <h3 class="patrocinio-title">{{cat}}</h3>
                         {% for post in posts %}
                         <div class="col-lg">
