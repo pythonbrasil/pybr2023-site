@@ -212,3 +212,10 @@ main {
 @media (max-width: 1399.98px) { 
 
 }
+
+.patrocinio-background{
+  display: inline-block;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #fff;
+}
