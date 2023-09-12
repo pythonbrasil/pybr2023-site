@@ -219,3 +219,19 @@ main {
   padding: 5px;
   background-color: #fff;
 }
+
+.article-img {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.article-link{
+ color: var(--main-color); 
+}
+
+.categories-thumb {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}

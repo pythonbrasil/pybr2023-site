@@ -16,11 +16,13 @@
         </p>
     </div>
     {% for category, article in categories %}
-    <div class="col-12 col-lg-4 mb-2">
-        <a href="/{{category.url}}">
-            <img src="/images/patrocinio_pqno.png" class="img-fluid">
-        </a>
-        <h2>{{category.name|title}}</h2>
-    </div>
+    {% if category != 'keynotes' %}
+        <div class="col-12 col-lg-4 mb-2">
+            <a href="/{{category.url}}" class="categories-thumb">
+                <img src="/images/patrocinio_pqno.png" width="200px" class="img-fluid">
+            </a>
+            <h2>{{category.name|title}}</h2>
+        </div>
+    {%endif%}
     {% endfor  %}
 </div>

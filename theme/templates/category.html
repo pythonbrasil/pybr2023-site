@@ -23,15 +23,14 @@
     </div>
     <div class="col-12 mt-4">
         <p>Queremos muito agradecer a todos os nossos patrocinadores da categoria {{category|title}} por apoiarem o evento e
-            torna-lo viavel</p>
+            torna-lo viável</p>
         <p>Fica aqui nosso eterno muito obrigado</p>
     </div>
     {% for a in articles %}
     <div class="col-12 col-md-4">
-        <a href="/{{a.url}}">
-            <img src="{{a.image}}" alt="{{a.title}}" class="img-fluid"><br>
+        <a href="/{{a.url}}" class="categories-thumb">
+            <img src="{{a.image}}" alt="{{a.title}}" width="200px" class="img-fluid"><br>
         </a> 
-        {{a.title|title}}
     </div>
     {% endfor  %}
 </div>
