@@ -1,32 +1,32 @@
 :root {
   --main-color: #b21b69;
-  --secondar-color: #08293C;
+  --secondar-color: #08293c;
   --complement-color: #622562;
   --gradient: linear-gradient(0deg, #b21b69 0%, #622562 100%);
 }
 
 @font-face {
-  font-family: 'Cervanttis';
-  src: url('/theme/font/Cervanttis.ttf');
+  font-family: "Cervanttis";
+  src: url("/theme/font/Cervanttis.ttf");
 }
 
 @font-face {
-  font-family: 'Signika';
-  src: url('/theme/font/Signika-Regular.ttf');
+  font-family: "Signika";
+  src: url("/theme/font/Signika-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Signika';
-  src: url('/theme/font/Signika-Light.ttf');
+  font-family: "Signika";
+  src: url("/theme/font/Signika-Light.ttf");
   font-weight: lighter;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Signika';
-  src: url('/theme/font/Signika-Bold.ttf');
+  font-family: "Signika";
+  src: url("/theme/font/Signika-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
@@ -39,7 +39,7 @@
 body {
   min-height: 100vh;
   background: var(--secondar-color);
-  font-family: 'Signika';
+  font-family: "Signika";
   color: white;
   overflow-x: hidden;
 }
@@ -49,13 +49,13 @@ main {
 }
 
 .nav-item .nav-link {
-  font-family: 'Signika';
+  font-family: "Signika";
   font-weight: bold;
   color: white;
 }
 
 .nav-item .nav-link.eventbright {
-  font-family: 'Signika';
+  font-family: "Signika";
   color: var(--secondar-color);
   padding: 3px 15px;
   background-color: white;
@@ -63,7 +63,7 @@ main {
 }
 
 .hashtag {
-  font-family: 'Signika';
+  font-family: "Signika";
   color: white;
   text-align: left;
 }
@@ -73,7 +73,7 @@ main {
   text-align: left;
   display: flex;
   vertical-align: middle;
-  font-family: 'Signika';
+  font-family: "Signika";
 }
 
 .section {
@@ -90,27 +90,27 @@ main {
   padding: 30px;
 }
 
-.evento{
-  background: url('/theme/img/path1.png') no-repeat;
+.evento {
+  background: url("/theme/img/path1.png") no-repeat;
   background-size: contain;
   background-position: right;
   background-position-x: calc(100vw - 600px);
 }
 
-.programacao{
-  background: url('/theme/img/path3.png') no-repeat;
+.programacao {
+  background: url("/theme/img/path3.png") no-repeat;
   background-position: left;
   background-position-x: -600px;
 }
 
-.trabalhos{
-  background: url('/theme/img/path4.png') no-repeat;
+.trabalhos {
+  background: url("/theme/img/path4.png") no-repeat;
   background-position: right;
   background-position-x: calc(100vw - 600px);
 }
 
-.patrocinadores{
-  background: url('/theme/img/path2.png') no-repeat;
+.patrocinadores {
+  background: url("/theme/img/path2.png") no-repeat;
   background-position: left;
   background-position-x: -400px;
   background-position-y: 400px;
@@ -120,7 +120,7 @@ main {
   padding-top: 20px;
 }
 
-.navbar-bg{
+.navbar-bg {
   background-color: var(--secondar-color);
 }
 
@@ -137,7 +137,7 @@ main {
   list-style: none;
 }
 
-.keynote:nth-child(even) .keynotes-description{
+.keynote:nth-child(even) .keynotes-description {
   background-color: white;
   text-align: right;
   display: inline-block;
@@ -151,7 +151,7 @@ main {
   width: 50%;
 }
 
-.keynote:nth-child(even) .keynotes-description{
+.keynote:nth-child(even) .keynotes-description {
   background-color: white;
   text-align: left;
   display: inline-block;
@@ -166,12 +166,12 @@ main {
   text-decoration: none;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: 0;
   color: #fff;
 }
 
-.btn-block{
+.btn-block {
   width: 100%;
   margin-bottom: 10px;
 }
@@ -180,13 +180,12 @@ main {
   list-style-image: url("/theme/img/list_icon.png");
 }
 
-.list-item-li{
+.list-item-li {
   margin-bottom: 15px;
 }
 
-
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
   .section {
     justify-content: initial;
     margin-top: 20px;
@@ -195,25 +194,21 @@ main {
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
-
+@media (max-width: 991.98px) {
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) { 
-
+@media (max-width: 1199.98px) {
 }
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) { 
-
+@media (max-width: 1399.98px) {
 }
 
-.patrocinio-background{
+.patrocinio-background {
   display: inline-block;
   border-radius: 15px;
   padding: 5px;
@@ -226,8 +221,8 @@ main {
   padding: 20px;
 }
 
-.article-link{
- color: var(--main-color); 
+.article-link {
+  color: var(--main-color);
 }
 
 .categories-thumb {
@@ -235,4 +230,26 @@ main {
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
+}
+
+/* The animation code */
+@keyframes pulseButton {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0px;
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0px;
+  }
+}
+
+.btn-inscreva-se {
+  animation: pulseButton;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
