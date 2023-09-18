@@ -116,6 +116,13 @@ main {
   background-position-y: 400px;
 }
 
+.parceiros {
+  background: url("/theme/img/path2.png") no-repeat;
+  background-position: left top;
+  background-position-x: -400px;
+  background-position-y: -607px;
+}
+
 .navbar {
   padding-top: 20px;
 }
