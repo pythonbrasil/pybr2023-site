@@ -1,6 +1,6 @@
 :root {
   --main-color: #b21b69;
-  --secondar-color: #08293c;
+  --secondar-color: #1e283c;
   --complement-color: #622562;
   --gradient: linear-gradient(0deg, #b21b69 0%, #622562 100%);
 }
@@ -84,6 +84,10 @@ main {
   justify-content: center;
 }
 
+.v-divisor {
+  border-right: 4px solid rgba(255, 255, 255, 0.25);
+}
+
 .footer-itens {
   color: var(--secondar-color);
   background-color: #fff;
@@ -97,10 +101,20 @@ main {
   background-position-x: calc(100vw - 600px);
 }
 
+#faq {
+  background: var(--secondar-color);
+  padding-top: 20px;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
 .programacao {
   background: url("/theme/img/path3.png") no-repeat;
   background-position: left;
   background-position-x: -600px;
+  background-position-y: 15px;
 }
 
 .trabalhos {
@@ -114,6 +128,13 @@ main {
   background-position: left;
   background-position-x: -400px;
   background-position-y: 400px;
+}
+
+.parceiros {
+  background: url("/theme/img/path2.png") no-repeat;
+  background-position: left top;
+  background-position-x: -400px;
+  background-position-y: -607px;
 }
 
 .navbar {
@@ -232,6 +253,12 @@ main {
   padding: 10px;
 }
 
+.footer-image {
+  margin: auto;
+  margin-top: 60px;
+  max-width: 300px;
+}
+
 /* The animation code */
 @keyframes pulseButton {
   0% {
@@ -248,8 +275,26 @@ main {
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px); 
+  }
+}
+
 .btn-inscreva-se {
   animation: pulseButton;
-  animation-duration: 2s;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.floatcapa {
+  animation: float;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
