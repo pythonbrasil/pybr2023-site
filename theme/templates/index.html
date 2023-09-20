@@ -9,7 +9,7 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg">
-                        <img src="/theme/img/capa.png" alt="logo" class="img-fluid">
+                        <img src="/theme/img/capa.png" alt="logo" class="img-fluid floatcapa">
                     </div>
                     <div class="col-lg mt-4">
                         <div class="container">
@@ -37,23 +37,21 @@
                 <h2 class="title fs-1">O Evento</h2>
                 <hr class="divider" />
                 <p class="fs-4 text-start">
-                    A Python Brasil é a maior conferência da linguagem de programação Python da América Latina, sendo um evento voltado a educação, 
-                    treinamento e troca de experiências. Temos como maxima que Pessoas são maiores que tecnologia queremos que todos que visitem o evento vivam essa maxima.
-                    Sob um codigo de conduta o evento preza por criar um ambiente seguro e convidativo a todas as pessoas que a se sentirem bem vindas.
+                    A Python Brasil é a maior conferência de Python da América Latina, sendo um evento voltado a educação, 
+                    treinamento e troca de experiências. Temos como maxima que pessoas são maiores que tecnologia, e queremos que todos que visitem o evento vivam essa experiencia.
+                    Sob um codigo de conduta o evento preza por criar um ambiente seguro e convidativo a todas as pessoas.
                 </p>
                 <p class="fs-4 text-start">
                     Como um evento itinerante, todo ano sediado em uma cidade e região diferente do país, 
-                    sempre organizados por pessoas de comunidades locais, a python brasil tem alguns objetivos em cada visita que faz
-                </p>
-                <p class="fs-4 text-start">
-                    como principais:<br>
-                <ul class="text-start list-object">
-                    <li class="fs-5 list-item-li text-start">Difundir a linguagem Python</li>
-                    <li class="fs-5 list-item-li text-start">Promover a troca de experiências e conhecimentos</li>
-                    <li class="fs-5 list-item-li text-start">Incentivar o crescimento da comunidade nacional</li>
-                    <li class="fs-5 list-item-li text-start">Incentivar o crescimento da comunidade regional</li>
-                    <li class="fs-5 list-item-li text-start">Impactar econômica e socialmente a região.</li>
-                </ul>
+                    sempre organizados por pessoas de comunidades locais, a python brasil tem alguns objetivos em cada visita que faz.<br>
+                    Como principais:<br>
+                    <ul class="text-start list-object">
+                        <li class="fs-5 list-item-li text-start">Difundir a linguagem Python</li>
+                        <li class="fs-5 list-item-li text-start">Promover a troca de experiências e conhecimentos</li>
+                        <li class="fs-5 list-item-li text-start">Incentivar o crescimento da comunidade nacional</li>
+                        <li class="fs-5 list-item-li text-start">Incentivar o crescimento da comunidade regional</li>
+                        <li class="fs-5 list-item-li text-start">Impactar econômica e socialmente a região.</li>
+                    </ul>
                 </p>
             </div>
         </section>
@@ -81,9 +79,9 @@
         </section> -->
         <section class="section programacao" id="programacao">
             <div class="container">
-                <h2 class="title fs-1"> Programação do Evento </h2>
+                <h2 class="title fs-1"> Agenda do Evento </h2>
                 <hr class="divider" />
-                <div class="row">
+                 <div class="row">
                     <div class="col-lg">
                         <h3>
                             <strong>
@@ -137,58 +135,45 @@
                         </p>
                     </div>
                 </div>
-                <hr class="divider mb-4 mt-4" />
+                <h2 class="title fs-1"> Programação do Evento </h2>
+                <hr class="divider" />
                 <div>
+                    
                     <p class="fs-4">
-                        Grade ainda em construção!<br>
-                        Enquanto isso já garantiu seu ingresso ?<br>
-                        Que tal ir conhecendo a cidade do evento ?<br>
+                        Grade ainda em desenvolvimento!
                     </p>
-                    <div class="row">
-                        <p class="fs-4 mx-auto col-lg-4">
-                            <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-block btn-outline-light">
-                                <i class="fa-solid fa-ticket"></i>
-                                Inscreva-se para o evento
-                            </a>
-                        </p>
-                        <p class="fs-4 mx-auto col-lg-4">
-
-                            <a href="https://www.google.com/maps/place/Caxias+do+Sul,+RS/" target="_blank"
-                                class="btn btn-block btn-outline-light">
-                                Caxias do Sul RS
-                            </a>
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
         <section class="section faq" id="faq">
             <div class="container">
                 <h2 class="title fs-1"> Medidas sobre a COVID-19 </h2>
+                <br>
                 <hr class="divider" />
+                <br>
                 <div class="row">
-                    <div class="col-lg px-4">
-                        <h3>
+                    <div class="col-lg px-4 v-divisor">
+                        <h3 class="text-start">
                             <strong>
                                 Vacine-se!
                             </strong>
                         </h3>
-                        <p class="fs-4">
+                        <p class="fs-4 text-justify">
                             Acesse site do Conecte SUS e procure uma unidade básica de saúde para atualizar seu cartão de vacina.
                         </p>
                     </div>
-                    <div class="col-lg px-4">
-                        <h3>
+                    <div class="col-lg px-4 v-divisor">
+                        <h3 class="text-start">
                             <strong>
                                 Recomendação do uso de máscaras
                             </strong>
                         </h3>
-                        <p class="fs-4">
+                        <p class="fs-4 text-justify">
                             Caso participantes sejam testados positivo para Covid, o uso de máscaras pasará a ser obrigatório
                         </p>
                     </div>
-                    <div class="col-lg px-4">
-                        <h3>
+                    <div class="col-lg px-4 text-justify">
+                        <h3 class="text-start">
                             <strong>
                                 Código de Conduta
                             </strong>
@@ -279,18 +264,22 @@
                         </div>
                         {% endfor %}
                     {% endfor %}
-                </div>
+                </div> -->
+
                 <div class="row">
                     {% for cat, posts in categories if cat == 'apoios' %}
                         <h3 class="patrocinio-title">{{cat}}</h3>
                         {% for post in posts %}
                         <div class="col-lg">
-                            <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" class="img-fluid m-2">
+                            <a target="_blank" href="{{post.link}}" class="patrocinio-background">
+                                <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="200px"  class="img-fluid m-2">
+                            </a>
                         </div>
                         {% endfor %}
                     {% endfor %}
                 </div>
-                <div class="row">
+
+                 <!-- <div class="row">
                     {% for cat, posts in categories if cat == 'embaixadores' %}
                         <h3 class="patrocinio-title">{{cat}}</h3>
                         {% for post in posts %}
