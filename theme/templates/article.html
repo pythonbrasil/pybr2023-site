@@ -22,11 +22,14 @@ endwith %}
     >
       <div class="col p-4 d-flex flex-column position-static text-start">
         <p class="card-text mb-auto text-start">{{article.content}}</p>
+        {% if article.link %}
         <a href="{{article.link}}" target="_blank" class="icon-link gap-1 icon-link-hover stretched-link article-link">
           Conheça mais
           <svg class="bi article-link"><use xlink:href="#chevron-right" /></svg>
         </a>
+        {% endif %}
       </div>
+      {% if article.image %}
       <div class="article-img col-auto d-none d-lg-block">
         <img
           src="{{article.image}}"
@@ -35,6 +38,7 @@ endwith %}
           class="img-fluid"
         />
       </div>
+      {% endif %}
     </div>
   </div>
 </div>
