@@ -1,0 +1,35 @@
+{% macro picture(image, title, size) -%}
+<figure>
+  <picture>
+    <source
+      srcset="{{SITE_URL}}/images/responsive/{{image}}_w{{size}}.webp"
+      width="{{size}}"
+      media="(max-width: 580px)"
+      type="image/webp"
+    />
+    <source
+      srcset="{{SITE_URL}}/images/responsive/{{image}}_w{{size}}.png"
+      width="{{size}}"
+      media="(max-width: 580px)"
+      type="image/png"
+    />
+    <source
+      srcset="{{SITE_URL}}/images/responsive/{{image}}_w{{size + 60}}.webp"
+      width="{{size}}"
+      type="image/webp"
+    />
+    <source
+      srcset="{{SITE_URL}}/images/responsive/{{image}}_w{{size + 60}}.png"
+      width="{{size}}"
+      type="image/png"
+    />
+    <img
+      src="{{SITEURL}}/images/{{image}}.png"
+      alt="{{title}}"
+      width="{{size}}px"
+      class="img-fluid m-2"
+      loading="lazy"
+    />
+  </picture>
+</figure>
+{%- endmacro %}
