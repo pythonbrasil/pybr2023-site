@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Game</title>
+    <style>
+      :root {
+        --main-color: #b21b69;
+        --secondar-color: #1e283c;
+        --complement-color: #622562;
+        --gradient: linear-gradient(0deg, #b21b69 0%, #622562 100%);
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        background: var(--gradient);
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column; /* arrage items on top of the other */
+        justify-content: center;
+        align-items: center;
+      }
+      canvas {
+        box-shadow: black 20px 10px 50px; /*elevate our canvas*/
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game" width="400" height="400" />
+    <script src="/theme/javascript/game.js"></script>
+  </body>
+</html>
