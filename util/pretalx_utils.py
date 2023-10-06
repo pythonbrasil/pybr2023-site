@@ -135,29 +135,29 @@ class CreateMDContent():
         with open('{}/{}.md'.format(content_path, file_name), "w") as f:
             content = dedent(
                 "---\n"
-                + 'title: "'
+                + 'Title: "'
                 + content.get('title')
                 + '"\n'
-                + 'description: "'
+                + 'Date: 2023-12-03 10:20'
+                + '\n'
+                + 'Description: "'
                 + content.get('abstract')
                 + '"\n'
-                + 'slug: "'
+                + 'Slug: "'
                 + string_parser(content.get('title'))
                 + '"\n'
-                + 'duration: "'
+                + 'Duration: "'
                 + str(content.get('duration'))
                 + '"\n'
-                + 'date: 2023-12-03 10:20'
-                + '\n'
-                + 'speakers: "' +
+                + 'Speakers: "' +
                 '| '.join(x.get('name')
                           for x in content.get('speakers'))
                 + '"\n'
-                + 'speakers_bigraphy: "' +
+                + 'Speakers_biography: "' +
                 '| '.join(x.get('biography')
                           for x in content.get('speakers'))
                 + '"\n'
-                + 'speakers_avatar: "' +
+                + 'Speakers_avatar: "' +
                 '| '.join(x.get('avatar')
                           for x in content.get('speakers'))
                 + '\n\n'
