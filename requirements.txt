@@ -2,3 +2,5 @@ pelican[markdown]
 livereload
 invoke
 ghp-import
+requests
+python-dotenv
