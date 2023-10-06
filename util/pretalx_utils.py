@@ -44,8 +44,8 @@ def string_parser(string):
         .replace("%", "-por-cento-")
         .replace("'", "")
         .replace(":", "")
-        .replace("--", "_")
-        .replace("-", "_")
+        .replace("--", "-")
+        .replace("_", "-")
     )
 
 
