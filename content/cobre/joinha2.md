@@ -7,4 +7,4 @@ image: /images/patrocinio_pqno.png
 <!-- image: /images/patrocinio_medio.png
 image: /images/patrocinio_grande.png -->
 
-A python brasil agradece a você!
+A Python Brasil agradece a você!
