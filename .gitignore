@@ -12,3 +12,5 @@ __pycache__/
 *.swp
 *.sublime-project
 *.sublime-workspace
+*.woff2
+*.woff
