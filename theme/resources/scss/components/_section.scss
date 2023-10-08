@@ -84,6 +84,33 @@ section {
       width: 100%;
       column-gap: 1rem;
     }
+    .map-link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+      svg {
+        fill: #fff;
+        stroke: #fff;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+      &:active,
+      &:hover {
+        background-color: #fff;
+        color: var(--secondary-color);
+        svg {
+          fill: var(--secondary-color);
+          stroke: var(--secondary-color);
+        }
+      }
+    }
   }
   &.programacao,
   &.faq,
