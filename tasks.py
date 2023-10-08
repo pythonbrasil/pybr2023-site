@@ -10,6 +10,7 @@ from old.runner import move_old_to_output
 from util.myfuntions import move_cname
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
+from util.pretalx_utils import generate_content
 
 SETTINGS_FILE_BASE = 'pelicanconf.py'
 SETTINGS = {}
@@ -26,6 +27,14 @@ CONFIG = {
     'port': 8000,
 }
 
+
+@task
+def build_webpack(c):
+    """Builds the css and javascript assets and move to theme/static/"""
+    sys.stderr.write('Generating the css and javascript assets...\n')
+    c.run('npm run --silent build >> /dev/null')
+
+
 @task
 def clean(c):
     """Remove generated files"""
@@ -33,22 +42,27 @@ def clean(c):
         shutil.rmtree(CONFIG['deploy_path'])
         os.makedirs(CONFIG['deploy_path'])
 
+
 @task
 def build(c):
     """Build local version of site"""
+    build_webpack(c)
     c.run('pelican -t theme -s {settings_base}'.format(**CONFIG))
     move_old_to_output()
     move_cname()
+
 
 @task
 def rebuild(c):
     """`build` with the delete switch"""
     c.run('pelican -d -t theme -s {settings_base}'.format(**CONFIG))
 
+
 @task
 def regenerate(c):
     """Automatically regenerate site upon file modification"""
     c.run('pelican -r -t theme -s {settings_base}'.format(**CONFIG))
+
 
 @task
 def serve(c):
@@ -65,11 +79,13 @@ def serve(c):
     sys.stderr.write('Serving on port {port} ...\n'.format(**CONFIG))
     server.serve_forever()
 
+
 @task
 def reserve(c):
     """`build`, then `serve`"""
     build(c)
     serve(c)
+
 
 @task
 def preview(c):
@@ -77,6 +93,7 @@ def preview(c):
     c.run('pelican -t theme -s {settings_publish}'.format(**CONFIG))
     move_old_to_output()
     move_cname()
+
 
 @task
 def livereload(c):
@@ -94,7 +111,7 @@ def livereload(c):
     # Watch the theme's templates and static assets
     theme_path = SETTINGS['THEME']
     server.watch('{}/templates/*.html'.format(theme_path), lambda: build(c))
-    static_file_extensions = ['.css', '.js']
+    static_file_extensions = ['.css', '.js', '.scss']
     for extension in static_file_extensions:
         static_file = '{0}/static/**/*{1}'.format(theme_path, extension)
         server.watch(static_file, lambda: build(c))
@@ -106,7 +123,15 @@ def livereload(c):
 def to_old(c):
     """generate old year of a master branch"""
     folder = 'old/{}/'.format(SETTINGS.get('SITEYEAR'))
-    c.run('pelican -t theme -s {settings_base} -o {folder}'.format(**CONFIG, folder=folder))
+    c.run(
+        'pelican -t theme -s {settings_base} -o {folder}'.format(**CONFIG, folder=folder))
+
+
+@task
+def generate_content_from_server(c):
+    """ Generate the content from Pretalx site, using the api endpoint"""
+    generate_content()
+
 
 @task
 def gh_pages(c):
