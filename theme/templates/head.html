@@ -1,9 +1,10 @@
+{% macro head(title, description) -%}
 <head>
   <meta charset="utf-8" />
-  <title>Python Brasil 2023</title>
+  <title>{% if title %}{{ title }} - Python Brasil 2023{% else %}Python Brasil 2023{% endif %}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="{{SITE_META_KEYWORDS}}" name="keywords" />
-  <meta content="{{SITE_META_DESCRIPTION}}" name="description" />
+  <meta content="{% if description %}{{ description }}{% else %}{{SITE_META_DESCRIPTION}}{% endif %}" name="description" />
 
   <!-- Favicons -->
   <link href="/theme/img/favicon.svg" rel="icon" />
@@ -50,3 +51,4 @@
       gtag('config', 'UA-128014134-1');
     </script> -->
 </head>
+{%- endmacro %}

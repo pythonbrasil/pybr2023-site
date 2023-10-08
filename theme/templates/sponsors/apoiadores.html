@@ -1,0 +1,72 @@
+{% from 'picture.html' import picture %}
+<section class="sponsors">
+  <div class="container">
+    <h2 class="sponsors-title">Patrocínio</h2>
+    <div class="diamante">
+      <h3>Diamante</h3>
+      <div class="sponsors-items">
+        {% for cat, posts in categories if cat == 'diamante' %}
+        {% for post in posts %}
+        <div class="item">
+          <a href="{{post.link}}" target="_blank" title="{{post.title}}"
+            class="{{ post.title | replace(' ', '') | lower}}">
+            {{ picture(post.image, post.title, 200) }}
+          </a>
+        </div>
+        {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="prata">
+      <h3>Prata</h3>
+      <div class="sponsors-items">
+        {% for cat, posts in categories if cat == 'prata' %}
+        {% for post in posts %}
+        <div class="item">
+          <a href="{{post.link}}" target="_blank" title="{{post.title}}">
+            {{ picture(post.image, post.title, 200) }}
+          </a>
+        </div>
+        {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="sponsors-call-action">
+      <h4>Quer patrocinar o evento?</h4>
+      <span>Confira nosso media kit e entre em contato:</span>
+      <a href="mailto:eventos@python.org.br">eventos@python.org.br</a>
+      <div class="mediakit">
+        <a href="{{PLANOS.pt_br}}" target="_blank">Media kit em Português</a>
+        <a href="{{PLANOS.en}}" target="_blank">Media kit in English</a>
+      </div>
+    </div>
+    <div class="parceiros">
+      <h3>Nossos parceiros</h3>
+      <div class="sponsors-items">
+        {% for cat, posts in categories if cat == 'parceiros' %}
+        {% for post in posts %}
+        <div class="item">
+          <a href="{{post.link}}" target="_blank" title="{{post.title}}">
+            {{ picture(post.image, post.title, 200) }}
+          </a>
+        </div>
+        {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="apoio">
+      <h3>Nossos apoiadores</h3>
+      <div class="sponsors-items">
+        {% for cat, posts in categories if cat == 'apoios' %}
+        {% for post in posts %}
+        <div class="item">
+          <a href="{{post.link}}" target="_blank" title="{{post.title}}">
+            {{ picture(post.image, post.title, 200) }}
+          </a>
+        </div>
+        {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

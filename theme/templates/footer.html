@@ -137,7 +137,7 @@
           <ul class="list-group list-group-flush">
             {% for tag, text, active in MENU %} {% if active %}
             <li class="list-group-item">
-              <a href="{{tag}}">{{text}}</a>
+              <a href="/{{tag}}">{{text}}</a>
             </li>
             {% endif %} {% endfor %} {% if EVENTO.inscricao %}
             <li class="list-group-item buy-tickets">
