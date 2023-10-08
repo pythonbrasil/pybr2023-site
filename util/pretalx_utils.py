@@ -135,30 +135,30 @@ class CreateMDContent():
         with open('{}/{}.md'.format(content_path, file_name), "w") as f:
             content = dedent(
                 "---\n"
-                + 'Title: "'
+                + 'Title: '
                 + content.get('title')
-                + '"\n'
+                + '\n'
                 + 'Date: 2023-12-03 10:20'
                 + '\n'
-                + 'Description: "'
-                + content.get('abstract')
-                + '"\n'
-                + 'Slug: "'
+                + 'Description: '
+                + content.get('abstract').replace('\r\n', '<br/>')
+                + '\n'
+                + 'Slug: '
                 + string_parser(content.get('title'))
-                + '"\n'
-                + 'Duration: "'
+                + '\n'
+                + 'Duration: '
                 + str(content.get('duration'))
-                + '"\n'
-                + 'Speakers: "' +
-                '| '.join(x.get('name')
+                + '\n'
+                + 'Speakers: ' +
+                '|'.join(x.get('name')
                           for x in content.get('speakers'))
-                + '"\n'
-                + 'Speakers_biography: "' +
-                '| '.join(x.get('biography')
+                + '\n'
+                + 'Speakers_biography: ' +
+                '|'.join(x.get('biography').replace('\r\n', '<br/>')
                           for x in content.get('speakers'))
-                + '"\n'
-                + 'Speakers_avatar: "' +
-                '| '.join(x.get('avatar')
+                + '\n'
+                + 'Speakers_avatar: ' +
+                '|'.join(x.get('avatar')
                           for x in content.get('speakers'))
                 + '\n\n'
                 + "---\n"
