@@ -151,15 +151,15 @@ class CreateMDContent():
                 + '\n'
                 + 'Speakers: ' +
                 '|'.join(x.get('name')
-                          for x in content.get('speakers'))
+                         for x in content.get('speakers'))
                 + '\n'
                 + 'Speakers_biography: ' +
                 '|'.join(x.get('biography').replace('\r\n', '<br/>')
-                          for x in content.get('speakers'))
+                         for x in content.get('speakers'))
                 + '\n'
                 + 'Speakers_avatar: ' +
                 '|'.join(x.get('avatar')
-                          for x in content.get('speakers'))
+                         for x in content.get('speakers'))
                 + '\n\n'
                 + "---\n"
                 + "\n"
@@ -170,11 +170,11 @@ class CreateMDContent():
             print("File created:" + file_name)
 
 
-def main():
+def generate_content():
     server = GetDataFromServer()
     CreateMDContent(server.talks, 'palestras').create_content()
     CreateMDContent(server.short_tutorials, 'tutoriais').create_content()
 
 
 if __name__ == '__main__':
-    main()
+    generate_content()
