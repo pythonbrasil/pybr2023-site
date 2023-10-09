@@ -12,3 +12,9 @@ __pycache__/
 *.swp
 *.sublime-project
 *.sublime-workspace
+*.woff2
+*.woff
+resize.sh
+theme/static/style.css
+theme/static/js/main.bundle.min.js
+theme/static/js/style.bundle.min.js

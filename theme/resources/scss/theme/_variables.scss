@@ -1,0 +1,22 @@
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+* {
+  --breakpoint-xs: $breakpoint-xs;
+  --breakpoint-sm: $breakpoint-sm;
+  --breakpoint-md: $breakpoint-md;
+  --breakpoint-lg: $breakpoint-lg;
+  --breakpoint-xl: $breakpoint-xl;
+  --breakpoint-xxl: $breakpoint-xxl;
+
+  --header-height: 4.5rem;
+
+  --main-color: #b21b69;
+  --secondary-color: #1e283c;
+  --complement-color: #622562;
+  --gradient: linear-gradient(0deg, #b21b69 0%, #622562 100%);
+}

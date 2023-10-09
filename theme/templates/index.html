@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="pt-br">
-{% include 'head.html' %}
+{% from 'head.html' import head %}
+{{ head("", "")}}
+{% from 'picture.html' import picture %}
 
 <body>
     {% include 'menu.html' %}
@@ -9,19 +11,32 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg">
-                        <img src="/theme/img/capa.png" alt="logo" class="img-fluid floatcapa">
+                        <figure>
+                            <picture>
+                                <source srcset="/theme/img/responsive/capa_w368.webp" width="368" height="327" media="(max-width: 360px)" type="image/webp" />
+                                <source srcset="/theme/img/responsive/capa_w368.png" width="368" height="327" media="(max-width: 360px)" type="image/png" />
+                                <source srcset="/theme/img/responsive/capa_w568.webp" width="512" height="454" media="(max-width: 560px)" type="image/webp" />
+                                <source srcset="/theme/img/responsive/capa_w568.png" width="512" height="454" media="(max-width: 560px)" type="image/png" />
+                                <source srcset="/theme/img/responsive/capa_w768.webp" width="768" height="681" media="(max-width: 1360px)" type="image/webp" />
+                                <source srcset="/theme/img/responsive/capa_w768.png" width="768" height="681" media="(max-width: 1360x)" type="image/png" />
+                                <source srcset="/theme/img/responsive/capa_w1288.webp" width="1288" height="1142" media="(max-width: 1920px)" type="image/webp" />
+                                <source srcset="/theme/img/responsive/capa_w1288.png" width="1288" height="1142" media="(max-width: 1920px)" type="image/png" />
+                                <source srcset="/theme/img/responsive/capa.webp" type="image/webp"/>
+                                <img src="/theme/img/capa.png" alt="Logo Python Brasil 2023 - Caxias do Sul" class="img-fluid floatcapa">
+                            </picture>
+                        </figure>
                     </div>
                     <div class="col-lg mt-4">
                         <div class="container">
-                            <h2 class="fs-1 text-start">
+                            <h1 class="fs-1 text-start">
                                 <strong>
                                     {{EVENTO.data_evento}} {{SITEYEAR}}
                                 </strong>
-                            </h2>
+                            </h1>
                             <p class="fs-6 text-start">#PYTHONBRASIL{{SITEYEAR}}</p>
                             <p class="fs-3 mx-auto col-lg-4">
                                 <a href="{{EVENTO.inscricao}}" target="_blank" class="btn btn-block btn-outline-light btn-inscreva-se">
-                                    <i class="fa-solid fa-ticket"></i>
+                                    {% include "svg/ticket.svg" %}
                                     Inscreva-se para o evento aqui
                                 </a>
                                 {{EVENTO.cidade}}
@@ -95,7 +110,11 @@
                             Espaço gratuito da Python Brasil para troca de informações onde os acontecem tutoriais e workshops.
                         </p>
                         <p class="fs-2 text-start">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1742.0495590817811!2d-51.1499042444396!3d-29.161751284130204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebcefbf7bdbad%3A0xd4f245a189942c53!2sUCS%20-%20Bloco%2071!5e0!3m2!1sen!2sbr!4v1694466754757!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1742.0495590817811!2d-51.1499042444396!3d-29.161751284130204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebcefbf7bdbad%3A0xd4f245a189942c53!2sUCS%20-%20Bloco%2071!5e0!3m2!1sen!2sbr!4v1694466754757!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="UCS - Bloco 71"></iframe>
+                            <a class="map-link" href="https://maps.app.goo.gl/86hDHwrwu9uLMhvU9" target="_blank">
+                                Como chegar
+                                {% include "svg/route.svg" %}
+                            </a>
                         </p>
                     </div>
                     <div class="col-lg">
@@ -113,7 +132,11 @@
                             acontecendo simultaneamente
                         </p>
                         <p class="fs-2 text-start">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.483055266695!2d-51.23806892365488!3d-29.17990207537038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea375e899dfd1%3A0xd32defd4f660f647!2sFaculdade%20Anhanguera!5e0!3m2!1sen!2sbr!4v1694468002583!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.483055266695!2d-51.23806892365488!3d-29.17990207537038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea375e899dfd1%3A0xd32defd4f660f647!2sFaculdade%20Anhanguera!5e0!3m2!1sen!2sbr!4v1694468002583!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Faculdade Anhanguera"></iframe>
+                            <a class="map-link" href="https://maps.app.goo.gl/i2KyY4o728wsCBz68" target="_blank">
+                                Como chegar
+                                {% include "svg/route.svg" %}
+                            </a>
                         </p>
                     </div>
                     <div class="col-lg">
@@ -130,7 +153,11 @@
                             open source
                         </p>
                         <p class="fs-2 text-start">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3194.7046784541203!2d-51.1900071295404!3d-29.169091845131327!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea326424495af%3A0x475dc7aa4e432395!2sEdif%C3%ADcio%20Platinum!5e0!3m2!1sen!2sbr!4v1695824939554!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3194.7046784541203!2d-51.1900071295404!3d-29.169091845131327!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea326424495af%3A0x475dc7aa4e432395!2sEdif%C3%ADcio%20Platinum!5e0!3m2!1sen!2sbr!4v1695824939554!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Edifício Platinum"></iframe>
+                            <a class="map-link" href="https://maps.app.goo.gl/mFyt6zvJk3s8GGqB8" target="_blank">
+                                Como chegar
+                                {% include "svg/route.svg" %}
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -143,11 +170,13 @@
                     </center>
                 </h4>
                 <hr class="divider" />
-                <div>
-                    <a href="palestras.html" class="btn btn-block btn-outline-light">
+                <div class="call-to-action">
+                    <a href="/category/palestras.html" class="btn btn-block btn-outline-light">
+                        {% include 'svg/speakers.svg' %}
                         Palestras
                     </a>
-                    <a href="tutoriais.html" class="btn btn-block btn-outline-light">
+                    <a href="/category/tutoriais.html" class="btn btn-block btn-outline-light">
+                        {% include 'svg/laptop-code.svg' %}
                         Tutoriais
                     </a>
                 </div>
@@ -202,18 +231,18 @@
                 </p>
                 <p class="fs-2">
                     Se quiser se juntar a elas e ter visibilidade nacional entre em contato conosco!
-                    eventos@python.org.br
+                    <a href="mailto:eventos@python.org.br" target="_blank">eventos@python.org.br</a>
                 </p>
                 <div class="row">
                     <div class="col-lg">
                         <a href="{{PLANOS.pt_br}}" target="_blank" class="btn btn-block btn-outline-light">
-                            <i class="fa-solid fa-suitcase"></i>
+                            {% include "svg/suitcase.svg" %}
                             Media kit (pt-br)
                         </a>
                     </div>
                     <div class="col-lg">
                         <a href="{{PLANOS.en}}" target="_blank" class="btn btn-block btn-outline-light">
-                            <i class="fa-solid fa-suitcase"></i>
+                            {% include "svg/suitcase.svg" %}
                             Media kit (en)
                         </a>
                     </div>
@@ -225,7 +254,7 @@
                         {% for post in posts %}
                         <div class="col-lg">
                             <a target="_blank" href="{{post.link}}" class="patrocinio-background">
-                                <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="400px"  class="img-fluid m-2">
+                                {{ picture(post.image, post.title, 400) }}
                             </a>
                         </div>
                         {% endfor %}
@@ -257,7 +286,7 @@
                         {% for post in posts %}
                         <div class="col-lg">
                             <a target="_blank" href="{{post.link}}" class="patrocinio-background">
-                                <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="200px"  class="img-fluid m-2">
+                                {{ picture(post.image, post.title, 200) }}
                             </a>
                         </div>
                         {% endfor %}
@@ -292,7 +321,7 @@
                         {% for post in posts %}
                         <div class="col-lg">
                             <a target="_blank" href="{{post.link}}" class="patrocinio-background">
-                                <img src="{{SITEURL}}{{post.image}}" alt="padrocinador" width="200px"  class="img-fluid m-2">
+                                {{ picture(post.image, post.title, 200) }}
                             </a>
                         </div>
                         {% endfor %}
@@ -324,9 +353,10 @@
                         <div class="col-lg d-flex justify-content-center">
                           <div class="card text-center" style="width: 18rem;">
                             <a href="{{ post.link }}" target="_blank">
-                             <img src="{{SITEURL}}{{post.image}}" class="card-img-top" alt="...">
+                                {{ picture(post.image, post.title, 200) }}
+                             <!--img src="{{SITEURL}}{{post.image}}" class="card-img-top" alt="..." -->
                             </a>
-                            <div class="card-body">
+                            <div class="card-body" id="popover-dismiss">
                               <h5 class="card-title">{{post.title}}</h5>
                               <p class="card-text">{{post.summary}}</p>
                               <a tabindex="0" class="btn btn-block btn-outline-dark" role="button"
@@ -355,14 +385,18 @@
     <script type="text/javascript">
       const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
       const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-      const popover = new bootstrap.Popover('.popover-dismiss', {
-        trigger: 'focus'
-      })
+
+      if (document.querySelector('.popover')) {
+        const popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+            trigger: 'focus'
+        })
+      }
 
       function copyVoucher(voucher) {  
         navigator.clipboard.writeText(voucher);
       }
     </script>
+    <script src="/theme/js/main.bundle.min.js"></script>
 </body>
 
 </html>

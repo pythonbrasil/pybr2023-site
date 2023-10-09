@@ -1,0 +1,28 @@
+// Import the font family first.
+@import "./theme/font";
+
+// Reset the default css behaviors and determine the default styles for the body element
+@import "./theme/reset";
+
+// Variables used globally
+@import "./theme/variables";
+
+// Determine some globals styles
+@import "./components/globals";
+
+// Import css style to maintain the compatibility
+@import "../css/theme.css";
+
+// Components of the theme
+@import "./components/container";
+@import "./components/body";
+@import "./components/header";
+@import "./components/main";
+@import "./components/section";
+@import "./components/footer";
+@import "./components/_popover.css";
+@import "./components/sponsors";
+
+// Pages
+@import "./pages/palestras";
+@import "./pages/article";

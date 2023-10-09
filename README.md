@@ -17,7 +17,8 @@ Por favor use os arquivos **html** dentro da pasta **theme** para editar o conte
 
 O arquivo `CNAME` é automaticamente copiado para dentro do output, levando os dados necessarios junto com o tema e os estilos.
 
-Para estilizar use o arquivo `styles.css` em `\theme\static\css\`
+O tema foi atualizado e escrito utilizando [SASS](https://sass-lang.com) e as alterações devem ser feitas nos arquivos no path `\theme\resources\scss`.
+O arquivo `styles.css` em `\theme\static\css\` foi mantido para garantir a compatibilidade.
 
 Toda a pasta static ira para o output na compilação sempre que precisar limpar *html,css,js,...* apague a pasta **output** e rode novamente o comando de inicializar ou utilize o comando
 

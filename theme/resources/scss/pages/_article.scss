@@ -1,0 +1,138 @@
+main {
+  &.sinlge-content {
+    background-image: linear-gradient(
+      to bottom,
+      var(--secondary-color) 0,
+      var(--main-color) 58rem,
+      var(--main-color) 90%,
+      var(--secondary-color)
+    );
+    padding-top: 4rem;
+    min-height: calc(100vh - var(--header-height));
+    .header-content {
+      @extend .container;
+      padding: 3rem 0;
+      row-gap: 1rem;
+      img {
+        width: 15rem;
+        height: auto;
+      }
+      h1 {
+        width: 50%;
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        font-weight: 300;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+      }
+      .links {
+        width: 50%;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+        a {
+          text-transform: uppercase;
+          color: #fff;
+          &::after {
+            content: "/";
+            width: 1rem;
+          }
+          &:active,
+          &:hover {
+            span {
+              color: var(--main-color);
+            }
+          }
+        }
+        span {
+          color: #f1f1f1;
+        }
+      }
+    }
+    article {
+      @extend .container;
+      background: #fff;
+      color: var(--secondary-color);
+      min-height: 30vh;
+      display: flex;
+      border-radius: 0.5rem;
+      display: block;
+      text-align: center;
+      padding: 1rem 2rem;
+      width: 50%;
+      border: 2px solid var(--secondary-color);
+      box-shadow: 0 3px 0 var(--secondary-color);
+      padding-bottom: 0;
+      overflow: hidden;
+      margin-bottom: 8rem;
+      @media screen and (max-width: 992px) {
+        width: 100%;
+      }
+      hr {
+        display: none;
+      }
+      .speakers {
+        .speaker {
+          display: flex;
+          justify-content: center;
+          .speaker-avatar {
+            height: 12rem;
+            overflow: hidden;
+            width: 10rem;
+            border-radius: 0.5rem;
+            border: 2px solid var(--secondary-color);
+            box-shadow: 0 3px 0 var(--secondary-color);
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              &.thaisviana {
+                object-position: 184%;
+                transform: scale(1.8);
+              }
+              &.camilamaia {
+                object-position: left;
+              }
+            }
+            &.s_2 {
+              display: grid;
+              grid-template-columns: 10rem 10rem;
+              grid-template-rows: 12rem;
+              width: 20rem;
+            }
+          }
+        }
+      }
+      .talk-about {
+        h3 {
+          margin-top: 1rem;
+        }
+        .talk-description {
+          margin-left: -2rem;
+          margin-right: -2rem;
+          padding: 1.5rem 2rem;
+          background: #f1f1f1;
+          border-top: 1px solid #bdbdbdee;
+          h4 {
+            position: relative;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 10%;
+              bottom: 0;
+              border-bottom: 4px solid var(--main-color);
+            }
+          }
+          p {
+            padding: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}

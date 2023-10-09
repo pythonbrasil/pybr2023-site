@@ -1,4 +1,5 @@
-{% include 'head.html' %}
+{% from 'head.html' import head %}
+{{ head("Lista de conteúdo", "")}}
 {% with hide_menu=true %}
 {% include 'menu.html' %}
 {% endwith %}
@@ -26,3 +27,4 @@
     {%endif%}
     {% endfor  %}
 </div>
+<script src="/theme/js/main.bundle.min.js"></script>

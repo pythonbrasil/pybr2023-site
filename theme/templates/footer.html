@@ -1,7 +1,38 @@
 <footer class="footer container-fluid">
   <div class="row">
-    <div class="col-lg-4 text-center">
-      <img src="/theme/img/logo_1.png" alt="Logo da python" class="img-fluid footer-image d-none d-lg-block ">
+    <div class="col-lg-4 text-center footer-logo">
+      <figure>
+        <picture>
+          <source
+            srcset="/theme/img/responsive/logo_1_w360.webp"
+            width="360"
+            media="(max-width: 360px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/theme/img/responsive/logo_1_w360.png"
+            width="360"
+            media="(max-width: 360px)"
+            type="image/png"
+          />
+          <source
+            srcset="/theme/img/responsive/logo_1_w460.webp"
+            width="460"
+            type="image/webp"
+          />
+          <source
+            srcset="/theme/img/responsive/logo_1_w460.png"
+            width="460"
+            type="image/png"
+          />
+          <img
+            src="/theme/img/logo_1.png"
+            alt="Logo Python Brasil 2023 - Caxias do Sul"
+            class="img-fluid footer-image d-none d-lg-block"
+            loading="lazy"
+          />
+        </picture>
+      </figure>
     </div>
     <div class="col-lg-8 footer-itens">
       <div class="row">
@@ -10,52 +41,77 @@
           <ul class="list-group list-group-flush">
             {% if SOCIAL.twitter %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.twitter}}" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i>
-                Twitter</a>
+              <a href="{{SOCIAL.twitter}}" target="_blank" class="twitter">
+                {% include "svg/twitter.svg" %} Twitter
+              </a>
             </li>
-            {% endif %}
-
-            {% if SOCIAL.facebook %}
+            {% endif %} {% if SOCIAL.facebook %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.facebook}}" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i>
-                Facebook</a>
+              <a href="{{SOCIAL.facebook}}" target="_blank" class="facebook">
+                {% include "svg/facebook.svg" %} Facebook
+              </a>
             </li>
-            {% endif %}
-
-            {% if SOCIAL.instagram %}
+            {% endif %} {% if SOCIAL.instagram %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.instagram}}" class="instagram" target="_blank" class="instagram"><i
-                  class="fa-brands fa-instagram"></i> Instagram</a>
+              <a
+                href="{{SOCIAL.instagram}}"
+                class="instagram"
+                target="_blank"
+                class="instagram"
+              >
+                {% include "svg/instagram.svg" %} Instagram
+              </a>
             </li>
-            {% endif %}
-            {% if SOCIAL.linkedin %}
+            {% endif %} {% if SOCIAL.linkedin %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.linkedin}}" class="linkedin" target="_blank" class="linkedin"><i
-                  class="fa-brands fa-linkedin"></i> Linkedin</a>
+              <a
+                href="{{SOCIAL.linkedin}}"
+                class="linkedin"
+                target="_blank"
+                class="linkedin"
+              >
+                {% include "svg/linkedin.svg" %} Linkedin
+              </a>
             </li>
-            {% endif %}
-            {% if SOCIAL.youtube %}
+            {% endif %} {% if SOCIAL.youtube %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.youtube}}" class="youtube" target="_blank" class="youtube"><i
-                  class="fa-brands fa-youtube"></i> Youtube</a>
+              <a
+                href="{{SOCIAL.youtube}}"
+                class="youtube"
+                target="_blank"
+                class="youtube"
+                >{% include "svg/youtube.svg" %} Youtube
+              </a>
             </li>
-            {% endif %}
-            {% if SOCIAL.flickr %}
+            {% endif %} {% if SOCIAL.flickr %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.flickr}}" class="flickr" target="_blank" class="flickr"><i
-                  class="fa-brands fa-flickr"></i> Flickr</a>
+              <a
+                href="{{SOCIAL.flickr}}"
+                class="flickr"
+                target="_blank"
+                class="flickr"
+                >{% include "svg/flickr.svg" %} Flickr
+              </a>
             </li>
-            {% endif %}
-            {% if SOCIAL.email %}
+            {% endif %} {% if SOCIAL.email %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.email}}" class="email" target="_blank" class="email"><i class="fa fa-envelope"></i>
-                E-mail</a>
+              <a
+                href="{{SOCIAL.email}}"
+                class="email"
+                target="_blank"
+                class="email"
+                >{% include "svg/envelope.svg" %} E-mail
+              </a>
             </li>
-            {% endif %}
-            {% if SOCIAL.telegram %}
+            {% endif %} {% if SOCIAL.telegram %}
             <li class="list-group-item">
-              <a href="{{SOCIAL.telegram}}" class="telegram" target="_blank" class="telegram"><i
-                  class="fa-brands fa-telegram"></i> Telegram</a>
+              <a
+                href="{{SOCIAL.telegram}}"
+                class="telegram"
+                target="_blank"
+                class="telegram"
+                >{% include "svg/telegram.svg" %} Telegram
+              </a>
             </li>
             {% endif %}
           </ul>
@@ -64,14 +120,10 @@
           <h4>Links da APyB</h4>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <a href="http://python.org.br/">
-                APyB
-              </a>
+              <a href="http://python.org.br/"> APyB </a>
             </li>
             <li class="list-group-item">
-              <a href="http://python.org.br/cdc/">
-                Código de conduta
-              </a>
+              <a href="http://python.org.br/cdc/"> Código de conduta </a>
             </li>
             <li class="list-group-item">
               <a href="http://python.org.br/premio-dorneles-tremea-jean-ferri">
@@ -83,14 +135,11 @@
         <div class="col-lg">
           <h4>Site Map</h4>
           <ul class="list-group list-group-flush">
-            {% for tag, text, active in MENU %}
-            {% if active %}
+            {% for tag, text, active in MENU %} {% if active %}
             <li class="list-group-item">
-              <a href="{{tag}}">{{text}}</a>
+              <a href="/{{tag}}">{{text}}</a>
             </li>
-            {% endif %}
-            {% endfor %}
-            {% if EVENTO.inscricao %}
+            {% endif %} {% endfor %} {% if EVENTO.inscricao %}
             <li class="list-group-item buy-tickets">
               <a href="{{EVENTO.inscricao}}" target="_blank">Inscrever-se</a>
             </li>
