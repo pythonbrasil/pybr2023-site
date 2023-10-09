@@ -35,7 +35,8 @@ main {
       column-gap: 1rem;
       margin-bottom: 10rem;
       @media screen and (max-width: 992px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: none;
+        display: block;
       }
       .single-item {
         flex: 1 0 calc(50% - 1rem);
@@ -54,6 +55,9 @@ main {
         &:active,
         &:hover {
           border: 2px solid var(--secondary-color);
+        }
+        @media screen and (max-width: 992px) {
+          margin-bottom: 2rem;
         }
         .speakers {
           display: flex;

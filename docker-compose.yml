@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  node:
+    build: 
+      dockerfile: ./docker/dockerfile
+      context: .
+    container_name: event_theme
+    command: npm run --silent build >> /dev/null

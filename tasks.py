@@ -30,9 +30,12 @@ CONFIG = {
 
 @task
 def build_webpack(c):
-    """Builds the css and javascript assets and move to theme/static/"""
+    """Builds the css and javascript assets and move to theme/"""
     sys.stderr.write('Generating the css and javascript assets...\n')
-    c.run('npm run --silent build >> /dev/null')
+    c.run('docker compose build --no-cache')
+    c.run('docker compose up -d')
+    c.run('docker cp event_theme:/app/theme/static/ ./theme/')
+    c.run('docker compose down -v')
 
 
 @task
@@ -90,6 +93,7 @@ def reserve(c):
 @task
 def preview(c):
     """Build production version of site"""
+    build_webpack(c)
     c.run('pelican -t theme -s {settings_publish}'.format(**CONFIG))
     move_old_to_output()
     move_cname()

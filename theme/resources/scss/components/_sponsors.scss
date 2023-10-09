@@ -28,6 +28,9 @@ section {
         .sponsors-items {
           width: 100%;
           display: flex;
+          @media screen and (max-width: 992px) {
+            display: block;
+          }
           justify-content: center;
           column-gap: 2rem;
           .item {
@@ -40,13 +43,12 @@ section {
             a {
               &.psf {
                 img {
-                  max-height: 7rem;
+                  max-height: 11rem;
                 }
               }
               img {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                object-fit: none;
                 object-position: center;
               }
             }
@@ -56,34 +58,38 @@ section {
       .diamante {
         .sponsors-items {
           .item {
-            width: calc(100% / 3);
+            width: calc(100% / 2);
             @media screen and (max-width: 992px) {
-              width: calc(100% / 2);
+              width: calc(100%);
+              margin-bottom: 2rem;
             }
           }
         }
       }
       .prata {
         .item {
-          width: calc(100% / 8);
+          width: calc(100% / 4);
           @media screen and (max-width: 992px) {
-            width: calc(100% / 4);
+            width: calc(100%);
+            margin-bottom: 2rem;
           }
         }
       }
       .parceiros {
         .item {
-          width: calc(100% / 8);
+          width: calc(100% / 4);
           @media screen and (max-width: 992px) {
-            width: calc(100% / 4);
+            width: calc(100%);
+            margin-bottom: 2rem;
           }
         }
       }
       .apoio {
         .item {
-          width: calc(100% / 10);
+          width: calc(100% / 4);
           @media screen and (max-width: 992px) {
-            width: calc(100% / 4);
+            width: calc(100%);
+            margin-bottom: 2rem;
           }
         }
       }

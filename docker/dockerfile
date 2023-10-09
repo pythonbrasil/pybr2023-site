@@ -1,0 +1,11 @@
+FROM node:latest
+
+WORKDIR /app
+
+COPY ./package.json /app/package.json
+COPY ./package-lock.json /app/package-lock.json
+COPY ./webpack.config.js /app/webpack.config.js
+COPY ./theme /app/theme
+
+RUN npm i
+RUN npm run --silent build >> /dev/null
