@@ -40,12 +40,31 @@ pip install -r requirements.txt
 
 # Rodar/Iniciar
 
+**Ambiente precisa de docker instalado!!**
+
+Todo o build do docker esta abstraido dentro do invoke mas é nesessario uma das ultimas versões do docker ja com o comando via plugin  `docker compose [up, build, down]`
+
+
+
+
 ```shell
 source .venv/bin/activate
 invoke livereload
 ```
 
 vai rodar em http://127.0.0.1:8000/
+
+# Alteração de CSS/JS
+
+Quando alterar css ou js utilize a pasta resources que tem os arquivos SCSS que serão buildados e colocados na static via o comando 
+
+```
+invoke build-webpack
+```
+que empacotara e minimizara as imagens, fonts, scss, e js.
+
+os demais recursos do pelican estão disponiveis da mesma forma.
+
 
 # Deploy
 ```shell
