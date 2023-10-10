@@ -1,0 +1,89 @@
+#pretalx-agenda {
+    width: 100%;
+    .hide {
+        display: none;
+    }
+    #pretalx-programacao {
+        .programacao-day {
+            .room {
+                .talks {
+                    .talk {
+                        list-style: none;
+                        padding: 8px;
+                        border-bottom: 1px solid var(--main-color);
+                        margin-bottom: 12px;
+                        .time-space {
+                            display: inline-block;
+                            max-width: 30%;
+                        }
+                        .talk-space {
+                            min-width: 60%;
+                            display: inline-block;
+                            text-align: left;
+                            h4 {
+                                text-align: left;
+                            }
+                            p {
+                                text-align: left;
+                            }
+                            .nivel {
+                                background-color: var(--secondary-color);
+                                color: white;
+                                border-radius: 8px;
+                                padding: 4px;
+                            }
+            
+                        }
+                    }
+                }
+            }
+            background-color: white;
+            border-radius: 10px;
+            transition: all 0.5s;
+            color: var(--secondary-color);
+            padding: 8px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            .programacao-day-title {
+                color: var(--secondary-color);
+                padding: 2px;
+                border-bottom: 1px solid var(--secondary-color);
+                margin-bottom: 4px;
+            }
+            .pretalx-room{
+                display: inline-block;
+                cursor: pointer;
+                background-color: var(--secondary-color);
+                border: 1px solid white;
+                color: white;
+                border-radius: 8px;
+                margin:4px;
+                padding: 12px;
+                &.active {
+                    background-color: white;
+                    border: 1px solid var(--secondary-color);
+                    color: var(--secondary-color)
+                }
+            }
+        }
+    }
+    #pretalx-dias {
+        padding: 8px;
+        margin: auto;
+        .pretalx-day{
+            display: inline-block;
+            cursor: pointer;
+            background-color: var(--secondary-color);
+            border: 1px solid white;
+            color: white;
+            border-radius: 8px;
+            margin:4px;
+            padding: 12px;
+            &.active {
+                background-color: white;
+                border: 1px solid var(--secondary-color);
+                color: var(--secondary-color)
+            }
+        }
+    }
+}
