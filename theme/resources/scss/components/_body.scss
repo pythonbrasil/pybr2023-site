@@ -5,4 +5,9 @@ body {
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+
+  .pretalx-embed {
+    width: 100%;
+    overflow: scroll;
+  }
 }
