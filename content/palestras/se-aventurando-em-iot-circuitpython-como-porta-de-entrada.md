@@ -1,9 +1,8 @@
 ---
-Title: Se Aventurando em IoT: CircuitPython como porta de entrada
-Date: 2023-12-03 10:20
+Title: Se Aventurando em IoT CircuitPython como porta de entrada
+Date: 2023-10-01 10:20
 Description: Conheça mais sobre o universo da Internet das Coisas (IoT) e aprenda a programar um microcontrolador usando Python de forma simples!
 Slug: se-aventurando-em-iot-circuitpython-como-porta-de-entrada
-Id: se-aventurando-em-iot-circuitpython-como-porta-de-entrada
 Duration: 45
 Speakers: Pedro Rendeiro
 Speakers_biography: 
