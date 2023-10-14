@@ -1,0 +1,84 @@
+<div class="event-schedule">
+  <div class="call-to-action">
+    <button type="button" class="btn btn-block btn-outline-light content-group active" id="tutoriais" disabled>
+      {% include 'svg/laptop-code.svg' %}
+      Tutoriais
+    </button>
+    <button type="button" class="btn btn-block btn-outline-light content-group" id="palestras">
+      {% include 'svg/speakers.svg' %}
+      Palestras
+    </button>
+    <button type="button" class="btn btn-block btn-outline-light content-group" id="sprint">
+      {% include 'svg/speakers.svg' %}
+      Sprints
+    </button>
+  </div>
+  <div id="pretalx-agenda" class="pretalx-agenda">
+    <div class="pretalx-content active" id="tutoriais_content">
+      <div class="content-header" id="tutoriais_header">
+        <ul id="pretalx-dias" class="pretalx-dias">
+          <li class="pretalx-day active" id="day-1" data-index-day="20231030" data-date="2023-10-30">
+            {% include 'svg/day.svg' %}
+            30/10/2023
+          </li>
+          <li class="pretalx-day" id="day-2" data-index-day="20231031" data-date="2023-10-31">
+            {% include 'svg/day.svg' %}
+            31/10/2023
+          </li>
+          <li class="pretalx-day" id="day-3" data-index-day="20231101" data-date="2023-11-01">
+            {% include 'svg/day.svg' %}
+            01/11/2023
+          </li>
+        </ul>
+        <ul class="pretalx-rooms" id="tutoriais_rooms">
+          <li class="pretalx-room hidden">
+            {% include 'svg/place.svg' %}
+          </li>
+        </ul>
+      </div>
+      <div id="tutoriais_programacao" class="pretalx-programacao">
+      </div>
+    </div>
+    <div class="pretalx-content" id="palestras_content">
+      <div class="content-header" id="palestras_header">
+        <ul id="pretalx-dias" class="pretalx-dias">
+          <li class="pretalx-day" id="day-4" data-index-day="20231102" data-date="2023-11-02">
+            {% include 'svg/day.svg' %}
+            02/11/2023
+          </li>
+          <li class="pretalx-day" id="day-5" data-index-day="20231103" data-date="2023-11-03">
+            {% include 'svg/day.svg' %}
+            03/11/2023
+          </li>
+          <li class="pretalx-day" id="day-6" data-index-day="20231104" data-date="2023-11-04">
+            {% include 'svg/day.svg' %}
+            04/11/2023
+          </li>
+        </ul>
+        <ul class="pretalx-rooms" id="palestras_rooms">
+          <li class="pretalx-room hidden">
+            {% include 'svg/place.svg' %}
+          </li>
+        </ul>
+      </div>
+      <div id="palestras_programacao" class="pretalx-programacao"></div>
+    </div>
+    <div class="pretalx-content" id="sprint_content">
+      <div class="content-header" id="sprint_header">
+        <ul id="pretalx-dias" class="pretalx-dias">
+          <li class="pretalx-day" id="day-7" data-index-day="20231105" data-date="2023-11-05">
+            {% include 'svg/day.svg' %}
+            05/11/2023
+          </li>
+        </ul>
+        <ul class="pretalx-rooms" id="sprint_rooms">
+          <li class="pretalx-room hidden">
+            {% include 'svg/place.svg' %}
+          </li>
+        </ul>
+      </div>
+      <div id="sprint_programacao" class="pretalx-programacao">
+      </div>
+    </div>
+  </div>
+</div>
