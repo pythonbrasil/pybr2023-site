@@ -22,9 +22,11 @@
 @import "./components/footer";
 @import "./components/_popover.css";
 @import "./components/sponsors";
-@import "./components/pretalx";
+@import "./components/skeleton";
+//@import "./components/pretalx";
 
 
 // Pages
 @import "./pages/palestras";
 @import "./pages/article";
+@import "./pages/home/talks";

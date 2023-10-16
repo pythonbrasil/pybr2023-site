@@ -6,7 +6,9 @@ import json
 from dotenv import dotenv_values
 from markdownify import markdownify
 from textwrap import dedent
-
+from glob import glob
+from PIL import Image
+from pathlib import Path
 
 def string_parser(string):
     return (
@@ -106,6 +108,7 @@ class CreateMDContent():
                 'abstract': talks['abstract'],
                 'track': talks['track'],
                 'duration': talks['duration'],
+                'description': talks['description'] or talks['abstract'],
                 'speakers': [],
             }
 
@@ -114,6 +117,7 @@ class CreateMDContent():
                     'name': speaker['name'] or '',
                     'biography': speaker['biography'] or '',
                     'avatar': speaker['avatar'] or '',
+                    'code': speaker['code'] or '',
                 })
 
             self.create_file(content=talk)
@@ -133,12 +137,12 @@ class CreateMDContent():
 
         file_name = string_parser(content.get('title'))
         with open('{}/{}.md'.format(content_path, file_name), "w") as f:
-            content = dedent(
+            md_content = dedent(
                 "---\n"
                 + 'Title: '
-                + content.get('title')
+                + content.get('title').replace(':', '')
                 + '\n'
-                + 'Date: 2023-12-03 10:20'
+                + 'Date: 2023-10-01 10:20'
                 + '\n'
                 + 'Description: '
                 + content.get('abstract').replace('\r\n', '<br/>')
@@ -163,11 +167,30 @@ class CreateMDContent():
                 + '\n\n'
                 + "---\n"
                 + "\n"
-                + markdownify(content.get('abstract'))
+                + markdownify(content.get('description'))
             )
-            f.write(content)
+            f.write(md_content)
             f.close()
+            for speaker in content.get('speakers'):
+                if speaker.get('avatar'):
+                    self.get_avatar(str(speaker.get('code')), speaker.get('avatar'))
             print("File created:" + file_name)
+
+    def get_avatar(self, name=str, img_src=str):
+        """ Save the avatar locally."""
+        img_request = requests.get(img_src)
+        if img_request.ok:
+            file_type = img_request.headers['Content-type'].split("/")[1]
+            with open('{}/content/images/palestrantes/{}.{}'.format(self.app_path, name, file_type), "wb") as file:
+                file.write(img_request.content)
+                file.close()
+                webp_file = file.name.split('.')[0] + "_thumb.webp"
+                png_file = file.name.split('.')[0] + "_thumb.png"
+                image = Image.open(file.name)
+                image.thumbnail((128,128), Image.LANCZOS)
+                image.save(png_file, format="png", optimize=True)
+                image.save(webp_file, format="webp", optimize=True)
+                os.remove(file.name)
 
 
 def generate_content():

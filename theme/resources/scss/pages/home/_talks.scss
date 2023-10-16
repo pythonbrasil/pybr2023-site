@@ -1,0 +1,321 @@
+.event-schedule {
+  width: 100%;
+  padding-bottom: 2rem;
+  display: none;
+  &.active {
+    display: block;
+  }
+  .call-to-action {
+    @extend .container;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: row;
+    border: 2px solid var(--secondary-color);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom: 2px solid var(--main-color);
+    padding: 0;
+    .content-group {
+      cursor: pointer;
+      border: 2px solid #fff;
+      padding: 0.6rem 0;
+      margin: 0;
+      font-size: 1.4rem;
+      border-radius: 0;
+      outline: 2px solid #eeee;
+      &:active,
+      &:hover,
+      &.active {
+        background-color: var(--main-color);
+        border-color: #fff;
+        color: #fff;
+        svg {
+          fill: #fff;
+          stroke: #fff;
+        }
+      }
+      &.active {
+        border-bottom: 2px solid var(--main-color);
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      border-radius: 0;
+    }
+  }
+  .pretalx-agenda {
+    @extend .container;
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0;
+    padding-bottom: 4rem;
+    border: 2px solid var(--secondary-color);
+    border-top: 2px solid var(--main-color);
+    .pretalx-content {
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      &.active {
+        display: flex;
+      }
+      .pretalx-dias {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        column-gap: 2px;
+        justify-content: space-between;
+        list-style: none;
+        border-bottom: 4px solid var(--complement-color);
+        background: #eeee;
+        .pretalx-day {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 0.5rem;
+          background-color: #fff;
+          border: 2px solid #fff;
+          border-right: none;
+          border-radius: 0;
+          color: var(--secondary-color);
+          padding: 0.5rem 0;
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: var(--secondary-color);
+          }
+          &:last-of-type {
+            border-right: 2px solid #fff;
+          }
+          &:hover {
+            background-color: var(--complement-color);
+            color: #fff;
+            svg {
+              fill: #fff;
+            }
+          }
+          &.active {
+            background-color: var(--complement-color);
+            border-bottom: 2px solid var(--complement-color);
+            color: #fff;
+            svg {
+              fill: #fff;
+            }
+          }
+          &:disabled {
+            cursor: not-allowed;
+          }
+        }
+      }
+      .pretalx-rooms {
+        background: #eeee;
+        display: none;
+        list-style: none;
+        border-bottom: 4px solid var(--secondary-color);
+        &.active {
+          display: flex;
+        }
+        .pretalx-room {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.5rem 0;
+          color: var(--secondary-color);
+          border: 2px solid #fff;
+          cursor: pointer;
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: var(--secondary-color);
+          }
+          &:hover {
+            background-color: var(--secondary-color);
+            border: 2px solid #fff;
+            color: #fff;
+            svg {
+              fill: #fff;
+            }
+          }
+          &.active {
+            background-color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            color: #fff;
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+      }
+      .pretalx-programacao {
+        width: 100%;
+        color: var(--secondary-color);
+        .programacao-dia {
+          width: 100%;
+          display: none;
+          flex-direction: column;
+          padding: 2rem;
+          row-gap: 1rem;
+          @media screen and (max-width: $breakpoint-sm) {
+            padding: 0;
+            padding-top: 2rem;
+            row-gap: 0;
+          }
+          &.active {
+            display: flex;
+          }
+          h2 {
+            margin-bottom: 1rem;
+          }
+          .programacao-talk {
+            overflow: hidden;
+            width: 100%;
+            display: none;
+            border: 1px solid var(--complement-color);
+            row-gap: 1rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 0.6rem;
+            box-shadow: 0 3px 0 var(--secondary-color);
+            @media screen and (max-width: $breakpoint-sm) {
+              border-radius: 0;
+              box-shadow: none;
+              border-left: none;
+              border-right: none;
+            }
+            .talk-start {
+              width: 15%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              &.Beginner {
+                background-color: var(--main-color);
+                color: #fff;
+              }
+              &.Intermediary {
+                background-color: #300d42;
+                color: #fff;
+              }
+              &.Advanced {
+                background-color: #3c1053;
+                color: #fff;
+              }
+              &.Non-technical {
+                background-color: #041b2d;
+                color: #fff;
+              }
+              h3 {
+                @media screen and (max-width: $breakpoint-sm) {
+                  font-size: 1rem;
+                }
+              }
+              @media screen and (max-width: 480px) {
+                width: 20%;
+              }
+            }
+            .talk-title {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              position: relative;
+              padding: 1rem;
+              row-gap: 0.5rem;
+              h4 {
+                margin: 0;
+                @media screen and (max-width: $breakpoint-sm) {
+                  font-size: 1.3rem;
+                }
+              }
+              @media screen and (max-width: 480px) {
+                align-items: center;
+              }
+              .palestrantes {
+                display: flex;
+                column-gap: 0.5rem;
+                justify-content: center;
+                align-items: center;
+                p {
+                  margin: 0;
+                }
+                .avatar {
+                  position: relative;
+                  display: flex;
+                  height: 2rem;
+                  img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                  }
+                }
+                @media screen and (max-width: 480px) {
+                  flex-direction: column;
+                }
+              }
+              .nivel-tipo {
+                display: flex;
+                column-gap: 0.5rem;
+                span {
+                  padding: 0 0.5rem;
+                  background-color: var(--complement-color);
+                  color: #fff;
+                  &.Beginner {
+                    background-color: var(--main-color);
+                    color: #fff;
+                  }
+                  &.Intermediary {
+                    background-color: #300d42;
+                    color: #fff;
+                  }
+                  &.Advanced {
+                    background-color: #3c1053;
+                    color: #fff;
+                  }
+                  &.Non-technical {
+                    background-color: #041b2d;
+                    color: #fff;
+                  }
+                }
+              }
+              .talk-more {
+                position: absolute;
+                bottom: 1rem;
+                width: 8rem;
+                right: 1rem;
+                font-size: 1rem;
+                background-color: var(--main-color);
+                color: #fff;
+                border-radius: 50px;
+                font-weight: 400;
+                &:active,
+                &:hover {
+                  background-color: var(--secondary-color);
+                }
+                @media screen and (max-width: 480px) {
+                  width: 100%;
+                  align-self: flex-end;
+                  margin-top: 0.5rem;
+                  position: initial;
+                  background-color: #fff;
+                  color: var(--secondary-color);
+                }
+              }
+            }
+            &.active {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
