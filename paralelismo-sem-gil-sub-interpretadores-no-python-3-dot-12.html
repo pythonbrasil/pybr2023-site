@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8" />
-  <title>Paralelismo Sem Gil: Sub-Interpretadores  No Python 3.12 - Python Brasil 2023</title>
+  <title>Paralelismo Sem Gil Sub-Interpretadores  No Python 3.12 - Python Brasil 2023</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="" name="keywords" />
   <meta content="Uma das grandes limitações do Python sempre foi que programas multi-threading usam um único núcleo da CPU. Com o Python 3.12, essa limitação é finalmente contornável, sem o uso de múltiplos processos." name="description" />
@@ -26,7 +26,6 @@
 
   <!-- Main Stylesheet File -->
   <link href="/theme/style.css" rel="stylesheet" rel="preload" as="style"/>
-  <script type="text/javascript" src="https://pretalx.com/python-brasil-2023/schedule/widget/v2.en.js"></script>
 
   <!-- =======================================================
       Theme Name: TheEvent
@@ -124,14 +123,14 @@
       </picture>
     </figure>
     <h1 class="mt-4">
-      Paralelismo Sem Gil: Sub-Interpretadores  No Python 3.12
+      Paralelismo Sem Gil Sub-Interpretadores  No Python 3.12
     </h1>
     <div class="links">
       <a href="/category/palestras.html">
         <span class="badge text-bg-light"> palestras </span>
       </a>
       <spam>
-        Paralelismo sem GIL: sub-interpretadores  no Python 3.12
+        Paralelismo sem GIL sub-interpretadores  no Python 3.12
       </spam>
     </div>
   </div>
@@ -152,9 +151,10 @@
       <h3>João Sebastião de Oliveira Bueno</h3>
       <p>João S. O. Bueno é desenvolvedor Python desde 2001. Acompanhou a fundação da APYB, e desenvolveu projetos principalmente em Python em vários domínios da computação ao longo desse tempo.</p>
       <div class="talk-description">
-        <h4>Paralelismo sem GIL: sub-interpretadores  no Python 3.12</h4>
+        <h4>Paralelismo sem GIL sub-interpretadores  no Python 3.12</h4>
         <hr>
-<p>Uma das grandes limitações do Python sempre foi que programas multi-threading usam um único núcleo da CPU. Com o Python 3.12, essa limitação é finalmente contornável, sem o uso de múltiplos processos.</p>
+<p>Em tempo para a versão 3.12 foi aprovada a "PEP 684: A Per Interpreter GIL", culminando um trabalho de 8 anos do core developer Eric Snow, que permite, dentro de um mesmo processo Python, o uso em paralelo de vários núcleos de CPU de forma concorrente. A interface pública pra isso, PEP 554, não foi aprovada, mas a funcionalidade está lá, "escondida". O apresentador é autor de um pacote Python para possibilitar e simplificar o uso de sub-interpretadores como uma opção intermediária entre criação de sub-processos (sub-processing) e threads (que por conta da Global Interpreter Lock efetivamente limitam o código Python a um único núcleo).</p>
+<p>A palestra apresenta a lib que permite o uso de sub-interpretadores com a GIL independente, de forma tão simples quanto o módulo threading, mostra alguns benchmarks, e explora possibilidades para finalmente ter programas Python fazendo uso integral de CPUs de múltiplos núcleos.</p>
       </div>
     </div>
   </article>
