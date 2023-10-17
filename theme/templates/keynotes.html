@@ -1,27 +1,31 @@
-{% macro left_keynote(image, name, summary) -%}
+{% macro left_keynote(image, name, body) -%}
+<div class="keynote-card">
     <div class="col-md">
-        <img src="{{ image }}" class="img-fluid rounded" alt="...">
+        <img src="{{ image }}" class="keynote-img" alt="...">
     </div>
-    <div class="col-md-8">
+    <div class="keynote-text">
         <div class="card-body text-white">
             <h5 class="card-title fs-1 text-start">{{ name }}</h5>
             <p class="card-text fs-2 text-start">
-                {{ summary }}
+                {{ body }}
             </p>
         </div>
     </div>
+</div>
 {%- endmacro %}
 
-{% macro right_keynote(image, name, summary) -%}
-    <div class="col-md-8">
+{% macro right_keynote(image, name, body) -%}
+<div class="keynote-card">
+    <div class="keynote-text">
         <div class="card-body text-white">
             <h5 class="card-title fs-1 text-end">{{ name }}</h5>
             <p class="card-text fs-2 text-end">
-                {{ summary }}
+                {{ body }}
             </p>
         </div>
     </div>
-    <div class="col-md">
-        <img src="{{ image }}" class="img-fluid rounded" alt="...">
+    <div class="col-md  ">
+        <img src="{{ image }}" class="keynote-img" alt="...">
     </div>
+</div>
 {%- endmacro %}

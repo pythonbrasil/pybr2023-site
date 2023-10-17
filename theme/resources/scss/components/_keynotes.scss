@@ -1,0 +1,19 @@
+.keynote-img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+}
+
+.keynote-card {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.keynote-text {
+    display: flex;
+    flex-grow: 1;
+}

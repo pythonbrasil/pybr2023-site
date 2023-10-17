@@ -83,6 +83,22 @@
                 </p>
             </div>
         </section>
+        <section class="section keynotes" id="keynotes">
+            <div class="container">
+                <h2 class="title fs-1"> Os Keynotes </h2>
+                <hr class="divider" />
+                {% for cat, posts in categories if cat == 'keynotes' %}
+                    {% for post in posts %}
+                        {% from 'keynotes.html' import left_keynote, right_keynote %}
+                            {% if loop.cycle('odd', 'even') == 'odd' %}
+                                {{ left_keynote(SITEURL+post.image, post.name, post.content) }}
+                            {% else %}
+                                {{ right_keynote(SITEURL+post.image, post.name, post.content) }}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </section>
         <section class="section programacao" id="programacao">
             <div class="container">
                 <h2 class="title fs-1"> Agenda do Evento </h2>
