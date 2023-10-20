@@ -223,9 +223,9 @@ function createScheduleDay(date, rooms) {
     // Create the talk level element
     const talk_level = `<div class="nivel-tipo">
       <span class="nivel ${talk.track.replaceAll(" ", "_")}">${
-      Track[talk.track.replace("-", "_")]
+      talk.track
     }</span>
-      <span class="tipo">${Type[talk.type.replace(" ", "_")]}</span>
+      <span class="tipo">${talk.type}</span>
       <span class="local">${talk.room.toUpperCase()}</span>
     </div>`;
 
