@@ -1,0 +1,67 @@
+{# create a new macro #}
+{% macro keynote(post) -%}
+<div class="keynote-card">
+    <div class="keynote-data">
+        <div class="keynote-avatar">
+            <figure>
+                <picture>
+                    <source srcset="{{SITE_URL}}/images/keynotes/responsive/{{post.image}}_w300.webp" width="300"
+                        media="(max-width: 580px)" type="image/webp" />
+                    <source srcset="{{SITE_URL}}/images/keynotes/responsive/{{post.image}}_w300.png" width="300"
+                        media="(max-width: 580px)" type="image/png" />
+                    <source srcset="{{SITE_URL}}/images/keynotes/responsive/{{post.image}}_w400.webp" width="400"
+                        type="image/webp" />
+                    <source srcset="{{SITE_URL}}/images/keynotes/responsive/{{post.image}}_w400.png" width="400"
+                        type="image/png" />
+                    <img src="{{SITEURL}}/images/keynotes/{{post.image}}.png" alt="keynote {{post.name}}" width="300px"
+                        class="img {{post.title}}" loading="lazy" />
+                </picture>
+            </figure>
+        </div>
+        <div class="keynotes-links">
+            <ul>
+                {% if post.linkedin %}
+                <li>
+                    <a href="{{ post.linkedin }}" target="_blank">
+                        {% include "svg/linkedin.svg" %}
+                    </a>
+                </li>
+                {% endif %}
+                {% if post.github %}
+                <li>
+                    <a href="{{ post.github }}" target="_blank">
+                        {% include "svg/github.svg" %}
+                    </a>
+                </li>
+                {% endif %}
+                {% if post.instagram %}
+                <li>
+                    <a href="{{ post.instagram }}" target="_blank">
+                        {% include "svg/instagram.svg" %}
+                    </a>
+                </li>
+                {% endif %}
+                {% if post.youtube %}
+                <li>
+                    <a href="{{ post.youtube }}" target="_blank">
+                        {% include "svg/youtube.svg" %}
+                    </a>
+                </li>
+                {% endif %}
+                {% if post.site %}
+                <li>
+                    <a href="{{ post.site }}" target="_blank">
+                        {% include "svg/site.svg" %}
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="keynote-text">
+        <h5 class="keynote-name">{{ post.name }}</h5>
+        <span class="keynote-summary">{{ post.summary }}</span>
+        {{ post.content }}
+    </div>
+</div>
+{%- endmacro %}
