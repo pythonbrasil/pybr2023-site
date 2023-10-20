@@ -3,7 +3,9 @@ Date: 2023-10-03 10:10
 Modified: 2010-12-05 19:30
 Authors: Python Brasil
 image: gabi
-name: Gabi
+name: Gabriela Oliveira
+Linkedin: https://www.linkedin.com/in/gabrielaoliveirago
+Site: https://gabrielaoliveira.co
 Summary: Headline: Partner e Head de design estratégico na NTConsult, Escritora e TEDx Speaker
 Draft: False
 
