@@ -1,0 +1,66 @@
+section {
+  &.keynotes {
+    background-color: var(--secondary-color);
+    .keynote-card {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      column-gap: 2rem;
+      justify-content: center;
+      .keynote-avatar {
+        overflow: hidden;
+        display: flex;
+        width: 20rem; // 1rem = 16px;
+        height: 20rem;
+        flex: 0 0 auto;
+        order: 0;
+        border-radius: 50%;
+        border: 4px solid var(--main-color);
+        img {
+          width: 20rem;
+          height: 20rem;
+          object-fit: cover;
+          object-position: center;
+          &.mirian,
+          &.gabi {
+            object-position: top;
+          }
+        }
+      }
+      .keynote-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        .keynote-name {
+          font-size: 2.5rem;
+          margin: 0;
+        }
+        .keynote-summary {
+          p {
+            margin: 0;
+            font-size: 1.3rem;
+            color: #cbcbcb;
+            font-weight: 400;
+          }
+        }
+        p {
+          font-size: 1.3rem;
+          font-weight: 300;
+          //line-height: 1.3;
+        }
+      }
+      &:nth-of-type(even) {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        .keynote-avatar {
+          order: 1;
+        }
+        .keynote-text {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

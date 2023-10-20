@@ -1,0 +1,14 @@
+{% from "keynotes/keynote.html" import keynote %}
+<section class="section keynotes" id="keynotes">
+  <div class="container">
+      <h2 class="title fs-1"> Keynotes </h2>
+      <hr class="divider" />
+      {% for cat, posts in categories if cat == 'keynotes' %}
+          {% for post in posts %}
+            {% if (not post.draft or post.draft == 'False') %}
+              {{ keynote(post) }}
+            {% endif %}
+          {% endfor %}
+      {% endfor %}
+  </div>
+</section>

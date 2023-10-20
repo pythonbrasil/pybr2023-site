@@ -1,8 +1,8 @@
 Title: Jeferson
-Date: 2010-12-03 10:20
+Date: 2023-10-03 10:00
 Modified: 2010-12-05 19:30
 Authors: Python Brasil
-image: /images/keynotes/jeff.jpg
+image: jeff
 name: Jeferson
 Summary: Jeferson transformou sua vida através do código aberto
 

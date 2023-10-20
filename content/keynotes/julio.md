@@ -1,8 +1,8 @@
 Title: Julio
-Date: 2010-12-03 10:20
+Date: 2023-10-03 10:15
 Modified: 2010-12-05 19:30
 Authors: Python Brasil
-image: /images/keynotes/julio.jpg
+image: julio
 name: Julio Biason
 Summary: Júlio o programador motociclista
 

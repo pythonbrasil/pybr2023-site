@@ -1,8 +1,8 @@
 Title: mirian
-Date: 2010-12-03 10:20
+Date: 2023-10-03 10:20
 Modified: 2010-12-05 19:30
 Authors: Python Brasil
-image: /images/keynotes/mirian.jpeg
+image: mirian
 name: Mirian Souza
 Summary: Dedica-se a educar e capacitar pessoas, equipes e comunidades
 
