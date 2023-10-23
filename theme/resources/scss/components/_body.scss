@@ -11,3 +11,32 @@ body {
     overflow: scroll;
   }
 }
+
+.guia {
+  .col-lg {
+    text-align: center;
+    width: 100%;
+    .btn {
+      background-color: var(--secondary-color);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+      &:active,
+      &:hover {
+        background-color: #fff;
+        color: var(--secondary-color);
+        svg {
+          fill: var(--secondary-color);
+          stroke: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
