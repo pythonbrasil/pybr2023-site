@@ -200,7 +200,9 @@ section {
         }
         &:nth-of-type(2),
         &:nth-of-type(3),
-        &:nth-of-type(4) {
+        &:nth-of-type(4),
+        &:nth-of-type(5)
+        {
           display: flex;
           flex-direction: column;
         }
@@ -246,8 +248,16 @@ section {
           font-size: 1.5rem;
         }
       }
+      .row {
+        display: flex;
+        flex-direction: row;
+        @media screen and (max-width: 992px) {
+          flex-direction: column;
+        }
+      }
       .card {
         width: 18rem;
+        margin: 10px;
         background-color: #ffffff;
         color: var(--secondary-color);
         border: 1px solid rgba(0, 0, 0, 0.175);

@@ -278,6 +278,18 @@
                     {% endfor %}
                 </div>
                 <div class="row">
+                    {% for cat, posts in categories if cat == 'cobre' %}
+                        <h3 class="patrocinio-title">{{cat}}</h3>
+                        {% for post in posts %}
+                        <div class="col-lg">
+                            <a target="_blank" href="{{post.link}}" class="patrocinio-background">
+                                {{ picture(post.image, post.title, 200) }}
+                            </a>
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="row">
                     {% for cat, posts in categories if cat == 'apoios' %}
                     <h3 class="patrocinio-title">{{cat}}</h3>
                     {% for post in posts %}
@@ -309,11 +321,13 @@
                             <div class="card-body" id="popover-dismiss">
                                 <h5 class="card-title">{{post.title}}</h5>
                                 <p class="card-text">{{post.summary}}</p>
+                                {% if post.voucher %}
                                 <a tabindex="0" class="btn btn-block btn-outline-dark" role="button"
                                     data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Copiado!"
                                     onclick="copyVoucher('{{post.voucher}}')">
                                     Copiar Voucher
                                 </a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
