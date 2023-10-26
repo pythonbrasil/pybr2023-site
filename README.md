@@ -28,6 +28,19 @@ invoke clean
 
 lembrando que todos os comandos invoke estão no arquivo `tasks.py`
 
+# resize images generate webp
+
+instale o command line para gerar imagens webp
+
+```shell
+sudo apt-get install webp
+```
+
+dentro da pasta das imagens que precisam ser recriadas rode o bash
+
+```shell
+sudo bash [caminho relativo]/scripts/resize_images.sh
+```
 
 # Ambiente
 ```shell
@@ -43,8 +56,6 @@ pip install -r requirements.txt
 **Ambiente precisa de docker instalado!!**
 
 Todo o build do docker esta abstraido dentro do invoke mas é nesessario uma das ultimas versões do docker ja com o comando via plugin  `docker compose [up, build, down]`
-
-
 
 
 ```shell
