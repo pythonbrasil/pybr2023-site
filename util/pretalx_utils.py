@@ -102,6 +102,7 @@ class CreateMDContent():
 
     def create_content(self):
         json_data = json.loads(self.data)
+        print(json_data)
         for talks in json_data['results']:
             talk = {
                 'title': talks['title'],

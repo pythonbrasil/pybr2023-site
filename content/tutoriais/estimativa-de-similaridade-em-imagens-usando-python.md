@@ -4,9 +4,9 @@ Date: 2023-10-01 10:20
 Description: Entenda o desafio de estimatimar a similaridade de imagens usando uma Rede Siamesa com perda de trigêmeos. A rede siamesa será implementada utilizando a biblioteca tensorflow/keras.
 Slug: estimativa-de-similaridade-em-imagens-usando-python
 Duration: 180
-Speakers: wesin
-Speakers_biography: Tenho orgulho de ser uma pessoa que aprende ao longo da vida, com graduação em engenharia da computação, mestrado em computação aplicada e doutorado em computação aplicada.
-Speakers_avatar: https://pretalx.com/media/avatars/06de9b74e16c5260733c4eef6b7c1a67_ZJoQ3Lb.jpg
+Speakers: Wesin Ribeiro
+Speakers_biography: Nascido na terra do açaí, sou engenheiro da computação, com mestrado e doutorado em computação aplicada, professor universitário e adoro programar em Python.
+Speakers_avatar: https://pretalx.com/media/avatars/perfil2_uU5tMev.png
 
 ---
 
