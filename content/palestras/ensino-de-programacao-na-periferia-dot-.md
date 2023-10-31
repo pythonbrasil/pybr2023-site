@@ -4,9 +4,9 @@ Date: 2023-10-01 10:20
 Description: Demonstrar o acumulo prático do Núcleo de Tecnologia do MTST no ensino de tecnologia nas periferias da cidade de São Paulo.
 Slug: ensino-de-programacao-na-periferia-dot-
 Duration: 45
-Speakers: Alexandre Zago Boava|Gabriel Simeone
-Speakers_biography: Cientista de dados e militante do MTST, atua no Núcleo de Tecnologia nas áreas de educação, governança de dados e internet e plataformização do trabalho.|Trabalho como Desenvolvedor desde 2018, fui educador no Instituto Paulo-Freire, técnico em automação pelo SENAI e membro da coordenação nacional do MTST.
-Speakers_avatar: https://pretalx.com/media/avatars/foto_tronco_ale_28yVEBv.jpeg|https://pretalx.com/media/avatars/1637147896944_TZsI1VU.jpeg
+Speakers: Alexandre Zago Boava|Gabriel Simeone|Deborah Foroni
+Speakers_biography: Cientista de dados e militante do MTST, atua no Núcleo de Tecnologia nas áreas de educação, governança de dados e internet e plataformização do trabalho.|Trabalho como Desenvolvedor desde 2018, fui educador no Instituto Paulo-Freire, técnico em automação pelo SENAI e membro da coordenação nacional do MTST.|Trabalho na área de dados aproximadamente 5 anos, atualmente sou cientista de dados. Faço parte de algumas comunidades e coletivos em tec (Pyladies SP, Núcleo de Tec MTST e Todas as Letras).
+Speakers_avatar: https://pretalx.com/media/avatars/foto_tronco_ale_28yVEBv.jpeg|https://pretalx.com/media/avatars/1637147896944_TZsI1VU.jpeg|https://pretalx.com/media/avatars/233e831143eeb13c684379c66fe17b8c_cnG4aQR.jpg
 
 ---
 

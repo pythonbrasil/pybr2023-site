@@ -5,7 +5,7 @@ Description: Conheça mais sobre o universo da Internet das Coisas (IoT) e apren
 Slug: se-aventurando-em-iot-circuitpython-como-porta-de-entrada
 Duration: 45
 Speakers: Pedro Rendeiro
-Speakers_biography: 
+Speakers_biography: Estudante de Engenharia da Computação (UFPA), especialista em nada, mas interessado em embarcados, telecom, dados, IA e desenvolvimento de software em geral.
 Speakers_avatar: https://pretalx.com/media/avatars/std2022_r2QLGjl.jpg
 
 ---

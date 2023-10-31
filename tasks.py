@@ -132,7 +132,7 @@ def to_old(c):
 
 
 @task
-def generate_content_from_server(c):
+def update_from_pretalx(c):
     """ Generate the content from Pretalx site, using the api endpoint"""
     generate_content()
 

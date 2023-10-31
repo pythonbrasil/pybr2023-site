@@ -6,7 +6,7 @@ Slug: pln-em-relatos-de-vdf-identificando-padroes
 Duration: 45
 Speakers: Deborah Foroni
 Speakers_biography: Trabalho na área de dados aproximadamente 5 anos, atualmente sou cientista de dados. Faço parte de algumas comunidades e coletivos em tec (Pyladies SP, Núcleo de Tec MTST e Todas as Letras).
-Speakers_avatar: https://pretalx.com/media/avatars/IMG_20230818_205116_pMDBffW.jpg
+Speakers_avatar: https://pretalx.com/media/avatars/233e831143eeb13c684379c66fe17b8c_cnG4aQR.jpg
 
 ---
 
