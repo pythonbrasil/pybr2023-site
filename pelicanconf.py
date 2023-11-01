@@ -32,6 +32,7 @@ MENU = [
     ('#programacao', 'Programação', True),
     ('#patrocinadores', 'Patrocinadores', True),
     ('#faq', 'FAQ', True),
+    ('#footer', 'Site Map', True),
 ]
 
 # Social widget
