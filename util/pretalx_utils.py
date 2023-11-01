@@ -60,6 +60,7 @@ class GetDataFromServer():
         self.headers = self.__get_headers()
         self.talks = self.__get_talks() or None
         self.short_tutorials = self.__get_short_tutorials() or None
+        self.long_tutorials = self.__get_long_tutorials() or None
 
     def __load_token_from_file(self):
         """Load the API token from .env file on the root path"""
@@ -90,6 +91,13 @@ class GetDataFromServer():
             self.api_url)
         response = requests.get(url, headers=self.headers)
         return response.content
+    
+    def __get_long_tutorials(self):
+        """Get all confirmed tutorials from server"""
+        url = '{}?state=confirmed&submission_type=2861&limit=100'.format(
+            self.api_url)
+        response = requests.get(url, headers=self.headers)
+        return response.content
 
 
 class CreateMDContent():
@@ -102,7 +110,6 @@ class CreateMDContent():
 
     def create_content(self):
         json_data = json.loads(self.data)
-        print(json_data)
         for talks in json_data['results']:
             talk = {
                 'title': talks['title'],
@@ -137,6 +144,7 @@ class CreateMDContent():
                 os.mkdir(content_path)
 
         file_name = string_parser(content.get('title'))
+        print(file_name)
         with open('{}/{}.md'.format(content_path, file_name), "w") as f:
             md_content = dedent(
                 "---\n"
@@ -198,6 +206,7 @@ def generate_content():
     server = GetDataFromServer()
     CreateMDContent(server.talks, 'palestras').create_content()
     CreateMDContent(server.short_tutorials, 'tutoriais').create_content()
+    CreateMDContent(server.long_tutorials, 'tutoriais').create_content()
 
 
 if __name__ == '__main__':

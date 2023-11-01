@@ -1,5 +1,5 @@
 !/bin/bash
-IMAGE_SIZES=("200" "260" "400" "460")
+IMAGE_SIZES=("200" "260" "300" "400" "460")
 CURRENT_DIR=${PWD}
 OUTPUT_DIR="responsive"
 IMG_QUALITY=100
