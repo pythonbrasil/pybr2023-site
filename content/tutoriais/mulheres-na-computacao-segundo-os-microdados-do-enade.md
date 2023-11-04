@@ -10,4 +10,5 @@ Speakers_avatar: https://pretalx.com/media/avatars/Fernando_Masanori_O_Globo_P5B
 
 ---
 
-Pandas para iniciantes. A LGPD mudou a forma como os Microdados do ENADE são publicados. Neste novo formato, vamos analisar a evolução do número de mulheres que se formam em Computação no Brasil.
+Mulheres na Computação segundo microdados do ENADE
+https://bit.ly/pybr2023-tutorial2-masanori

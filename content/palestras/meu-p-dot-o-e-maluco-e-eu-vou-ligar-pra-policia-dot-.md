@@ -6,7 +6,7 @@ Slug: meu-p-dot-o-e-maluco-e-eu-vou-ligar-pra-policia-dot-
 Duration: 45
 Speakers: Thais Viana
 Speakers_biography: GPM de busca e Recomendação na Jusbrasil. Bacharel em Ciência da Computação pela UFRJ, mestre em Modelos e Arquiteturas em Sistemas Inteligentes pelo PPGI/UFRJ e entusiasta de comunidades de software.
-Speakers_avatar: https://pretalx.com/media/avatars/AB58B203-0BC7-4064-B55A-6984C05C862C_nE50NjN.png
+Speakers_avatar: https://pretalx.com/media/avatars/148541c36dbdcb727d55f70273437e3a_FYdNKx9.jpg
 
 ---
 
