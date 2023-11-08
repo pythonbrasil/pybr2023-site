@@ -61,6 +61,7 @@ class GetDataFromServer():
         self.talks = self.__get_talks() or None
         self.short_tutorials = self.__get_short_tutorials() or None
         self.long_tutorials = self.__get_long_tutorials() or None
+        self.keynotes = self.__get_keynotes() or None
 
     def __load_token_from_file(self):
         """Load the API token from .env file on the root path"""
@@ -81,6 +82,13 @@ class GetDataFromServer():
     def __get_talks(self):
         """Get all confirmed talks from server"""
         url = '{}?state=confirmed&submission_type=2858&limit=100'.format(
+            self.api_url)
+        response = requests.get(url, headers=self.headers)
+        return response.content
+    
+    def __get_keynotes(self):
+        """Get all confirmed talks from server"""
+        url = '{}?state=confirmed&submission_type=3601&limit=100'.format(
             self.api_url)
         response = requests.get(url, headers=self.headers)
         return response.content
@@ -205,6 +213,7 @@ class CreateMDContent():
 def generate_content():
     server = GetDataFromServer()
     CreateMDContent(server.talks, 'palestras').create_content()
+    CreateMDContent(server.keynotes, 'palestras').create_content()
     CreateMDContent(server.short_tutorials, 'tutoriais').create_content()
     CreateMDContent(server.long_tutorials, 'tutoriais').create_content()
 
